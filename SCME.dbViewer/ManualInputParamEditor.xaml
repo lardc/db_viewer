@@ -1,0 +1,71 @@
+﻿<Window x:Class="SCME.dbViewer.ManualInputParamEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:SCME.dbViewer"
+        xmlns:profilesTypes="clr-namespace:SCME.Types.Profiles;assembly=SCME.Types"
+        mc:Ignorable="d"
+        xmlns:res="clr-namespace:SCME.dbViewer.Properties"
+        ShowInTaskbar = "false"
+        WindowStartupLocation="CenterScreen"
+        Background="#FFF0F0F0"
+        Title="{x:Static res:Resources.ManualInputParamEditor}" Height="350" Width="600"
+        PreviewKeyDown="Window_PreviewKeyDown">
+
+    <Window.Resources>
+        <ObjectDataProvider x:Key="DataFromEnumTemperatureConditions" MethodName="TemperatureConditions" ObjectType="{x:Type local:FilteredTemperatureConditions}" />
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.33*"/>
+            <ColumnDefinition Width="0.33*"/>
+            <ColumnDefinition Width="0.33*"/>
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer x:Name="svProfileParameters" Grid.Row="0" Grid.ColumnSpan="3" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" Height="50">
+            <StackPanel Orientation="Vertical">
+                <Label Content="{x:Static res:Resources.SelectedProfileParameters}"/>
+                <StackPanel x:Name="spProfileParameters" Orientation="Horizontal"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="{x:Static res:Resources.Name}"/>
+        <TextBox x:Name="tbName" Grid.Row="2" Grid.Column="0" FontSize="16"/>
+
+        <Label Grid.Row="1" Grid.Column="1" Content="{x:Static res:Resources.TemperatureCondition}"/>
+        <ComboBox x:Name="cmbTemperatureCondition" Grid.Row="2" Grid.Column="1" ItemsSource="{Binding Source={StaticResource DataFromEnumTemperatureConditions}}" FontSize="16"/>
+
+        <Label Grid.Row="1" Grid.Column="2" Content="{x:Static res:Resources.Um}"/>
+        <TextBox x:Name="tbUm" Grid.Row="2" Grid.Column="2" FontSize="16"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Content="{x:Static res:Resources.DescrEN}"/>
+        <TextBox x:Name="tbDescrEN" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" MaxLength="150" FontSize="16" TextWrapping="Wrap"/>
+
+        <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Content="{x:Static res:Resources.DescrRU}"/>
+        <TextBox x:Name="tbDescrRU" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" MaxLength="150" FontSize="16" TextWrapping="Wrap"/>
+
+        <Label Grid.Row="7" Grid.Column="0" Content="{x:Static res:Resources.NormMinValue}"/>
+        <TextBox x:Name="tbNormMin" Grid.Row="8" Grid.Column="0" MaxLength="150" FontSize="16"/>
+        
+        <Label Grid.Row="7" Grid.Column="2" Content="{x:Static res:Resources.NormMaxValue}"/>
+        <TextBox x:Name="tbNormMax" Grid.Row="8" Grid.Column="2" MaxLength="150" FontSize="16"/>
+        
+        <Button x:Name="btOK" Grid.Row="9" Grid.Column="2" Content="OK" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="50" Height="25" Margin="0,5,5,5" Click="btOK_Click"/>
+    </Grid>
+</Window>

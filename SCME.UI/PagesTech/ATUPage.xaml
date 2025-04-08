@@ -1,0 +1,141 @@
+﻿<Page x:Class="SCME.UI.PagesTech.ATUPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:customControl="clr-namespace:SCME.UI.CustomControl" xmlns:ui="clr-namespace:SCME.UI"
+      xmlns:res="clr-namespace:SCME.UI.Properties"
+      mc:Ignorable="d" x:Name="aTUPage"
+      d:DesignWidth="1280" d:DesignHeight="924"
+      Title="{x:Static res:Resources.ATU}">
+
+    <Page.Resources>
+        <ui:EnumValueToString x:Key="EnumToString" />
+        
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource CLabelStyle}">
+            <Setter Property="Padding" Value="5,0,0,0" />
+            <Setter Property="Height" Value="62" />
+        </Style>
+
+        <Style TargetType="{x:Type Button}" BasedOn="{StaticResource CButtonStyle}">
+            <Setter Property="Margin" Value="10,0" />
+        </Style>
+
+        <Style x:Key="StLblStyle" TargetType="{x:Type Label}" BasedOn="{StaticResource CLabelStyle}">
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Padding" Value="10,0" />
+        </Style>
+
+        <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource CCheckBoxStyle}">
+            <Setter Property="Foreground" Value="{StaticResource xBlack1}" />
+            <Setter Property="Margin" Value="20,20" />
+            <Setter Property="Padding" Value="5,0" />
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <Border Grid.Column="3" Grid.Row="0" Margin="10,0,0,0">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.AtuPrePulseValue}" />
+                <customControl:ValidatingTextBox x:Name="lbAtuPrePulseValue" Grid.Column="1" Grid.Row="0" Padding="5" Margin="10,9,10,10" TextBlock.TextAlignment="Right" IsNumeric="True" Minimum="15" Maximum="250" Text="{Binding Parameters.PrePulseValue, ElementName=aTUPage, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.AtuPowerValueSet}" />
+                <customControl:ValidatingTextBox x:Name="lbAtuPowerValue" Grid.Column="1" Grid.Row="1" Padding="5" Margin="10,9,10,10" TextBlock.TextAlignment="Right" IsNumeric="True" IsFloat="True" Minimum="2" Maximum="75" Text="{Binding Parameters.PowerValue, ElementName=aTUPage, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Label Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.AtuUBR}" />
+                <Label Grid.Column="1" Grid.Row="2" Content="0" x:Name="lbAtuUBR" FontSize="{StaticResource FontSize26}" Margin="0,0,7,0" Height="Auto" />
+
+                <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.AtuUPRSM}" />
+                <Label Grid.Column="1" Grid.Row="3" Content="0" x:Name="lbAtuUPRSM" FontSize="{StaticResource FontSize26}" Margin="0,0,7,0" Height="Auto" />
+
+                <Label Grid.Column="0" Grid.Row="4" Content="{x:Static res:Resources.AtuIPRSM}" />
+                <Label Grid.Column="1" Grid.Row="4" Content="0" x:Name="lbAtuIPRSM" FontSize="{StaticResource FontSize26}" Margin="0,0,7,0" Height="Auto" />
+
+                <Label Grid.Column="0" Grid.Row="5" Content="{x:Static res:Resources.AtuPRSM}" />
+                <Label Grid.Column="1" Grid.Row="5" Content="0" x:Name="lbAtuPRSM" FontSize="{StaticResource FontSize26}" Margin="0,0,7,0" Height="Auto" />
+
+                <Label Content="{x:Static res:Resources.Height_Prof}" Grid.Column="0" Grid.Row="6" />
+                <customControl:ValidatingTextBox Grid.Column="1" Grid.Row="6" Padding="5" Margin="10" TextBlock.TextAlignment="Right" IsNumeric="True" Minimum="0" Maximum="100000" Text="{Binding ClampParameters.Height, ElementName=aTUPage}" />
+
+                <Label Content="{x:Static res:Resources.Temp}"  Grid.Column="0"  Grid.Row="7" />
+                <customControl:ValidatingTextBox Grid.Column="1" Grid.Row="7"  Padding="5" Margin="10" TextBlock.TextAlignment="Right" IsNumeric="True" Minimum="0" Maximum="200" Text="{Binding Temperature, ElementName=aTUPage}" />
+
+                <Label Content="{x:Static res:Resources.Force}"  Grid.Column="0"  Grid.Row="8" />
+                <customControl:ValidatingTextBox Grid.Column="1" Grid.Row="8"  Padding="5" Margin="10" TextBlock.TextAlignment="Right" IsNumeric="True" Maximum="200" Minimum="0" Text="{Binding ClampParameters.CustomForce, ElementName=aTUPage}" />
+
+                <Label Grid.Column="0" x:Name="lblTitleTop" Grid.Row="9" Content="{x:Static res:Resources.TopTempName}" />
+                <Label Grid.Column="1" Grid.Row="9" Content="0" x:Name="TopTempLabel" HorizontalAlignment="Right" Background="LightGreen" Margin="0,0,7,0" />
+
+                <Label Grid.Column="0" x:Name="lblTitleBot" Grid.Row="10" Content="{x:Static res:Resources.BotTempName}" />
+                <Label Grid.Column="1" Grid.Row="10" Content="0" x:Name="BotTempLabel" HorizontalAlignment="Right" Background="LightGreen" Margin="0,0,7,0" />
+            </Grid>
+        </Border>
+        <Button x:Name="btnBack" x:FieldModifier="private"
+                Grid.Column="0" Grid.Row="2" 
+                Content="{x:Static res:Resources.Back}"
+                Click="btnBack_OnClick"
+               Margin="6" />
+        <Button x:Name="btnTemperature" x:FieldModifier="private"
+                Grid.Column="1" Grid.Row="2"
+                Content="{x:Static res:Resources.SetTemp}"
+                Click="btnTemperature_OnClick"
+                Margin="6" />
+        <Button Grid.Column="2" Grid.Row="2"
+                Content="{x:Static res:Resources.Stop}"
+                Click="btnStop_OnClick"
+                Margin="6" Background="{StaticResource xRed1}" />
+        <Button x:Name="btnStart" x:FieldModifier="private"
+                Grid.Column="3" Grid.Row="2"
+                Content="{x:Static res:Resources.Start}"
+                Click="btnStart_OnClick"
+                Margin="6" Background="{StaticResource xGreen1}" />
+
+        <Border Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Margin="10,0,0,0">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="18*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" x:Name="lbAtuFaultReason" Content="FaultReason" FontSize="{StaticResource FontSize26}" Background="Tomato" />
+                <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" x:Name="lbAtuWarning" Content="Warning" FontSize="{StaticResource FontSize26}" Background="Gold" />
+            </Grid>
+        </Border>
+        
+    </Grid>
+
+</Page>

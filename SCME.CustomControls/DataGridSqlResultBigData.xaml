@@ -1,0 +1,135 @@
+﻿<DataGrid x:Class="SCME.CustomControls.DataGridSqlResultBigData"
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+          xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+          xmlns:local="clr-namespace:SCME.CustomControls"
+          xmlns:res="clr-namespace:SCME.CustomControls.Properties"
+          mc:Ignorable="d">
+
+    <DataGrid.Resources>
+        <ContextMenu x:Key="DataGridCellContextMenu">
+            <MenuItem Header="{x:Static res:Resources.Copy}" Command="Copy"/>
+        </ContextMenu>
+
+        <Style x:Key="ArrowStyle" TargetType="Path">
+            <Setter Property="StrokeThickness" Value="1"/>
+            <Setter Property="Fill" Value="gray"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Visibility" Value="Collapsed"/>
+        </Style>
+
+        <Style x:Key="ArrowUpStyle" BasedOn="{StaticResource ArrowStyle}" TargetType="Path">
+            <Setter Property="Data" Value="M10,5 L5,10 H15 L10,5"/>
+        </Style>
+
+        <Style x:Key="ArrowDownStyle" BasedOn="{StaticResource ArrowStyle}" TargetType="Path">
+            <Setter Property="Data" Value="M10,10 L15,5 H5 L10,10"/>
+        </Style>
+
+        <Style x:Key="hidingButtonStyle" TargetType="Button">
+            <Setter Property="Content" Value="F"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="VerticalContentAlignment" Value="Top"/>
+            <Setter Property="Padding" Value="0,-5"/>
+            <Setter Property="Margin" Value="0,2"/>
+            <Setter Property="Width" Value="25"/>
+            <Setter Property="Height" Value="18"/>
+            <Setter Property="Background" Value="#FFDDDDDD"/>
+            <Setter Property="Opacity" Value="100"/>
+            <Setter Property="FontSize" Value="16"/>
+
+            <Setter Property="Visibility" Value="Hidden"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsMouseOver, ElementName=columnHeaderBorder}" Value="True">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="{x:Type DataGridCell}" x:Key="ContentDataGridStyle">
+            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{StaticResource SelectedRow}"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="DataGridColumnHeader" x:Key="DataGridColumnHeaderCustomStyle">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                        <Grid Margin="{TemplateBinding Padding}">
+                            <Border x:Name="columnHeaderBorder" BorderThickness="1" Padding="3,0,3,0" BorderBrush="Black" Background="{StaticResource CustomBlue1}">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20*"/>
+                                        <RowDefinition Height="80*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Path x:Name="PathArrowUp" Style="{StaticResource ArrowUpStyle}" Grid.Row="0" Grid.RowSpan="2"/>
+                                    <Path x:Name="PathArrowDown" Style="{StaticResource ArrowDownStyle}" Grid.Row="0" Grid.RowSpan="2"/>
+                                    <ContentPresenter Grid.Row="1" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+			                                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+				                                                   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                    <Button Style="{StaticResource hidingButtonStyle}" Grid.Row="0" Grid.RowSpan="2" Click="BtFilter_Click"/>
+                                </Grid>
+                            </Border>
+                            <Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Width="2" BorderThickness="1" Cursor="SizeWE"
+                                   BorderBrush="{Binding VerticalGridLinesBrush, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <EventSetter Event="Click" Handler="ColumnHeader_Click"/>
+            <EventSetter Event="Loaded" Handler="ColumnHeader_Loaded"/>
+        </Style>
+    </DataGrid.Resources>
+
+    <DataGrid.ColumnHeaderStyle>
+        <Style BasedOn="{StaticResource DataGridColumnHeaderCustomStyle}" TargetType="DataGridColumnHeader"/>
+    </DataGrid.ColumnHeaderStyle>
+
+    <DataGrid.CellStyle>
+        <Style BasedOn="{StaticResource ContentDataGridStyle}" TargetType="DataGridCell">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="ContextMenu" Value="{StaticResource DataGridCellContextMenu}"/>
+        </Style>
+    </DataGrid.CellStyle>
+
+    <DataGrid.RowStyle>
+        <Style TargetType="{x:Type DataGridRow}">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        </Style>
+    </DataGrid.RowStyle>
+
+    <DataGrid.Style>
+        <Style TargetType="{x:Type DataGrid}">
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="ColumnHeaderHeight" Value="40"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+            <Setter Property="SelectionUnit" Value="CellOrRowHeader"/>
+            <Setter Property="CanUserResizeRows" Value="False"/>
+        </Style>
+    </DataGrid.Style>
+
+</DataGrid>

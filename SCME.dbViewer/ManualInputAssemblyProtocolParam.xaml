@@ -1,0 +1,51 @@
+﻿<Window x:Class="SCME.dbViewer.ManualInputAssemblyProtocolParam"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:res="clr-namespace:SCME.dbViewer.Properties"
+        xmlns:local="clr-namespace:SCME.dbViewer"
+        xmlns:common="clr-namespace:SCME.Common;assembly=Common"
+        xmlns:customcontrols="clr-namespace:SCME.CustomControls;assembly=SCME.CustomControls"
+        mc:Ignorable="d"
+        Title="ManualInputAssemblyProtocolParam" Height="450" Width="800">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type DataGridCell}" x:Key="DataGridCellStyle">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <EventSetter Event="PreviewKeyDown" Handler="DataGridCell_PreviewKeyDown"/>
+            <EventSetter Event="GotFocus" Handler="DataGridCell_GotFocus"/>
+        </Style>
+
+        <ContextMenu x:Key="DataGridContextMenu">
+            <MenuItem Header="{x:Static res:Resources.DeleteCurrentRecord}" Click="ContextMenuDeleteCurrentRecord_Click"/>
+        </ContextMenu>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" LastChildFill="False" Margin="0,0,20,0" DockPanel.Dock="Right">
+            <Button x:Name="btExchangeParam" DockPanel.Dock="Right" Content="Ex" FontWeight="Bold" FontSize="14" Width="24" Margin="10,0,0,0" Click="BtExchangeParam"/>
+            <Button x:Name="btDeleteParam" DockPanel.Dock="Right" Content="-" FontWeight="Bold" FontSize="14" Foreground="Red" Width="24" Margin="10,0,0,0" Click="BtDeleteParam"/>
+            <Button x:Name="btNewParam" DockPanel.Dock="Right" Content="+" FontWeight="Bold" FontSize="14" Foreground="Green" Width="24" Height="23" VerticalAlignment="Top" Click="BtNewParam"/>
+        </DockPanel>
+
+        <customcontrols:DataGridSqlResult x:Name="dgAssemblyProtocolParam" Grid.Row="1" ItemsSource="{Binding DataSource, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" ContextMenu="{StaticResource DataGridContextMenu}" GotMouseCapture="DgAssemblyProtocolParam_GotMouseCapture" ColumnHeaderHeight="60">
+            <DataGrid.CellStyle>
+                <Style BasedOn="{StaticResource DataGridCellStyle}" TargetType="DataGridCell"/>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{x:Static res:Resources.AssemblyProtocol}" Binding="{Binding {x:Static common:Constants.Descr}, UpdateSourceTrigger=PropertyChanged}" Width="auto"/>
+            </DataGrid.Columns>
+        </customcontrols:DataGridSqlResult>
+
+        <Button x:Name="btSave" Grid.Row="2" Content="{x:Static res:Resources.Save}" HorizontalAlignment="Right" Width="120" Height="40" Click="BtSave_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,115 @@
+﻿<Page x:Class="SCME.ProfileBuilder.ConnectPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:res="clr-namespace:SCME.ProfileBuilder.Properties"
+      xmlns:profileBuilder="clr-namespace:SCME.ProfileBuilder"
+      mc:Ignorable="d" 
+      d:DesignWidth="1280" d:DesignHeight="924"
+	Title="ConnectPage">
+
+    <Page.Resources>
+        <profileBuilder:InverseBooleanConverter x:Key="B2nB" />
+    </Page.Resources>
+    
+    <Grid>
+        <TabControl>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="3" FontSize="32">Direct Connection SQlite</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10*"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="5*"></RowDefinition>
+                            <RowDefinition Height="10*"></RowDefinition>
+                            <RowDefinition Height="70*"></RowDefinition>
+                            <RowDefinition Height="10*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70*"></ColumnDefinition>
+                            <ColumnDefinition Width="30*"></ColumnDefinition>
+                            <ColumnDefinition  Width="30*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="{x:Static res:Resources.ProfileBuilderTitle}" Style="{StaticResource CLabelBlackStyle}" />
+                        <TextBox x:Name="tbDbPath" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" FontSize="{StaticResource FontSize32}"  TextAlignment="Left" TextWrapping="Wrap" VerticalContentAlignment="Center"/>
+                        <Button Content="{x:Static res:Resources.Browse}" Grid.Row="3" Grid.Column="1" Style="{StaticResource CButtonStyle}" Margin="5" Click="ButtonSQliteBrowse_Click" />
+                        <Button Content="{x:Static res:Resources.Connect}" Grid.Row="3" Grid.Column="2" Style="{StaticResource CButtonStyle}" Margin="5" Click="ButtonSQliteConnect_Click" />
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="3" FontSize="32">Direct MS SQL DB connection</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10*"></RowDefinition>
+                            <RowDefinition Height="10*"></RowDefinition>
+                            <RowDefinition Height="10*"></RowDefinition>
+                            <RowDefinition Height="10*"></RowDefinition>
+                            <RowDefinition Height="10*"></RowDefinition>
+                            <RowDefinition Height="10*"></RowDefinition>
+                            <RowDefinition Height="10*"></RowDefinition>
+                            <RowDefinition Height="10*"></RowDefinition>
+                            <RowDefinition Height="10*"></RowDefinition>
+                            <RowDefinition Height="50*"></RowDefinition>
+                            <RowDefinition Height="15*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70*"></ColumnDefinition>
+                            <ColumnDefinition Width="30*"></ColumnDefinition>
+                            <ColumnDefinition  Width="30*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Content="{x:Static res:Resources.ProfileBuilderServerName}" Style="{StaticResource CLabelBlackStyle}"/>
+                        <TextBox x:Name="tbServerName" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" FontSize="{StaticResource FontSize32}"  TextAlignment="Left" TextWrapping="Wrap" />
+                        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Content="{x:Static res:Resources.ProfileBuilderDBName}" Style="{StaticResource CLabelBlackStyle}"/>
+                        <TextBox x:Name="tbDBName" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" FontSize="{StaticResource FontSize32}"  TextAlignment="Left" TextWrapping="Wrap" />
+                        <CheckBox x:Name="chkDbIntSec" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" FontSize="{StaticResource FontSize32}" Content="{x:Static res:Resources.ProfileBuilderIntegratedSecurity}" Foreground="{StaticResource BlackBackground}"/>
+                        <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Content="{x:Static res:Resources.ProfileBuilderDBUser}" Style="{StaticResource CLabelBlackStyle}"/>
+                        <TextBox x:Name="tbDBUser" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" FontSize="{StaticResource FontSize32}"  TextAlignment="Left" TextWrapping="Wrap" IsEnabled="{Binding IsChecked, ElementName=chkDbIntSec, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource B2nB}}"/>
+                        <Label Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" Content="{x:Static res:Resources.ProfileBuilderDBPassword}" Style="{StaticResource CLabelBlackStyle}"/>
+                        <TextBox x:Name="tbDBPassword" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" FontSize="{StaticResource FontSize32}"  TextAlignment="Left" TextWrapping="Wrap" IsEnabled="{Binding IsChecked, ElementName=chkDbIntSec, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource B2nB}}" />
+                        <Button Content="{x:Static res:Resources.Connect}" Grid.Row="10" Grid.Column="2" Style="{StaticResource CButtonStyle}" Margin="5" Click="ButtonSQLConnect_Click" />
+                    </Grid>
+                </TabItem.Content>
+              
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="3" FontSize="32">Database server connection</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10*"></RowDefinition>
+                            <RowDefinition Height="10*"></RowDefinition>
+                            <RowDefinition Height="10*"></RowDefinition>
+                            <RowDefinition Height="70*"></RowDefinition>
+                            <RowDefinition Height="10*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70*"></ColumnDefinition>
+                            <ColumnDefinition Width="30*"></ColumnDefinition>
+                            <ColumnDefinition  Width="30*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="{x:Static res:Resources.TryConnect}" Grid.Row="2" Grid.Column="2" Style="{StaticResource CButtonStyle}" Margin="5" Click="ButtonWcfConnect_OnClick" />
+                    </Grid>
+                </TabItem.Content>
+
+            </TabItem>
+        </TabControl>
+        
+    </Grid>
+</Page>

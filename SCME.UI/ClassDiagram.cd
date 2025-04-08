@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SCME.UI.CAccount">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAEAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Accounts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.UI.AccountEngine">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Accounts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.UI.App" Collapsed="true">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.UI.Cache" Collapsed="true">
+    <Position X="5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAiwoAARQIAYIDABAAoIAAAACAgQAIAKgAEQBAICigA=</HashCode>
+      <FileName>Cache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.UI.CKeyboardLayout" Collapsed="true">
+    <Position X="13.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAgAAEAAAAAAAAAAAAABoAAAAABAAAAAA=</HashCode>
+      <FileName>KeyboardLayouts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.UI.KeyboardLayouts">
+    <Position X="11.5" Y="3" Width="1.5" />
+    <Members>
+      <Field Name="m_Doc" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAQAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>KeyboardLayouts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.UI.CStorageItem">
+    <Position X="13.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>LocalStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.UI.LocalStorage">
+    <Position X="11.5" Y="6" Width="1.5" />
+    <Members>
+      <Field Name="m_Doc" Hidden="true" />
+      <Field Name="m_Path" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAQAAAIIAAAIAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>LocalStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.UI.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAINAhQAABJsIABBgCkIBxCAABwAAJARwAQBMAAQ=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SCME.UI.CustomControl.GridListBoxLogs">
+    <Position X="19" Y="2" Width="2" />
+    <Members>
+      <Method Name="InvokeEndOfData" Hidden="true" />
+      <Method Name="ScrollViewer_OnScrollChanged" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACCAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>CustomControl\GridListBoxLogs.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.CustomControl.ListBoxProfiles" BaseTypeListCollapsed="true">
+    <Position X="21.25" Y="0.5" Width="2" />
+    <Members>
+      <Method Name="Btn_Click" Hidden="true" />
+      <Field Name="m_IsCloseVisible" Hidden="true" />
+      <Method Name="MouseRightButtonDownHandler" Hidden="true" />
+      <Method Name="NotifyPropertyChanged" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Class Name="SCME.UI.CustomControl.ListBoxProfiles.RemoveItemEventArgs" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CustomControl\ListBoxProfiles.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIIAAAAAAIAAAgAAAAACEAAAABAAAAAA=</HashCode>
+      <FileName>CustomControl\ListBoxProfiles.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SCME.UI.CustomControl.SimpleListBox" BaseTypeListCollapsed="true">
+    <Position X="19" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CustomControl\SimpleListBox.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.CustomControl.ValidatingTextBox">
+    <Position X="17" Y="0.5" Width="1.75" />
+    <Members>
+      <Field Name="m_OldText" Hidden="true" />
+      <Method Name="TextBox_GotFocus" Hidden="true" />
+      <Method Name="TextBox_LostFocus" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gQAAAACAAAgAAAAAAAAAiAAAAAAAAAIAAAAAAAAABQg=</HashCode>
+      <FileName>CustomControl\ValidatingTextBox.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.CustomControl.VirtualKeyboard" BaseTypeListCollapsed="true">
+    <Position X="15" Y="3" Width="1.5" />
+    <Members>
+      <Method Name="AnimateScrollViewer" Hidden="true" />
+      <Method Name="Backspase_Click" Hidden="true" />
+      <Method Name="BNormalClick" Hidden="true" />
+      <Method Name="Enter_Click" Hidden="true" />
+      <Field Name="KEY" Hidden="true" />
+      <Method Name="Left_Click" Hidden="true" />
+      <Method Name="NotifyPropertyChanged" Hidden="true" />
+      <Method Name="Right_Click" Hidden="true" />
+      <Method Name="Selector_OnSelectionChanged" Hidden="true" />
+      <Method Name="UIElement_OnMouseDown" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAQIABUQACgAAAgAQEgQAAAAAECAAAAAA=</HashCode>
+      <FileName>CustomControl\VirtualKeyboard.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SCME.UI.IO.ControlLogic">
+    <Position X="16.25" Y="9.25" Width="2.5" />
+    <Members>
+      <Field Name="CONTROL_SERVER_ENDPOINT_NAME" Hidden="true" />
+      <Field Name="DATABASE_SERVER_ENDPOINT_NAME" Hidden="true" />
+      <Field Name="m_CallbackHost" Hidden="true" />
+      <Field Name="m_ControlClient" Hidden="true" />
+      <Field Name="m_DatabaseClient" Hidden="true" />
+      <Field Name="m_InitParams" Hidden="true" />
+      <Field Name="m_IsServerConnected" Hidden="true" />
+      <Field Name="m_NetPingTimer" Hidden="true" />
+      <Field Name="m_StopInit" Hidden="true" />
+      <Field Name="REQUEST_DELAY_MS" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>yCJQAAACGTD1Q0gEBAICkAEBGQQKCEAJYA0AwCAkAAI=</HashCode>
+      <FileName>IO\ControlLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.UI.IO.ExternalControlCallbackHost" BaseTypeListCollapsed="true">
+    <Position X="19" Y="9.25" Width="2.5" />
+    <Members>
+      <Field Name="m_QueueWorker" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>IEwAIMAAAAAMAAACAACCAKUAAgIBAAYYgwQCAFAAAAA=</HashCode>
+      <FileName>IO\ControlLogic.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.IO.FtdiLibrary" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIQEgQCQKGBAAABAAIAAAImACAAigAEYKsAAJAAAAGA=</HashCode>
+      <FileName>IO\FtdiLibrary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.UI.IO.QueueWorker">
+    <Position X="13.25" Y="9.25" Width="2.5" />
+    <Members>
+      <Field Name="m_ActionQueue" Hidden="true" />
+      <Field Name="m_Net" Hidden="true" />
+      <Field Name="m_Stop" Hidden="true" />
+      <Field Name="m_Timer" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>KAoKAGABKuBAAADACAAIFCAAAIiFgABsAAAAAUAAAQQ=</HashCode>
+      <FileName>IO\QueueWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.UI.PagesCommon.HardwareStatusPage" Collapsed="true">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAABAAAAAAAAAgCAAAAAAICAAABAAAAAA=</HashCode>
+      <FileName>PagesCommon\HardwareStatus.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.PagesUser.LoginPage" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAACAAAAAAAAAAAAAQAAAAAAAABAAAA=</HashCode>
+      <FileName>PagesUser\LoginPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.PagesUser.ProfileSelectionPage" Collapsed="true">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAEAAAAQAAAAAAAAAACQAAAAQAAAAgAAAgAAAAgAA=</HashCode>
+      <FileName>PagesUser\ProfileSelectionPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.PagesUser.UserTestPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JzdjIAEpWCIBSAIwIBEiyQEgoCiDgF4YQLBBAQg4glE=</HashCode>
+      <FileName>PagesUser\UserTestPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SCME.UI.PagesCommon.ResultsPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAgAAEAAAAAAhAgAIAAAAAAKwAAAABAIEAAAABICAAA=</HashCode>
+      <FileName>PagesCommon\ResultsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SCME.UI.PagesTech.BvtPage" Collapsed="true">
+    <Position X="9.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ISAAKAAAACIAQAAAABEFwAAgAAgBgAAIAIAAAAwMgHA=</HashCode>
+      <FileName>PagesTech\BvtPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.PagesTech.CalibrationPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAEAAMCIBABAQFAAEgoaAAAAgICGAAAASAMgA=</HashCode>
+      <FileName>PagesTech\CalibrationPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SCME.UI.PagesTech.ClampPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ISAAgAABAAAAAAAAJBEFwAAAgCAABAAIBAAcAAgMgDE=</HashCode>
+      <FileName>PagesTech\ClampPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SCME.UI.PagesTech.ConsolePage" Collapsed="true">
+    <Position X="9.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQBAAEAABAAAAAAQBAAEAAAIAAAAICAAAAAAAIgA=</HashCode>
+      <FileName>PagesTech\ConsolePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.PagesTech.GatePage" Collapsed="true">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ISAACgAAACIAQAAAABEF4CAgAAABAAAIAIAEAAyMgDE=</HashCode>
+      <FileName>PagesTech\GatePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.PagesTech.LogsPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAICBEEAAAoAAAAEAIAAAAAAIAAAA=</HashCode>
+      <FileName>PagesTech\LogsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SCME.UI.PagesTech.PasswordPage" Collapsed="true">
+    <Position X="5.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PagesTech\PasswordPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.PagesTech.ProfilePage" Collapsed="true">
+    <Position X="9.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgABEAAACQAAAAgQAAAACAEgIAAIBAE6AACAEAAAQAQ=</HashCode>
+      <FileName>PagesTech\ProfilePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.PagesTech.SelftestPage" Collapsed="true">
+    <Position X="5.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ISAAAhAAEQEQgIAAAABBwAmAoAAAAAAYJAAECAAAAAQ=</HashCode>
+      <FileName>PagesTech\SelftestPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.PagesTech.TechnicianPage" Collapsed="true">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAEAAAAAAAAAAAAAAIACAAA=</HashCode>
+      <FileName>PagesTech\TechnicianPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.PagesTech.SLPage" Collapsed="true">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ISAECAAAACIAQAAAABEFwAAhAAABAAAIAIAEAAwEgDE=</HashCode>
+      <FileName>PagesTech\SLPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.UI.CustomControl.HardwareItem">
+    <Position X="23.5" Y="0.5" Width="2" />
+    <Members>
+      <Method Name="AnimateProgressBar" Hidden="true" />
+      <Method Name="ButtonDisable_Click" Hidden="true" />
+      <Field Name="m_Color" Hidden="true" />
+      <Field Name="m_DisableButtonContent" Hidden="true" />
+      <Field Name="m_DisableButtonVisibility" Hidden="true" />
+      <Field Name="m_Error" Hidden="true" />
+      <Field Name="m_IsDisabled" Hidden="true" />
+      <Field Name="m_IsTimeoutEnabled" Hidden="true" />
+      <Field Name="m_Logo" Hidden="true" />
+      <Field Name="m_PbColor" Hidden="true" />
+      <Field Name="m_Storyboard" Hidden="true" />
+      <Field Name="m_Title" Hidden="true" />
+      <Method Name="NotifyPropertyChanged" Hidden="true" />
+      <Method Name="ProgressGo" Hidden="true" />
+      <Method Name="Sb_Completed" Hidden="true" />
+      <Method Name="SetError" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QBEAASAAAwAUA+ACABQABEiAgAAAAQEAAgAAAAgAAQA=</HashCode>
+      <FileName>CustomControl\HardwareItem.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SCME.UI.PagesTech.DVdtPage" Collapsed="true">
+    <Position X="9.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ISAAGAAAAAIAAAAAAAEBQAAAAAABAAAIBIIAAAwEADA=</HashCode>
+      <FileName>PagesTech\DVdtPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

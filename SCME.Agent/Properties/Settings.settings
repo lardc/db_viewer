@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SCME.Agent.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServiceAppPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SCME.Service.exe</Value>
+    </Setting>
+    <Setting Name="UIAppPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SCME.UI.exe</Value>
+    </Setting>
+    <Setting Name="IsUserInterfaceEnabled" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ProxyAppPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SCME.Proxy.exe</Value>
+    </Setting>
+    <Setting Name="IsProxyEnabled" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ProxyInitDelayMs" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

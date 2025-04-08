@@ -1,0 +1,815 @@
+﻿<ListView x:Class="SCME.dbViewer.CustomControl.ListViewParameters"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dbViewer="clr-namespace:SCME.dbViewer"  
+        xmlns:customControl="clr-namespace:SCME.dbViewer.CustomControl"
+        xmlns:forParameters="clr-namespace:SCME.dbViewer.ForParameters"
+        HorizontalAlignment="Stretch">
+
+    <ListView.Resources>
+        <Style TargetType="TextBox" x:Key="tbStyle">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+
+        <customControl:ParamTemplateDictionary x:Key="paramTemplateDictionary">
+            <DataTemplate DataType="forParameters:TParameters" x:Key="T_ParametersTemplate">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="0" Text = "{Binding Path=UDRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="0" Text = "{Binding Path=UDRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="0" Text = "{Binding Path=UDRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="0" Text = "{Binding Path=UDRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="1" Text="{Binding Path=URRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="1" Text="{Binding Path=URRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="1" Text="{Binding Path=URRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="1" Text="{Binding Path=URRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="2" Text="{Binding Path=UBO.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="2" Text="{Binding Path=UBO.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="2" Text="{Binding Path=UBO.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="2" Text="{Binding Path=UBO.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="3" Text="{Binding Path=UBR.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="3" Text="{Binding Path=UBR.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="3" Text="{Binding Path=UBR.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="3" Text="{Binding Path=UBR.value}"/>
+
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="4" Text="{Binding Path=UTM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="4" Text="{Binding Path=UTM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="4" Text="{Binding Path=UTM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="4" Text="{Binding Path=UTM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="5" Text="{Binding Path=ITM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="5" Text="{Binding Path=ITM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="5" Text="{Binding Path=ITM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="5" Text="{Binding Path=ITM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="6" Text="{Binding Path=dUDdt.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="6" Text="{Binding Path=dUDdt.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="6" Text="{Binding Path=dUDdt.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="6" Text="{Binding Path=dUDdt.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="7" Text="{Binding Path=IH.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="7" Text="{Binding Path=IH.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="7" Text="{Binding Path=IH.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="7" Text="{Binding Path=IH.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="8" Text="{Binding Path=UGT.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="8" Text="{Binding Path=UGT.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="8" Text="{Binding Path=UGT.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="8" Text="{Binding Path=UGT.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="9" Text="{Binding Path=IGT.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="9" Text="{Binding Path=IGT.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="9" Text="{Binding Path=IGT.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="9" Text="{Binding Path=IGT.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="10" Text="{Binding Path=Rg.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="10" Text="{Binding Path=Rg.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="10" Text="{Binding Path=Rg.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="10" Text="{Binding Path=Rg.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="11" Text="{Binding Path=IDRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="11" Text="{Binding Path=IDRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="11" Text="{Binding Path=IDRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="11" Text="{Binding Path=IDRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="12" Text="{Binding Path=IRRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="12" Text="{Binding Path=IRRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="12" Text="{Binding Path=IRRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="12" Text="{Binding Path=IRRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="13" Text="{Binding Path=tq.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="13" Text="{Binding Path=tq.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="13" Text="{Binding Path=tq.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="13" Text="{Binding Path=tq.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="14" Text="{Binding Path=Rac.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="14" Text="{Binding Path=Rac.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="14" Text="{Binding Path=Rac.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="14" Text="{Binding Path=Rac.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="15" Text="{Binding Path=Rca.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="15" Text="{Binding Path=Rca.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="15" Text="{Binding Path=Rca.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="15" Text="{Binding Path=Rca.value}"/>
+
+                </Grid>
+            </DataTemplate>
+            <DataTemplate DataType="forParameters:TLParameters" x:Key="TL_ParametersTemplate">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="0" Text="{Binding Path=UDRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="0" Text = "{Binding Path=UDRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="0" Text="{Binding Path=UDRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="0" Text="{Binding Path=UDRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="1" Text="{Binding Path=URRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="1" Text="{Binding Path=URRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="1" Text="{Binding Path=URRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="1" Text="{Binding Path=URRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="2" Text="{Binding Path=UBO.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="2" Text="{Binding Path=UBO.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="2" Text="{Binding Path=UBO.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="2" Text="{Binding Path=UBO.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="3" Text="{Binding Path=UBR.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="3" Text="{Binding Path=UBR.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="3" Text="{Binding Path=UBR.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="3" Text="{Binding Path=UBR.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="4" Text="{Binding Path=UTM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="4" Text="{Binding Path=UTM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="4" Text="{Binding Path=UTM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="4" Text="{Binding Path=UTM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="5" Text="{Binding Path=ITM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="5" Text="{Binding Path=ITM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="5" Text="{Binding Path=ITM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="5" Text="{Binding Path=ITM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="6" Text="{Binding Path=dUDdt.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="6" Text="{Binding Path=dUDdt.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="6" Text="{Binding Path=dUDdt.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="6" Text="{Binding Path=dUDdt.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="7" Text="{Binding Path=IH.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="7" Text="{Binding Path=IH.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="7" Text="{Binding Path=IH.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="7" Text="{Binding Path=IH.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="8" Text="{Binding Path=UGT.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="8" Text="{Binding Path=UGT.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="8" Text="{Binding Path=UGT.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="8" Text="{Binding Path=UGT.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="9" Text="{Binding Path=IGT.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="9" Text="{Binding Path=IGT.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="9" Text="{Binding Path=IGT.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="9" Text="{Binding Path=IGT.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="10" Text="{Binding Path=Rg.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="10" Text="{Binding Path=Rg.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="10" Text="{Binding Path=Rg.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="10" Text="{Binding Path=Rg.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="11" Text="{Binding Path=IDRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="11" Text="{Binding Path=IDRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="11" Text="{Binding Path=IDRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="11" Text="{Binding Path=IDRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="12" Text="{Binding Path=IRRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="12" Text="{Binding Path=IRRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="12" Text="{Binding Path=IRRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="12" Text="{Binding Path=IRRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="13" Text="{Binding Path=tq.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="13" Text="{Binding Path=tq.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="13" Text="{Binding Path=tq.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="13" Text="{Binding Path=tq.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="14" Text="{Binding Path=PRSM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="14" Text="{Binding Path=PRSM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="14" Text="{Binding Path=PRSM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="14" Text="{Binding Path=PRSM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="15" Text="{Binding Path=Rac.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="15" Text="{Binding Path=Rac.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="15" Text="{Binding Path=Rac.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="15" Text="{Binding Path=Rac.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="16" Text="{Binding Path=Rca.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="16" Text="{Binding Path=Rca.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="16" Text="{Binding Path=Rca.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="16" Text="{Binding Path=Rca.value}"/>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate DataType="forParameters:TBParameters" x:Key="TB_ParametersTemplate">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="0" Text="{Binding Path=UDRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="0" Text="{Binding Path=UDRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="0" Text="{Binding Path=UDRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="0" Text="{Binding Path=UDRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="1" Text="{Binding Path=URRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="1" Text="{Binding Path=URRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="1" Text="{Binding Path=URRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="1" Text="{Binding Path=URRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="2" Text="{Binding Path=UBO.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="2" Text="{Binding Path=UBO.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="2" Text="{Binding Path=UBO.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="2" Text="{Binding Path=UBO.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="3" Text="{Binding Path=UBR.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="3" Text="{Binding Path=UBR.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="3" Text="{Binding Path=UBR.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="3" Text="{Binding Path=UBR.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="4" Text="{Binding Path=UTM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="4" Text="{Binding Path=UTM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="4" Text="{Binding Path=UTM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="4" Text="{Binding Path=UTM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="5" Text="{Binding Path=ITM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="5" Text="{Binding Path=ITM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="5" Text="{Binding Path=ITM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="5" Text="{Binding Path=ITM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="6" Text="{Binding Path=dUDdt.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="6" Text="{Binding Path=dUDdt.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="6" Text="{Binding Path=dUDdt.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="6" Text="{Binding Path=dUDdt.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="7" Text="{Binding Path=IH.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="7" Text="{Binding Path=IH.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="7" Text="{Binding Path=IH.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="7" Text="{Binding Path=IH.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="8" Text="{Binding Path=tgt.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="8" Text="{Binding Path=tgt.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="8" Text="{Binding Path=tgt.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="8" Text="{Binding Path=tgt.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="9" Text="{Binding Path=UGT.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="9" Text="{Binding Path=UGT.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="9" Text="{Binding Path=UGT.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="9" Text="{Binding Path=UGT.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="10" Text="{Binding Path=IGT.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="10" Text="{Binding Path=IGT.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="10" Text="{Binding Path=IGT.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="10" Text="{Binding Path=IGT.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="11" Text="{Binding Path=Rg.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="11" Text="{Binding Path=Rg.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="11" Text="{Binding Path=Rg.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="11" Text="{Binding Path=Rg.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="12" Text="{Binding Path=IDRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="12" Text="{Binding Path=IDRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="12" Text="{Binding Path=IDRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="12" Text="{Binding Path=IDRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="13" Text="{Binding Path=IRRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="13" Text="{Binding Path=IRRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="13" Text="{Binding Path=IRRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="13" Text="{Binding Path=IRRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="14" Text="{Binding Path=tq.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="14" Text="{Binding Path=tq.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="14" Text="{Binding Path=tq.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="14" Text="{Binding Path=tq.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="15" Text="{Binding Path=trr.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="15" Text="{Binding Path=trr.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="15" Text="{Binding Path=trr.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="15" Text="{Binding Path=trr.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="16" Text="{Binding Path=Qrr.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="16" Text="{Binding Path=Qrr.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="16" Text="{Binding Path=Qrr.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="16" Text="{Binding Path=Qrr.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="17" Text="{Binding Path=Rac.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="17" Text="{Binding Path=Rac.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="17" Text="{Binding Path=Rac.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="17" Text="{Binding Path=Rac.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="18" Text="{Binding Path=Rca.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="18" Text="{Binding Path=Rca.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="18" Text="{Binding Path=Rca.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="18" Text="{Binding Path=Rca.value}"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="forParameters:TBIParameters" x:Key="TBI_ParametersTemplate">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="0" Text="{Binding Path=UDRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="0" Text="{Binding Path=UDRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="0" Text="{Binding Path=UDRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="0" Text="{Binding Path=UDRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="1" Text="{Binding Path=URRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="1" Text="{Binding Path=URRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="1" Text="{Binding Path=URRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="1" Text="{Binding Path=URRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="2" Text="{Binding Path=UBO.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="2" Text="{Binding Path=UBO.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="2" Text="{Binding Path=UBO.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="2" Text="{Binding Path=UBO.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="3" Text="{Binding Path=UBR.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="3" Text="{Binding Path=UBR.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="3" Text="{Binding Path=UBR.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="3" Text="{Binding Path=UBR.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="4" Text="{Binding Path=UTM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="4" Text="{Binding Path=UTM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="4" Text="{Binding Path=UTM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="4" Text="{Binding Path=UTM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="5" Text="{Binding Path=ITM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="5" Text="{Binding Path=ITM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="5" Text="{Binding Path=ITM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="5" Text="{Binding Path=ITM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="6" Text="{Binding Path=dUDdt.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="6" Text="{Binding Path=dUDdt.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="6" Text="{Binding Path=dUDdt.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="6" Text="{Binding Path=dUDdt.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="7" Text="{Binding Path=IH.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="7" Text="{Binding Path=IH.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="7" Text="{Binding Path=IH.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="7" Text="{Binding Path=IH.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="8" Text="{Binding Path=tgt.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="8" Text="{Binding Path=tgt.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="8" Text="{Binding Path=tgt.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="8" Text="{Binding Path=tgt.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="9" Text="{Binding Path=UGT.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="9" Text="{Binding Path=UGT.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="9" Text="{Binding Path=UGT.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="9" Text="{Binding Path=UGT.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="10" Text="{Binding Path=IGT.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="10" Text="{Binding Path=IGT.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="10" Text="{Binding Path=IGT.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="10" Text="{Binding Path=IGT.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="11" Text="{Binding Path=Rg.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="11" Text="{Binding Path=Rg.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="11" Text="{Binding Path=Rg.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="11" Text="{Binding Path=Rg.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="12" Text="{Binding Path=IDRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="12" Text="{Binding Path=IDRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="12" Text="{Binding Path=IDRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="12" Text="{Binding Path=IDRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="13" Text="{Binding Path=IRRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="13" Text="{Binding Path=IRRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="13" Text="{Binding Path=IRRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="13" Text="{Binding Path=IRRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="14" Text="{Binding Path=tq.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="14" Text="{Binding Path=tq.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="14" Text="{Binding Path=tq.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="14" Text="{Binding Path=tq.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="15" Text="{Binding Path=trr.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="15" Text="{Binding Path=trr.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="15" Text="{Binding Path=trr.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="15" Text="{Binding Path=trr.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="16" Text="{Binding Path=Qrr.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="16" Text="{Binding Path=Qrr.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="16" Text="{Binding Path=Qrr.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="16" Text="{Binding Path=Qrr.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="17" Text="{Binding Path=Rac.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="17" Text="{Binding Path=Rac.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="17" Text="{Binding Path=Rac.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="17" Text="{Binding Path=Rac.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="18" Text="{Binding Path=Rca.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="18" Text="{Binding Path=Rca.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="18" Text="{Binding Path=Rca.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="18" Text="{Binding Path=Rca.value}"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="forParameters:TBHParameters" x:Key="TBH_ParametersTemplate">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="0" Text="{Binding Path=UDRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="0" Text="{Binding Path=UDRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="0" Text="{Binding Path=UDRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="0" Text="{Binding Path=UDRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="1" Text="{Binding Path=URRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="1" Text="{Binding Path=URRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="1" Text="{Binding Path=URRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="1" Text="{Binding Path=URRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="2" Text="{Binding Path=UBO.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="2" Text="{Binding Path=UBO.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="2" Text="{Binding Path=UBO.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="2" Text="{Binding Path=UBO.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="3" Text="{Binding Path=UBR.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="3" Text="{Binding Path=UBR.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="3" Text="{Binding Path=UBR.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="3" Text="{Binding Path=UBR.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="4" Text="{Binding Path=UTM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="4" Text="{Binding Path=UTM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="4" Text="{Binding Path=UTM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="4" Text="{Binding Path=UTM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="5" Text="{Binding Path=ITM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="5" Text="{Binding Path=ITM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="5" Text="{Binding Path=ITM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="5" Text="{Binding Path=ITM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="6" Text="{Binding Path=dUDdt.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="6" Text="{Binding Path=dUDdt.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="6" Text="{Binding Path=dUDdt.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="6" Text="{Binding Path=dUDdt.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="7" Text="{Binding Path=IH.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="7" Text="{Binding Path=IH.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="7" Text="{Binding Path=IH.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="7" Text="{Binding Path=IH.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="8" Text="{Binding Path=tgt.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="8" Text="{Binding Path=tgt.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="8" Text="{Binding Path=tgt.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="8" Text="{Binding Path=tgt.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="9" Text="{Binding Path=UGT.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="9" Text="{Binding Path=UGT.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="9" Text="{Binding Path=UGT.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="9" Text="{Binding Path=UGT.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="10" Text="{Binding Path=IGT.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="10" Text="{Binding Path=IGT.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="10" Text="{Binding Path=IGT.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="10" Text="{Binding Path=IGT.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="11" Text="{Binding Path=Rg.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="11" Text="{Binding Path=Rg.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="11" Text="{Binding Path=Rg.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="11" Text="{Binding Path=Rg.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="12" Text="{Binding Path=IDRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="12" Text="{Binding Path=IDRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="12" Text="{Binding Path=IDRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="12" Text="{Binding Path=IDRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="13" Text="{Binding Path=IRRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="13" Text="{Binding Path=IRRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="13" Text="{Binding Path=IRRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="13" Text="{Binding Path=IRRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="14" Text="{Binding Path=tq.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="14" Text="{Binding Path=tq.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="14" Text="{Binding Path=tq.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="14" Text="{Binding Path=tq.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="15" Text="{Binding Path=trr.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="15" Text="{Binding Path=trr.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="15" Text="{Binding Path=trr.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="15" Text="{Binding Path=trr.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="16" Text="{Binding Path=Qrr.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="16" Text="{Binding Path=Qrr.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="16" Text="{Binding Path=Qrr.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="16" Text="{Binding Path=Qrr.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="17" Text="{Binding Path=Rac.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="17" Text="{Binding Path=Rac.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="17" Text="{Binding Path=Rac.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="17" Text="{Binding Path=Rac.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="18" Text="{Binding Path=Rca.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="18" Text="{Binding Path=Rca.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="18" Text="{Binding Path=Rca.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="18" Text="{Binding Path=Rca.value}"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="forParameters:DParameters" x:Key="D_ParametersTemplate">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="0" Text="{Binding Path=URRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="0" Text="{Binding Path=URRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="0" Text="{Binding Path=URRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="0" Text="{Binding Path=URRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="1" Text="{Binding Path=UBR.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="1" Text="{Binding Path=UBR.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="1" Text="{Binding Path=UBR.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="1" Text="{Binding Path=UBR.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="2" Text="{Binding Path=UFM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="2" Text="{Binding Path=UFM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="2" Text="{Binding Path=UFM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="2" Text="{Binding Path=UFM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="3" Text="{Binding Path=IFM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="3" Text="{Binding Path=IFM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="3" Text="{Binding Path=IFM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="3" Text="{Binding Path=IFM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="4" Text="{Binding Path=IRRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="4" Text="{Binding Path=IRRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="4" Text="{Binding Path=IRRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="4" Text="{Binding Path=IRRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="5" Text="{Binding Path=Rca.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="5" Text="{Binding Path=Rca.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="5" Text="{Binding Path=Rca.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="5" Text="{Binding Path=Rca.value}"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="forParameters:DLParameters" x:Key="DL_ParametersTemplate">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="0" Text="{Binding Path=URRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="0" Text="{Binding Path=URRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="0" Text="{Binding Path=URRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="0" Text="{Binding Path=URRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="1" Text="{Binding Path=UBR.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="1" Text="{Binding Path=UBR.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="1" Text="{Binding Path=UBR.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="1" Text="{Binding Path=UBR.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="2" Text="{Binding Path=UFM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="2" Text="{Binding Path=UFM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="2" Text="{Binding Path=UFM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="2" Text="{Binding Path=UFM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="3" Text="{Binding Path=IFM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="3" Text="{Binding Path=IFM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="3" Text="{Binding Path=IFM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="3" Text="{Binding Path=IFM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="4" Text="{Binding Path=IRRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="4" Text="{Binding Path=IRRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="4" Text="{Binding Path=IRRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="4" Text="{Binding Path=IRRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="5" Text="{Binding Path=PRSM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="5" Text="{Binding Path=PRSM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="5" Text="{Binding Path=PRSM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="5" Text="{Binding Path=PRSM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="6" Text="{Binding Path=Rca.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="6" Text="{Binding Path=Rca.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="6" Text="{Binding Path=Rca.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="6" Text="{Binding Path=Rca.value}"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="forParameters:DHParameters" x:Key="DH_ParametersTemplate">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="0" Text="{Binding Path=URRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="0" Text="{Binding Path=URRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="0" Text="{Binding Path=URRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="0" Text="{Binding Path=URRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="1" Text="{Binding Path=UBR.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="1" Text="{Binding Path=UBR.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="1" Text="{Binding Path=UBR.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="1" Text="{Binding Path=UBR.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="2" Text="{Binding Path=UFM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="2" Text="{Binding Path=UFM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="2" Text="{Binding Path=UFM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="2" Text="{Binding Path=UFM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="3" Text="{Binding Path=IFM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="3" Text="{Binding Path=IFM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="3" Text="{Binding Path=IFM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="3" Text="{Binding Path=IFM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="4" Text="{Binding Path=IRRM.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="4" Text="{Binding Path=IRRM.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="4" Text="{Binding Path=IRRM.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="4" Text="{Binding Path=IRRM.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="5" Text="{Binding Path=trr.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="5" Text="{Binding Path=trr.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="5" Text="{Binding Path=trr.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="5" Text="{Binding Path=trr.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="6" Text="{Binding Path=Qrr.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="6" Text="{Binding Path=Qrr.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="6" Text="{Binding Path=Qrr.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="6" Text="{Binding Path=Qrr.value}"/>
+
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="0" Grid.Column="7" Text="{Binding Path=Rca.temperature.asString, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="1" Grid.Column="7" Text="{Binding Path=Rca.tittleName}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="2" Grid.Column="7" Text="{Binding Path=Rca.um}"/>
+                    <TextBox Style="{StaticResource tbStyle}" Grid.Row="3" Grid.Column="7" Text="{Binding Path=Rca.value}"/>
+                </Grid>
+            </DataTemplate>
+
+        </customControl:ParamTemplateDictionary>
+    </ListView.Resources>
+
+    <ListView.ItemContainerStyle>
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="Focusable" Value="false"/>
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                        <ContentPresenter/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </ListView.ItemContainerStyle>
+
+    <ListView.ItemTemplateSelector>
+        <customControl:TemplateParamSelectorExt TemplateDictionary="{StaticResource paramTemplateDictionary}">
+
+        </customControl:TemplateParamSelectorExt>
+    </ListView.ItemTemplateSelector>
+</ListView>

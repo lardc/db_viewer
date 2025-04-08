@@ -1,0 +1,99 @@
+﻿<Page x:Class="SCME.UI.PagesTech.RACPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:customControl="clr-namespace:SCME.UI.CustomControl" xmlns:ui="clr-namespace:SCME.UI"
+      xmlns:local="clr-namespace:SCME.UI.PagesTech"
+      xmlns:res="clr-namespace:SCME.UI.Properties"
+      mc:Ignorable="d" x:Name="rACPage"
+      d:DesignWidth="1280" d:DesignHeight="924">
+    
+    <Page.Resources>
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource CLabelStyle}">
+            <Setter Property="Padding" Value="5,0,0,0" />
+            <Setter Property="Height" Value="62" />
+        </Style>
+
+        <Style TargetType="{x:Type Button}" BasedOn="{StaticResource CButtonStyle}">
+            <Setter Property="Margin" Value="10,0" />
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="3" Grid.Row="0" Margin="10,0,0,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.RACResVoltage}"/>
+                <customControl:ValidatingTextBox x:Name="vtbResVoltage" Grid.Column="1" Grid.Row="0" Padding="5" Margin="10,9,10,10" TextBlock.TextAlignment="Right" IsNumeric="True" Minimum="1000" Maximum="2500" Text="{Binding Parameters.ResVoltage, ElementName=rACPage, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.RACResultR}"/>
+                <Label Grid.Column="1" Grid.Row="1" Content="0" x:Name="lbResultR" FontSize="{StaticResource FontSize26}" Margin="0,0,7,0" Height="Auto"/>
+
+                <Label Grid.Column="0" x:Name="lblTitleTop" Grid.Row="2" Content="{x:Static res:Resources.TopTempName}" />
+                <Label Grid.Column="1" Grid.Row="2" Content="0" x:Name="TopTempLabel" HorizontalAlignment="Right" Background="LightGreen" Margin="0,0,7,0" />
+
+                <Label Grid.Column="0" x:Name="lblTitleBot" Grid.Row="3" Content="{x:Static res:Resources.BotTempName}" />
+                <Label Grid.Column="1" Grid.Row="3" Content="0" x:Name="BotTempLabel" HorizontalAlignment="Right" Background="LightGreen" Margin="0,0,7,0" />
+            </Grid>
+        </Border>
+
+        <Button x:Name="btnBack" Grid.Column="0" Grid.Row="2" x:FieldModifier="private" Margin="6"                 
+                Content="{x:Static res:Resources.Back}"
+                Click="btnBack_OnClick"/>
+
+        <Button x:Name="btnTemperature" Grid.Column="1" Grid.Row="2" x:FieldModifier="private" Margin="6"               
+                Content="{x:Static res:Resources.SetTemp}"
+                Click="btnTemperature_OnClick"/>
+
+        <Button Grid.Column="2" Grid.Row="2" Margin="6" Background="{StaticResource xRed1}"
+                Content="{x:Static res:Resources.Stop}"
+                Click="btnStop_OnClick"/>
+
+        <Button x:Name="btnStart" Grid.Column="3" Grid.Row="2" x:FieldModifier="private" Margin="6" Background="{StaticResource xGreen1}"
+                Content="{x:Static res:Resources.Start}"
+                Click="btnStart_OnClick"/>
+
+        <Border Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Margin="10,0,0,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="9*"/>
+                </Grid.RowDefinitions>
+               
+                <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" x:Name="lbFaultReason" Content="FaultReason" FontSize="{StaticResource FontSize26}" Background="Tomato"/>
+                <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" x:Name="lbWarning" Content="Warning" FontSize="{StaticResource FontSize26}" Background="Gold"/>
+                <Label Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" x:Name="lbProblem" Content="Problem" FontSize="{StaticResource FontSize26}" Background="LightPink"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
+            
+

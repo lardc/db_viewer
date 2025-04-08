@@ -1,0 +1,283 @@
+﻿<UserControl x:Class="SCME.UI.CustomControl.VirtualKeyboard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             Width="1280" Height="270"
+             Name="vKb"
+             Focusable="True"
+             Background="Transparent">
+    <UserControl.Resources>
+
+        <SolidColorBrush x:Key="Color1" Color="#46444C" />
+
+        <sys:Double x:Key="BSize">65</sys:Double>
+        <sys:Double x:Key="BSizeErase">132</sys:Double>
+        <sys:Double x:Key="BSizeSpace">534</sys:Double>
+
+        <sys:Double x:Key="BOpacity">0.9</sys:Double>
+
+        <PathGeometry x:Key="PgEnter">M 1 0 L 0 1 L 1 2 M 0 1 L 4 1 L 4 0</PathGeometry>
+
+        <PathGeometry x:Key="PgLeft">M 1 0 L 0 1 L 1 2 Z</PathGeometry>
+
+        <PathGeometry x:Key="PgRight">M 0 0 L 1 1 L 0 2 Z</PathGeometry>
+
+        <PathGeometry x:Key="PgBckSpc">M 0 1 L 1 0 L 5 0 L 5 2 L 1 2 Z M 2.5 0.5 L 3.5 1.5 M 2.5 1.5 L 3.5 0.5</PathGeometry>
+
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="Background" Value="{StaticResource Color1}" />
+            <Setter Property="Margin" Value="1" />
+            <Setter Property="Width" Value="{StaticResource BSize}" />
+            <Setter Property="Height" Value="{StaticResource BSize}" />
+            <Setter Property="Foreground" Value="{StaticResource xWhite1}" />
+            <Setter Property="FontFamily" Value="Helvetica Neue LT Std" />
+            <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+            <Setter Property="FontWeight" Value="ExtraLight" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid Width="{TemplateBinding Width}"
+                              Height="{TemplateBinding Height}"
+                              Background="{TemplateBinding Background}"
+                              Margin="{TemplateBinding Margin}">
+                            <TextBlock Grid.Column="0" Grid.Row="0"
+                                       FontFamily="{TemplateBinding FontFamily}"
+                                       FontSize="{StaticResource DefaultFontSize}"
+                                       FontWeight="{TemplateBinding FontWeight}"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       Padding="0"
+                                       Text="{TemplateBinding Content}" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Opacity" Value="{StaticResource BOpacity}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <EventSetter Event="Click" Handler="BNormalClick" />
+        </Style>
+
+        <Style TargetType="{x:Type ComboBox}">
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="Background" Value="{StaticResource Color1}" />
+            <Setter Property="BorderBrush" Value="{StaticResource Color1}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Margin" Value="1" />
+            <Setter Property="Width" Value="{StaticResource BSize}" />
+            <Setter Property="Height" Value="{StaticResource BSize}" />
+            <Setter Property="Foreground" Value="{StaticResource xWhite1}" />
+            <Setter Property="FontFamily" Value="Helvetica Neue LT Std" />
+            <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+            <Setter Property="FontWeight" Value="ExtraLight" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBox}">
+                        <Grid Width="{TemplateBinding Width}"
+                              Height="{TemplateBinding Height}"
+                              Background="{TemplateBinding Background}"
+                              Margin="{TemplateBinding Margin}">
+                            <Popup Name="PART_Popup" AllowsTransparency="True" Placement="Top" PopupAnimation="None"
+                                   IsOpen="{Binding Path=IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}">
+                                <Grid MaxHeight="{TemplateBinding MaxDropDownHeight}" Width="{TemplateBinding Width}"
+                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                                    <Border Background="Gray" BorderBrush="{StaticResource Color1}"
+                                            BorderThickness="2,2,2,0" Margin="0,0,2,0">
+                                        <ScrollViewer>
+                                            <ItemsPresenter Name="ItemsPresenter"
+                                                            KeyboardNavigation.DirectionalNavigation="Contained"
+                                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                        </ScrollViewer>
+                                    </Border>
+                                </Grid>
+                            </Popup>
+
+                            <ToggleButton Background="{TemplateBinding Background}"
+                                          BorderBrush="{TemplateBinding BorderBrush}"
+                                          BorderThickness="{TemplateBinding BorderThickness}"
+                                          IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}">
+                                <ToggleButton.Template>
+                                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                                        <Grid SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                                            <Border Background="{TemplateBinding Background}" />
+                                            <ContentPresenter />
+                                        </Grid>
+                                    </ControlTemplate>
+                                </ToggleButton.Template>
+                            </ToggleButton>
+
+                            <ContentPresenter IsHitTestVisible="false"
+                                              Margin="{TemplateBinding Padding}"
+                                              Content="{TemplateBinding SelectionBoxItem}"
+                                              ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                              ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                              ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="OverridesDefaultStyle" Value="true" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="{StaticResource xWhite1}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="LightGray"></Setter>
+                                <Setter Property="Foreground" Value="{StaticResource Color1}"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                        <TextBlock Text="{TemplateBinding Content}" Background="{TemplateBinding Background}"
+                                   Padding="10,0,0,0" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ControlButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="Background" Value="{StaticResource Color1}" />
+            <Setter Property="Margin" Value="1" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Width" Value="{StaticResource BSize}" />
+            <Setter Property="Height" Value="{StaticResource BSize}" />
+            <Setter Property="Foreground" Value="{StaticResource xWhite1}" />
+            <Setter Property="FontFamily" Value="Helvetica Neue LT Std" />
+            <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+            <Setter Property="FontWeight" Value="ExtraLight" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid Width="{TemplateBinding Width}"
+                              Height="{TemplateBinding Height}"
+                              Background="{TemplateBinding Background}"
+                              Margin="{TemplateBinding Margin}">
+                            <Path Margin="{TemplateBinding Padding}"
+                                  Stretch="Uniform" StrokeThickness="1.5"
+                                  Stroke="{StaticResource xWhite1}"
+                                  Data="{TemplateBinding Content}" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Opacity" Value="{StaticResource BOpacity}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+
+    <ScrollViewer Name="keyboardScrollViewer" VerticalScrollBarVisibility="Hidden"
+                  CanContentScroll="False" Focusable="False"
+                  Width="{Binding ElementName=vKb, Path=ActualWidth}">
+        <StackPanel>
+            <Grid Height="270" />
+            <Grid>
+                <Border Background="Gray" OpacityMask="White" Opacity="0.7"
+                        MouseDown="UIElement_OnMouseDown" />
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="65" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key101}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key102}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key103}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key104}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key105}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key106}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key107}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key108}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key109}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key110}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key111}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key112}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="33,0,0,0">
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key201}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key202}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key203}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key204}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key205}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key206}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key207}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key208}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key209}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key210}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key211}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key301}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key302}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key303}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key304}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key305}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key306}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key307}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key308}" />
+                            <Button Content="{Binding ElementName=vKb, Path=KeyLayout.Key309}" />
+                            <Button Content="{StaticResource PgLeft}" Padding="20"
+                                    Style="{StaticResource ControlButtonStyle}"
+                                    Click="Left_Click" />
+                            <Button Content="{StaticResource PgRight}" Padding="20"
+                                    Style="{StaticResource ControlButtonStyle}"
+                                    Click="Right_Click" />
+                            <Button Content="{StaticResource PgBckSpc}" Padding="8"
+                                    Style="{StaticResource ControlButtonStyle}"
+                                    Click="Backspase_Click" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <ComboBox Name="languageComboBox" SelectionChanged="Selector_OnSelectionChanged" />
+                            <Button Content=" " Width="{StaticResource BSizeSpace}" />
+                            <Button Content="_" />
+                            <Button Content="{StaticResource PgEnter}" Padding="20"
+                                    Style="{StaticResource ControlButtonStyle}"
+                                    Width="{StaticResource BSizeErase}"
+                                    Click="Enter_Click" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="1" />
+                            <Button Content="2" />
+                            <Button Content="3" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="4" />
+                            <Button Content="5" />
+                            <Button Content="6" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="7" />
+                            <Button Content="8" />
+                            <Button Content="9" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="0" Width="{StaticResource BSizeErase}" />
+                            <Button Content="." />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SCME.Service.BroadcastCommunication">
+    <Position X="3" Y="11" Width="2.75" />
+    <Members>
+      <Method Name="HandleSubToDelete" Hidden="true" />
+      <Field Name="m_Subscribers" Hidden="true" />
+      <Field Name="m_SubToDelete" Hidden="true" />
+      <Method Name="TryCatchWrapper" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>CSADBACYAAgEAAAUBICAAABAAACAASEAACggBWEAAEE=</HashCode>
+      <FileName>BroadcastCommunication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.Service.ExternalControlServer" BaseTypeListCollapsed="true">
+    <Position X="22" Y="0.5" Width="3.75" />
+    <Members>
+      <Field Name="m_Communication" Hidden="true" />
+      <Field Name="m_IOMain" Hidden="true" />
+      <Field Name="PRINTING_ENDPOINT_NAME" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>JMoAAAACABAAAAEAhCEhICA4AEgJAZQUYAAKIACAgAA=</HashCode>
+      <FileName>ControlServer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.Service.DatabaseServer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAACBAAAAAEAIAAAAAAAAAgEIIAAAAAAAAAAAAAAhAA=</HashCode>
+      <FileName>DatabaseServer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SCME.Service.LogicContainer">
+    <Position X="0.5" Y="11" Width="2.25" />
+    <Members>
+      <Field Name="m_ClampingSystemConnected" Hidden="true" />
+      <Field Name="m_Communication" Hidden="true" />
+      <Field Name="m_ConnectionState" Hidden="true" />
+      <Field Name="m_IOAdapter" Hidden="true" />
+      <Field Name="m_IOBvt" Hidden="true" />
+      <Field Name="m_IOClamping" Hidden="true" />
+      <Field Name="m_IOCommutation" Hidden="true" />
+      <Field Name="m_IOCommutationEx" Hidden="true" />
+      <Field Name="m_IOdVdt" Hidden="true" />
+      <Field Name="m_IOGate" Hidden="true" />
+      <Field Name="m_IOGateway" Hidden="true" />
+      <Field Name="m_IOStls" Hidden="true" />
+      <Field Name="m_Param" Hidden="true" />
+      <Field Name="m_ParametersBvt" Hidden="true" />
+      <Field Name="m_ParametersdVdt" Hidden="true" />
+      <Field Name="m_ParametersGate" Hidden="true" />
+      <Field Name="m_ParametersSL" Hidden="true" />
+      <Field Name="m_State" Hidden="true" />
+      <Field Name="m_Stop" Hidden="true" />
+      <Field Name="m_Thread" Hidden="true" />
+      <Method Name="MeasurementLogicRoutine" Hidden="true" />
+      <Method Name="Thread_FinishedHandler" Hidden="true" />
+      <Method Name="ThrowFaultException" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>kZkJAAGIESgBAUAAgQKCAIGAIABCLcAaYAVIFA4AgGI=</HashCode>
+      <FileName>LogicContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.Service.SystemHost">
+    <Position X="6" Y="11" Width="1.5" />
+    <Members>
+      <Field Name="ms_ControlService" Hidden="true" />
+      <Field Name="ms_ControlServiceHost" Hidden="true" />
+      <Field Name="ms_DatabaseServiceHost" Hidden="true" />
+      <Field Name="ms_MaintenanceServiceHost" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAARAAAAAAAAAACACwIAAAAAAAAACAAAA=</HashCode>
+      <FileName>SystemHost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.Service.IO.IOAdapter">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="FireConnectionEvent" Hidden="true" />
+      <Field Name="m_Adapter" Hidden="true" />
+      <Field Name="m_Communication" Hidden="true" />
+      <Field Name="m_ConnectionState" Hidden="true" />
+      <Field Name="m_IsAdapterEmulation" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAgBQAAIAAAAASAAAAIAIAAAAAAAAEAAEAEAAABAQAI=</HashCode>
+      <FileName>IO\IOAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.Service.IO.IOBvt">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="ACT_CLEAR_FAULT" Hidden="true" />
+      <Field Name="ACT_CLEAR_WARNING" Hidden="true" />
+      <Field Name="ACT_DISABLE_POWER" Hidden="true" />
+      <Field Name="ACT_ENABLE_POWER" Hidden="true" />
+      <Field Name="ACT_READ_FRAGMENT" Hidden="true" />
+      <Field Name="ACT_READ_MOVE_BACK" Hidden="true" />
+      <Field Name="ACT_SAVE_TO_ROM" Hidden="true" />
+      <Field Name="ACT_START_TEST" Hidden="true" />
+      <Field Name="ACT_STOP" Hidden="true" />
+      <Field Name="ARR_SCOPE_I" Hidden="true" />
+      <Field Name="ARR_SCOPE_V" Hidden="true" />
+      <Method Name="ClearWarning" Hidden="true" />
+      <Field Name="EMU_DEFAULT_IDRM" Hidden="true" />
+      <Field Name="EMU_DEFAULT_IRRM" Hidden="true" />
+      <Field Name="EMU_DEFAULT_VDRM" Hidden="true" />
+      <Field Name="EMU_DEFAULT_VRRM" Hidden="true" />
+      <Method Name="FireBvtAllEvent" Hidden="true" />
+      <Method Name="FireBvtDirectEvent" Hidden="true" />
+      <Method Name="FireBvtReverseEvent" Hidden="true" />
+      <Method Name="FireConnectionEvent" Hidden="true" />
+      <Method Name="FireExceptionEvent" Hidden="true" />
+      <Method Name="FireNotificationEvent" Hidden="true" />
+      <Field Name="m_Communication" Hidden="true" />
+      <Field Name="m_ConnectionState" Hidden="true" />
+      <Field Name="m_IOAdapter" Hidden="true" />
+      <Field Name="m_IOCommutation" Hidden="true" />
+      <Field Name="m_IsBVTEmulation" Hidden="true" />
+      <Field Name="m_IsBVTEmulationHard" Hidden="true" />
+      <Field Name="m_Node" Hidden="true" />
+      <Field Name="m_Parameters" Hidden="true" />
+      <Field Name="m_ReadGraph" Hidden="true" />
+      <Field Name="m_Result" Hidden="true" />
+      <Field Name="m_State" Hidden="true" />
+      <Field Name="m_Stop" Hidden="true" />
+      <Field Name="m_Timeout" Hidden="true" />
+      <Field Name="MEASURE_MODE_I" Hidden="true" />
+      <Field Name="MEASURE_MODE_V" Hidden="true" />
+      <Field Name="MEASURE_TYPE_AC_D" Hidden="true" />
+      <Field Name="MEASURE_TYPE_AC_R" Hidden="true" />
+      <Method Name="MeasurementLogicRoutine" Hidden="true" />
+      <Method Name="ReadArrays" Hidden="true" />
+      <Field Name="REG_DEVICE_STATE" Hidden="true" />
+      <Field Name="REG_DISABLE_REASON" Hidden="true" />
+      <Field Name="REG_FAULT_REASON" Hidden="true" />
+      <Field Name="REG_FREQUENCY_DIVISOR" Hidden="true" />
+      <Field Name="REG_LIMIT_CURRENT" Hidden="true" />
+      <Field Name="REG_LIMIT_VOLTAGE" Hidden="true" />
+      <Field Name="REG_MEASUREMENT_MODE" Hidden="true" />
+      <Field Name="REG_MEASUREMENT_TYPE" Hidden="true" />
+      <Field Name="REG_PLATE_TIME" Hidden="true" />
+      <Field Name="REG_PROBLEM" Hidden="true" />
+      <Field Name="REG_RAMPUP_RATE" Hidden="true" />
+      <Field Name="REG_RESULT_I" Hidden="true" />
+      <Field Name="REG_RESULT_V" Hidden="true" />
+      <Field Name="REG_S1_CURRENT1_FINE_D" Hidden="true" />
+      <Field Name="REG_S1_CURRENT1_FINE_N" Hidden="true" />
+      <Field Name="REG_S1_CURRENT2_FINE_D" Hidden="true" />
+      <Field Name="REG_S1_CURRENT2_FINE_N" Hidden="true" />
+      <Field Name="REG_S1_VOLTAGE1_FINE_D" Hidden="true" />
+      <Field Name="REG_S1_VOLTAGE1_FINE_N" Hidden="true" />
+      <Field Name="REG_S1_VOLTAGE2_FINE_D" Hidden="true" />
+      <Field Name="REG_S1_VOLTAGE2_FINE_N" Hidden="true" />
+      <Field Name="REG_START_VOLTAGE" Hidden="true" />
+      <Field Name="REG_TEST_FINISHED" Hidden="true" />
+      <Field Name="REG_VOLTAGE_FREQUENCY" Hidden="true" />
+      <Field Name="REG_WARNING" Hidden="true" />
+      <Field Name="REQUEST_DELAY_MS" Hidden="true" />
+      <Method Name="WaitForEndOfTest" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>uQlCxXIEECZJASJKkQICAIDiBFIgEcQpMgUABBAGBFo=</HashCode>
+      <FileName>IO\IOBvt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.Service.IO.IOClamping">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="ACT_CLAMPING_UPDATE" Hidden="true" />
+      <Field Name="ACT_CLEAR_FAULT" Hidden="true" />
+      <Field Name="ACT_CLEAR_WARNING" Hidden="true" />
+      <Field Name="ACT_GOTO_POSITION" Hidden="true" />
+      <Field Name="ACT_HALT" Hidden="true" />
+      <Field Name="ACT_HOMING" Hidden="true" />
+      <Field Name="ACT_RELEASE_CLAMPING" Hidden="true" />
+      <Field Name="ACT_SAVE_TO_ROM" Hidden="true" />
+      <Field Name="ACT_START_CLAMPING" Hidden="true" />
+      <Field Name="ARR_FORCE_ACT" Hidden="true" />
+      <Field Name="ARR_FORCE_DESIRED" Hidden="true" />
+      <Field Name="ARR_FORCE_ERR" Hidden="true" />
+      <Method Name="FireConnectionEvent" Hidden="true" />
+      <Method Name="FireExceptionEvent" Hidden="true" />
+      <Method Name="FireNotificationEvent" Hidden="true" />
+      <Method Name="FireSwitchEvent" Hidden="true" />
+      <Field Name="m_Communication" Hidden="true" />
+      <Field Name="m_ConnectionState" Hidden="true" />
+      <Field Name="m_IOAdapter" Hidden="true" />
+      <Field Name="m_IsClampingEmulation" Hidden="true" />
+      <Field Name="m_IsClampingEmulationHard" Hidden="true" />
+      <Field Name="m_Node" Hidden="true" />
+      <Field Name="m_Stop" Hidden="true" />
+      <Field Name="m_Timeout" Hidden="true" />
+      <Method Name="ReadArrayFast" Hidden="true" />
+      <Field Name="REG_CUSTOM_POS" Hidden="true" />
+      <Field Name="REG_DEVICE_STATE" Hidden="true" />
+      <Field Name="REG_DISABLE_REASON" Hidden="true" />
+      <Field Name="REG_FAULT_REASON" Hidden="true" />
+      <Field Name="REG_FORCE_FINE_D" Hidden="true" />
+      <Field Name="REG_FORCE_FINE_N" Hidden="true" />
+      <Field Name="REG_FORCE_OFFSET" Hidden="true" />
+      <Field Name="REG_FORCE_RESULT" Hidden="true" />
+      <Field Name="REG_FORCE_VAL" Hidden="true" />
+      <Field Name="REG_PROBLEM" Hidden="true" />
+      <Field Name="REG_WARNING" Hidden="true" />
+      <Method Name="WaitForEndOfTest" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>mRkDgokAEARAEZNBUQIAQIZSwgAADMApeSUBAhgmAMo=</HashCode>
+      <FileName>IO\IOClamping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.Service.IO.IOCommutation">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="ACT_CLEAR_FAULT" Hidden="true" />
+      <Field Name="ACT_CLEAR_WARNING" Hidden="true" />
+      <Field Name="ACT_COMM2_BVT_D" Hidden="true" />
+      <Field Name="ACT_COMM2_BVT_R" Hidden="true" />
+      <Field Name="ACT_COMM2_GATE" Hidden="true" />
+      <Field Name="ACT_COMM2_NONE" Hidden="true" />
+      <Field Name="ACT_COMM2_SL" Hidden="true" />
+      <Field Name="ACT_COMM6_BVT_D" Hidden="true" />
+      <Field Name="ACT_COMM6_BVT_R" Hidden="true" />
+      <Field Name="ACT_COMM6_GATE" Hidden="true" />
+      <Field Name="ACT_COMM6_NONE" Hidden="true" />
+      <Field Name="ACT_COMM6_SL" Hidden="true" />
+      <Field Name="ACT_DISABLE_POWER" Hidden="true" />
+      <Field Name="ACT_ENABLE_POWER" Hidden="true" />
+      <Method Name="ClearWarning" Hidden="true" />
+      <Method Name="FireConnectionEvent" Hidden="true" />
+      <Method Name="FireExceptionEvent" Hidden="true" />
+      <Method Name="FireNotificationEvent" Hidden="true" />
+      <Method Name="FireSwitchEvent" Hidden="true" />
+      <Field Name="m_Communication" Hidden="true" />
+      <Field Name="m_ConnectionState" Hidden="true" />
+      <Field Name="m_ID" Hidden="true" />
+      <Field Name="m_IOAdapter" Hidden="true" />
+      <Field Name="m_IsCommutationEmulation" Hidden="true" />
+      <Field Name="m_Node" Hidden="true" />
+      <Field Name="m_Type6" Hidden="true" />
+      <Field Name="REG_DEVICE_STATE" Hidden="true" />
+      <Field Name="REG_DISABLE_REASON" Hidden="true" />
+      <Field Name="REG_FAULT_REASON" Hidden="true" />
+      <Field Name="REG_MODULE_POSITION" Hidden="true" />
+      <Field Name="REG_MODULE_TYPE" Hidden="true" />
+      <Field Name="REG_WARNING" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>kQkAgQAAEAQAAYAACQIIAETAAAAAAMIhEAREAIAEAQI=</HashCode>
+      <FileName>IO\IOCommutation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.Service.IO.IOGate">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="ACT_CALIBRATE_GATE" Hidden="true" />
+      <Field Name="ACT_CALIBRATE_HOLDING" Hidden="true" />
+      <Field Name="ACT_CLEAR_FAULT" Hidden="true" />
+      <Field Name="ACT_CLEAR_WARNING" Hidden="true" />
+      <Field Name="ACT_SAVE_TO_ROM" Hidden="true" />
+      <Field Name="ACT_START_GATE" Hidden="true" />
+      <Field Name="ACT_START_IH" Hidden="true" />
+      <Field Name="ACT_START_IL" Hidden="true" />
+      <Field Name="ACT_START_KELVIN" Hidden="true" />
+      <Field Name="ACT_START_RG" Hidden="true" />
+      <Field Name="ARR_SCOPE1_DATA" Hidden="true" />
+      <Field Name="ARR_SCOPE2_DATA" Hidden="true" />
+      <Field Name="CAL_WAIT_TIME_MS" Hidden="true" />
+      <Method Name="ClearWarning" Hidden="true" />
+      <Field Name="DEFAULT_TIMEOUT" Hidden="true" />
+      <Field Name="EMU_DEFAULT_IGT" Hidden="true" />
+      <Field Name="EMU_DEFAULT_IH" Hidden="true" />
+      <Field Name="EMU_DEFAULT_IL" Hidden="true" />
+      <Field Name="EMU_DEFAULT_KELVIN" Hidden="true" />
+      <Field Name="EMU_DEFAULT_RESISTANCE" Hidden="true" />
+      <Field Name="EMU_DEFAULT_VGT" Hidden="true" />
+      <Method Name="FireAllEvent" Hidden="true" />
+      <Method Name="FireConnectionEvent" Hidden="true" />
+      <Method Name="FireExceptionEvent" Hidden="true" />
+      <Method Name="FireGateEvent" Hidden="true" />
+      <Method Name="FireIHEvent" Hidden="true" />
+      <Method Name="FireILEvent" Hidden="true" />
+      <Method Name="FireKelvinEvent" Hidden="true" />
+      <Method Name="FireNotificationEvent" Hidden="true" />
+      <Method Name="FireResistanceEvent" Hidden="true" />
+      <Method Name="IgtVgt" Hidden="true" />
+      <Method Name="Ih" Hidden="true" />
+      <Method Name="Il" Hidden="true" />
+      <Method Name="Kelvin" Hidden="true" />
+      <Field Name="m_Communication" Hidden="true" />
+      <Field Name="m_ConnectionState" Hidden="true" />
+      <Field Name="m_IOAdapter" Hidden="true" />
+      <Field Name="m_IOCommutation" Hidden="true" />
+      <Field Name="m_IsGateEmulation" Hidden="true" />
+      <Field Name="m_IsGateEmulationHard" Hidden="true" />
+      <Field Name="m_Node" Hidden="true" />
+      <Field Name="m_Parameter" Hidden="true" />
+      <Field Name="m_ReadGraph" Hidden="true" />
+      <Field Name="m_Result" Hidden="true" />
+      <Field Name="m_State" Hidden="true" />
+      <Field Name="m_Stop" Hidden="true" />
+      <Field Name="m_Timeout" Hidden="true" />
+      <Method Name="MeasurementLogicRoutine" Hidden="true" />
+      <Method Name="ReadArrayFastS" Hidden="true" />
+      <Field Name="REG_CAL_CURRENT" Hidden="true" />
+      <Field Name="REG_DEVICE_STATE" Hidden="true" />
+      <Field Name="REG_DISABLE_REASON" Hidden="true" />
+      <Field Name="REG_FAULT_REASON" Hidden="true" />
+      <Field Name="REG_GATE_FINE_IGT_D" Hidden="true" />
+      <Field Name="REG_GATE_FINE_IGT_N" Hidden="true" />
+      <Field Name="REG_GATE_FINE_IHL_D" Hidden="true" />
+      <Field Name="REG_GATE_FINE_IHL_N" Hidden="true" />
+      <Field Name="REG_GATE_FINE_VGT_D" Hidden="true" />
+      <Field Name="REG_GATE_FINE_VGT_N" Hidden="true" />
+      <Field Name="REG_GATE_IGT_OFFSET" Hidden="true" />
+      <Field Name="REG_GATE_IHL_OFFSET" Hidden="true" />
+      <Field Name="REG_GATE_VGT_OFFSET" Hidden="true" />
+      <Field Name="REG_GATE_VGT_PURE" Hidden="true" />
+      <Field Name="REG_KELVIN12" Hidden="true" />
+      <Field Name="REG_KELVIN14" Hidden="true" />
+      <Field Name="REG_KELVIN32" Hidden="true" />
+      <Field Name="REG_KELVIN41" Hidden="true" />
+      <Field Name="REG_PROBLEM" Hidden="true" />
+      <Field Name="REG_RES_CAL_CURRENT" Hidden="true" />
+      <Field Name="REG_RES_CAL_VOLTAGE" Hidden="true" />
+      <Field Name="REG_RESULT_IGT" Hidden="true" />
+      <Field Name="REG_RESULT_IH" Hidden="true" />
+      <Field Name="REG_RESULT_IL" Hidden="true" />
+      <Field Name="REG_RESULT_KELVIN" Hidden="true" />
+      <Field Name="REG_RESULT_RG" Hidden="true" />
+      <Field Name="REG_RESULT_VGT" Hidden="true" />
+      <Field Name="REG_RG_CURRENT" Hidden="true" />
+      <Field Name="REG_SCOPE1_TYPE" Hidden="true" />
+      <Field Name="REG_SCOPE2_TYPE" Hidden="true" />
+      <Field Name="REG_TEST_FINISHED" Hidden="true" />
+      <Field Name="REG_USE_HOLD_STRIKE" Hidden="true" />
+      <Field Name="REG_WARNING" Hidden="true" />
+      <Field Name="REQUEST_DELAY_MS" Hidden="true" />
+      <Method Name="Resistance" Hidden="true" />
+      <Field Name="SCOPE_I" Hidden="true" />
+      <Field Name="SCOPE_V" Hidden="true" />
+      <Method Name="WaitForEndOfTest" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>/QkOgACIkq9DAQBAkzIBDg7y5JIgRuE5tCQQAEAMAgo=</HashCode>
+      <FileName>IO\IOGate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.Service.IO.IOGateway">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="ACT_CLEAR_FAULT" Hidden="true" />
+      <Field Name="ACT_CLEAR_WARNING" Hidden="true" />
+      <Method Name="FireButtonEvent" Hidden="true" />
+      <Method Name="FireConnectionEvent" Hidden="true" />
+      <Method Name="FireExceptionEvent" Hidden="true" />
+      <Method Name="FireNotificationEvent" Hidden="true" />
+      <Field Name="m_ButtonStates" Hidden="true" />
+      <Field Name="m_Communication" Hidden="true" />
+      <Field Name="m_ConnectionState" Hidden="true" />
+      <Field Name="m_IOAdapter" Hidden="true" />
+      <Field Name="m_IsGatewayEmulation" Hidden="true" />
+      <Field Name="m_Node" Hidden="true" />
+      <Field Name="m_Thread" Hidden="true" />
+      <Field Name="REG_DEVICE_STATE" Hidden="true" />
+      <Field Name="REG_DISABLE_REASON" Hidden="true" />
+      <Field Name="REG_FAULT_REASON" Hidden="true" />
+      <Field Name="REG_LAMP1" Hidden="true" />
+      <Field Name="REG_LAMP2" Hidden="true" />
+      <Field Name="REG_LAMP3" Hidden="true" />
+      <Field Name="REG_SENSOR1" Hidden="true" />
+      <Field Name="REG_SENSOR2" Hidden="true" />
+      <Field Name="REG_SENSOR3" Hidden="true" />
+      <Field Name="REG_SENSOR4" Hidden="true" />
+      <Field Name="REG_WARNING" Hidden="true" />
+      <Field Name="REQUEST_DELAY_MS" Hidden="true" />
+      <Method Name="Thread_FinishedHandler" Hidden="true" />
+      <Method Name="ThreadWorker" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>mSkAgAAAEARAgQAAQQIAABAABAEABMAhEGQAAAgEAAI=</HashCode>
+      <FileName>IO\IOGateway.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.Service.IO.IOStLs">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="ACT_CLEAR_FAULT" Hidden="true" />
+      <Field Name="ACT_CLEAR_WARNING" Hidden="true" />
+      <Field Name="ACT_DISABLE_POWER" Hidden="true" />
+      <Field Name="ACT_ENABLE_POWER" Hidden="true" />
+      <Field Name="ACT_RUN_SELF_TEST" Hidden="true" />
+      <Field Name="ACT_SAVE_TO_ROM" Hidden="true" />
+      <Field Name="ACT_START_TEST" Hidden="true" />
+      <Field Name="ACT_STOP" Hidden="true" />
+      <Field Name="ARR_SCOPE_DESIRED" Hidden="true" />
+      <Field Name="ARR_SCOPE_ITM" Hidden="true" />
+      <Field Name="ARR_SCOPE_VTM" Hidden="true" />
+      <Field Name="ARR_SELF_TEST" Hidden="true" />
+      <Field Name="EMU_DEFAULT_VTM" Hidden="true" />
+      <Method Name="FireConnectionEvent" Hidden="true" />
+      <Method Name="FireExceptionEvent" Hidden="true" />
+      <Method Name="FireNotificationEvent" Hidden="true" />
+      <Method Name="FireVTMEvent" Hidden="true" />
+      <Field Name="m_Communication" Hidden="true" />
+      <Field Name="m_ConnectionState" Hidden="true" />
+      <Field Name="m_IOAdapter" Hidden="true" />
+      <Field Name="m_IOCommutation" Hidden="true" />
+      <Field Name="m_IsSLEmulation" Hidden="true" />
+      <Field Name="m_IsSLEmulationHard" Hidden="true" />
+      <Field Name="m_Node" Hidden="true" />
+      <Field Name="m_Parameter" Hidden="true" />
+      <Field Name="m_ReadGraph" Hidden="true" />
+      <Field Name="m_Result" Hidden="true" />
+      <Field Name="m_State" Hidden="true" />
+      <Field Name="m_Stop" Hidden="true" />
+      <Field Name="m_Timeout" Hidden="true" />
+      <Field Name="MEASURE_RAMP" Hidden="true" />
+      <Field Name="MEASURE_S_CURVE" Hidden="true" />
+      <Field Name="MEASURE_SIN" Hidden="true" />
+      <Method Name="MeasurementLogicRoutine" Hidden="true" />
+      <Field Name="REG_DEVICE_STATE" Hidden="true" />
+      <Field Name="REG_DISABLE_REASON" Hidden="true" />
+      <Field Name="REG_DISABLE_VTM_PP" Hidden="true" />
+      <Field Name="REG_FAULT_REASON" Hidden="true" />
+      <Field Name="REG_HEATING_CURRENT" Hidden="true" />
+      <Field Name="REG_HEATING_ENABLE" Hidden="true" />
+      <Field Name="REG_HEATING_TIME" Hidden="true" />
+      <Field Name="REG_ITM_FINE_D" Hidden="true" />
+      <Field Name="REG_ITM_FINE_N" Hidden="true" />
+      <Field Name="REG_MEASUREMENT_TYPE" Hidden="true" />
+      <Field Name="REG_PREDICT_PARAM_K1" Hidden="true" />
+      <Field Name="REG_PREDICT_PARAM_K2" Hidden="true" />
+      <Field Name="REG_PROBLEM" Hidden="true" />
+      <Field Name="REG_RAMP_DESIRED_CURRENT" Hidden="true" />
+      <Field Name="REG_RAMP_DESIRED_TIME" Hidden="true" />
+      <Field Name="REG_REPETITION_COUNT" Hidden="true" />
+      <Field Name="REG_SCURVE_ADD_TIME" Hidden="true" />
+      <Field Name="REG_SCURVE_DESIRED_CURRENT" Hidden="true" />
+      <Field Name="REG_SCURVE_DESIRED_TIME" Hidden="true" />
+      <Field Name="REG_SCURVE_FACTOR" Hidden="true" />
+      <Field Name="REG_SELF_TEST_RESULT" Hidden="true" />
+      <Field Name="REG_SIN_DESIRED_CURRENT" Hidden="true" />
+      <Field Name="REG_SIN_DESIRED_TIME" Hidden="true" />
+      <Field Name="REG_TEST_FINISHED" Hidden="true" />
+      <Field Name="REG_TEST_RESULT" Hidden="true" />
+      <Field Name="REG_USE_FULL_SCALE" Hidden="true" />
+      <Field Name="REG_V11" Hidden="true" />
+      <Field Name="REG_V12" Hidden="true" />
+      <Field Name="REG_V21" Hidden="true" />
+      <Field Name="REG_V22" Hidden="true" />
+      <Field Name="REG_V31" Hidden="true" />
+      <Field Name="REG_V32" Hidden="true" />
+      <Field Name="REG_V41" Hidden="true" />
+      <Field Name="REG_V42" Hidden="true" />
+      <Field Name="REG_V51" Hidden="true" />
+      <Field Name="REG_V52" Hidden="true" />
+      <Field Name="REG_VTM_FINE_D" Hidden="true" />
+      <Field Name="REG_VTM_FINE_N" Hidden="true" />
+      <Field Name="REG_VTM_FINE2_D" Hidden="true" />
+      <Field Name="REG_VTM_FINE2_N" Hidden="true" />
+      <Field Name="REG_VTM_OFFSET" Hidden="true" />
+      <Field Name="REG_WARNING" Hidden="true" />
+      <Field Name="REQUEST_DELAY_MS" Hidden="true" />
+      <Method Name="WaitForEndOfTest" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>mQ0qgQIAUKRLQSBJ0SJYA4DiBRYoAMFpOAQEQAJGBAo=</HashCode>
+      <FileName>IO\IOStLs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.Service.IO.IoSctu">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>sQEKCBCAEWwBAQAAGQLIAADCIACIAMAAMQQJUIAAAAA=</HashCode>
+      <FileName>IO\IoSctu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.Service.IO.IOdVdt">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>mYlCgRAAFCZBASBAAQIAAADCBRIAAMApMAQAAAAGAAI=</HashCode>
+      <FileName>IO\IOdVdt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

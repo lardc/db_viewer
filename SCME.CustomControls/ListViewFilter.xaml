@@ -1,0 +1,285 @@
+﻿<ListView x:Class="SCME.CustomControls.ListViewFilters"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:common="clr-namespace:SCME.Common;assembly=Common"
+        xmlns:local="clr-namespace:SCME.CustomControls"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit">
+
+    <ListView.Resources>
+        <common:ObjectToBoolConverter x:Key="OBJ2B"/>
+
+        <Style x:Key="delFilterPath" TargetType="Path">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Data" Value="M 0 0 L 20 20 M 0 20 L 20 0"/>
+            <Setter Property="StrokeThickness" Value="2"/>
+            <Setter Property="Stroke" Value="Red"/>
+            <Setter Property="Stretch" Value="Uniform"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+        </Style>
+
+        <Style x:Key="ButtonDateTimePickerOpenPath" TargetType="Path">
+            <Setter Property="Data" Value="M 0 11 L 22 11"/>
+            <Setter Property="StrokeThickness" Value="10"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Stroke" Value="White"/>
+            <Setter Property="Stretch" Value="Uniform"/>
+        </Style>
+
+        <Style x:Key="labelTittleFilterName" TargetType="Label">
+            <Setter Property="Background" Value="{StaticResource CustomBlue1}"/>
+            <Setter Property="Content" Value="{Binding Path=TittlefieldName}"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <local:FilterDataTemplateDictionary x:Key="filterDataTemplateDictionary">
+            <DataTemplate DataType="local:FilterDescription" x:Key="valuesInComboBoxFilterTemplate">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="0.62*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="BtDeleteSelectedFilter" Grid.Column="0" Height="27" Width="{Binding ElementName=BtDeleteSelectedFilter, Path=ActualHeight}"
+                            Click="BtDeleteSelectedFilter_Click" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListViewItem}}}">
+                        <Path Style="{StaticResource delFilterPath}"/>
+                    </Button>
+
+                    <Label Grid.Column="1" Style="{StaticResource labelTittleFilterName}"/>
+
+                    <ComboBox Grid.Column="2" IsReadOnly="True" IsEditable="True" Width="40" VerticalContentAlignment="Center" Text="{Binding Path=Comparison, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ComboBoxItem Content="="/>
+                    </ComboBox>
+
+                    <ComboBox Grid.Column="3" FontSize="14" VerticalContentAlignment="Center" ItemsSource="{Binding Path=ListOfValues}" Text="{Binding Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="local:FilterDescription" x:Key="listOfValuesFilterTemplate">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="0.62*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="BtDeleteSelectedFilter" Grid.Column="0" Height="27" Width="{Binding ElementName=BtDeleteSelectedFilter, Path=ActualHeight}"
+                            Click="BtDeleteSelectedFilter_Click" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListViewItem}}}">
+                        <Path Style="{StaticResource delFilterPath}"/>
+                    </Button>
+
+                    <Label Grid.Column="1" Style="{StaticResource labelTittleFilterName}"/>
+                    <Button Grid.Column="2" Content="=" Background="White" Width="40" VerticalContentAlignment="Center" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListViewItem}}}" Click="BtNewValue_Click"/>
+                    <local:ListViewFilterValues Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" ItemsSource="{Binding Path=Values}"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="local:FilterDescription" x:Key="stringFilterTemplate">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="0.62*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="BtDeleteSelectedFilter" Grid.Column="0" Height="27" Width="{Binding ElementName=BtDeleteSelectedFilter, Path=ActualHeight}"
+                            Click="BtDeleteSelectedFilter_Click" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListViewItem}}}">
+                        <Path Style="{StaticResource delFilterPath}"/>
+                    </Button>
+
+                    <Label Grid.Column="1" Style="{StaticResource labelTittleFilterName}"/>
+
+                    <ComboBox Grid.Column="2" IsReadOnly="True" IsEditable="True" Width="40" VerticalContentAlignment="Center" Text="{Binding Path=Comparison, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ComboBoxItem Content="="/>
+                        <ComboBoxItem Content="&lt;"/>
+                        <ComboBoxItem Content=">"/>
+                        <ComboBoxItem Content="&lt;="/>
+                        <ComboBoxItem Content=">="/>
+                    </ComboBox>
+
+                    <TextBox Grid.Column="3" FontSize="14" VerticalContentAlignment="Center" Text="{Binding Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="local:FilterDescription" x:Key="dateFilterTemplate">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="0.62*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="BtDeleteSelectedFilter" Grid.Column="0" Height="27" Width="{Binding ElementName=BtDeleteSelectedFilter, Path=ActualHeight}"
+                            Click="BtDeleteSelectedFilter_Click" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListViewItem}}}">
+                        <Path Style="{StaticResource delFilterPath}"/>
+                    </Button>
+
+                    <Label Grid.Column="1" Style="{StaticResource labelTittleFilterName}"/>
+
+                    <ComboBox Grid.Column="2" IsReadOnly="True" IsEditable="True" Width="40" VerticalContentAlignment="Center" Text="{Binding Path=Comparison, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ComboBoxItem Content="="/>
+                        <ComboBoxItem Content="&lt;"/>
+                        <ComboBoxItem Content=">"/>
+                        <ComboBoxItem Content="&lt;="/>
+                        <ComboBoxItem Content=">="/>
+                    </ComboBox>
+
+                    <local:DatePickerCustom Grid.Column="3" FontSize="14" Text="{Binding Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, StringFormat=dd.MM.yyyy}"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="local:FilterDescription" x:Key="dateTimeFilterTemplate">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="0.62*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="BtDeleteSelectedFilter" Grid.Column="0" Height="27" Width="{Binding ElementName=BtDeleteSelectedFilter, Path=ActualHeight}"
+                            Click="BtDeleteSelectedFilter_Click" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListViewItem}}}">
+                        <Path Style="{StaticResource delFilterPath}"/>
+                    </Button>
+
+                    <Label Grid.Column="1" Style="{StaticResource labelTittleFilterName}"/>
+
+                    <ComboBox Grid.Column="2" IsReadOnly="True" IsEditable="True" Width="40" VerticalContentAlignment="Center" Text="{Binding Path=Comparison, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ComboBoxItem Content="="/>
+                        <ComboBoxItem Content="&lt;"/>
+                        <ComboBoxItem Content=">"/>
+                        <ComboBoxItem Content="&lt;="/>
+                        <ComboBoxItem Content=">="/>
+                    </ComboBox>
+
+                    <Grid Grid.Column="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- не нашёл настройку отображения кнопки вызова отображения календаря DateTimePicker справа, прижатой к правой стороне формы
+                             поэтому выключил отображение стандартной кнопки вызова календаря и сделал свою -->
+                        <xctk:DateTimePicker x:Name="DtPicker" Grid.Column="0" FontSize="14" HorizontalAlignment="Left" TimePickerVisibility="Visible" ShowButtonSpinner="False" ShowDropDownButton="False" TimePickerShowButtonSpinner="False" BorderThickness="0" Format="Custom" FormatString="dd.MM.yyyy HH:mm:ss" TimeFormat="LongTime" Value="{Binding Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, StringFormat=dd.MM.yyyy HH:mm:ss}"/>
+
+                        <Button x:Name="BtDateTimePicker" Grid.Column="1" Margin="0,0,5,0" Height="22" Width="24" Tag="{Binding ElementName=DtPicker}" Click="BtDateTimePickerClick">
+                            <Path Style="{StaticResource ButtonDateTimePickerOpenPath}"/>
+                        </Button>
+
+                        <Rectangle Grid.Column="0" Grid.ColumnSpan="2" Stroke="Gray" StrokeThickness="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                    </Grid>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="local:FilterDescription" x:Key="intFilterTemplate">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="0.62*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="BtDeleteSelectedFilter" Grid.Column="0" Height="27" Width="{Binding ElementName=BtDeleteSelectedFilter, Path=ActualHeight}"
+                            Click="BtDeleteSelectedFilter_Click" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListViewItem}}}">
+                        <Path Style="{StaticResource delFilterPath}"/>
+                    </Button>
+
+                    <Label Grid.Column="1" Style="{StaticResource labelTittleFilterName}"/>
+
+                    <ComboBox Grid.Column="2" IsReadOnly="True" IsEditable="True" Width="40" VerticalContentAlignment="Center" Text="{Binding Path=Comparison, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ComboBoxItem Content="="/>
+                        <ComboBoxItem Content="&lt;"/>
+                        <ComboBoxItem Content=">"/>
+                        <ComboBoxItem Content="&lt;="/>
+                        <ComboBoxItem Content=">="/>
+                    </ComboBox>
+
+                    <TextBox Grid.Column="3" FontSize="14" VerticalContentAlignment="Center" Text="{Binding Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="TbOnlyNumeric_PreviewTextInput" DataObject.Pasting="TbOnlyNumericPaste" PreviewKeyDown="TbDisableSpace_PreviewKeyDown"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="local:FilterDescription" x:Key="doubleFilterTemplate">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="0.62*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="BtDeleteSelectedFilter" Grid.Column="0" Height="27" Width="{Binding ElementName=BtDeleteSelectedFilter, Path=ActualHeight}"
+                            Click="BtDeleteSelectedFilter_Click" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListViewItem}}}">
+                        <Path Style="{StaticResource delFilterPath}"/>
+                    </Button>
+
+                    <Label Grid.Column="1" Style="{StaticResource labelTittleFilterName}"/>
+
+                    <ComboBox Grid.Column="2" IsReadOnly="True" IsEditable="True" Width="40" VerticalContentAlignment="Center" Text="{Binding Path=Comparison, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ComboBoxItem Content="="/>
+                        <ComboBoxItem Content="&lt;"/>
+                        <ComboBoxItem Content=">"/>
+                        <ComboBoxItem Content="&lt;="/>
+                        <ComboBoxItem Content=">="/>
+                    </ComboBox>
+
+                    <TextBox Grid.Column="3" FontSize="14" VerticalContentAlignment="Center" Text="{Binding Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="TbOnlyDouble_PreviewTextInput" DataObject.Pasting="TbOnlyDoublePaste" PreviewKeyDown="TbDisableSpace_PreviewKeyDown"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate DataType="local:FilterDescription" x:Key="boolFilterTemplate">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="0.62*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="BtDeleteSelectedFilter" Grid.Column="0" Height="27" Width="{Binding ElementName=BtDeleteSelectedFilter, Path=ActualHeight}"
+                            Click="BtDeleteSelectedFilter_Click" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListViewItem}}}">
+                        <Path Style="{StaticResource delFilterPath}"/>
+                    </Button>
+
+                    <Label Grid.Column="1" Style="{StaticResource labelTittleFilterName}"/>
+
+                    <ComboBox Grid.Column="2" IsReadOnly="True" IsEditable="True" Width="40" VerticalContentAlignment="Center" Text="{Binding Path=Comparison, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ComboBoxItem />
+                        <ComboBoxItem Content="="/>
+                    </ComboBox>
+
+                    <CheckBox Grid.Column="3" IsThreeState="False" IsChecked="{Binding Path=Value, Converter={StaticResource OBJ2B}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <CheckBox.LayoutTransform>
+                            <ScaleTransform ScaleX="2" ScaleY="2"/>
+                        </CheckBox.LayoutTransform>
+                    </CheckBox>
+                </Grid>
+            </DataTemplate>
+        </local:FilterDataTemplateDictionary>
+    </ListView.Resources>
+
+    <ListView.ItemContainerStyle>
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="Focusable" Value="false"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                        <ContentPresenter/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </ListView.ItemContainerStyle>
+
+    <ListView.ItemTemplateSelector>
+        <local:FilterTemplateSelectorExt FilterTemplateDictionary="{StaticResource filterDataTemplateDictionary}"/>
+    </ListView.ItemTemplateSelector>
+</ListView>

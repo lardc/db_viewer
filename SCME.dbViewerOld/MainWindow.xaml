@@ -1,0 +1,54 @@
+﻿<Window x:Class="SCME.dbViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SCME.dbViewer"
+        xmlns:customControl="clr-namespace:SCME.dbViewer.CustomControl"
+        mc:Ignorable="d"
+        Title="Работа с данными, собранными средствами КИП СПП в центральной базе данных" Height="600" Width="1130">
+
+    <Window.Resources>
+        <local:DeviceParameters x:Key="parameters"/>
+    </Window.Resources>
+
+    <Grid x:Name="grdParent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Content="от даты" FontSize="16"/>
+            <DatePicker Grid.Column="1" x:Name="dpBegin" Focusable="False" CalendarClosed="dpBeg_CalendarClosed" FontSize="16"/>
+            
+            <Label Grid.Column="3" Content="до даты" FontSize="16"/>
+            <DatePicker Grid.Column="4" x:Name="dpEnd" Focusable="False" CalendarClosed="dpEnd_CalendarClosed" FontSize="16"/>
+           
+            <TextBlock Grid.Column="5" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Run Text="Показано записей: "/>
+                <Run Text="{Binding ElementName=dgDevices, Path=Items.Count, Mode=OneWay}" FontWeight="Bold"/>
+            </TextBlock>
+
+            <Button x:Name="btReport" Grid.Column="6" Content="Отчёт" HorizontalAlignment="Right" Height="20" VerticalAlignment="Center" Width="200" Margin="0,0,5,0" Click="btReport_Click"/>
+        </Grid>
+
+        <customControl:DataGridSqlResult x:Name="dgDevices" Grid.Row="1" SelectionMode="Single" SelectionChanged="dgDevices_SelectionChanged"/>
+        <GridSplitter Grid.Row="2" ShowsPreview="False" Height="3" HorizontalAlignment="Stretch" Background="LightGray"/>
+        <customControl:ListViewParameters x:Name="lvDevicesParameters" Grid.Row="3" ItemsSource="{Binding Source={StaticResource parameters}, Path=list, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+    </Grid>
+
+</Window>

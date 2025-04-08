@@ -1,0 +1,3043 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Profiles>
+  <Profile Name="D053 7100 4">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="False">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5000" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.05" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="900" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="D123 320 20">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="D143 800 24">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.55" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="2800" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="D173 2500 44">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="7850" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.8" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="5000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="4600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="D193 3200 56">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="7850" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.8" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="1000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="D253 1600 22">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5024" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2350" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="D253 1600 24">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5024" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="D253 2000 18">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6280" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.55" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="D353 1250 65">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3925" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.4" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="1000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="D353 1600 34">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5024" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="4800" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="3600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="D353 800 60">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.4" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="1000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="D443 1000 26">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.65" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="3500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2700" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DF133 500 12">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="1500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1300" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DF143 500 14">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="1700" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DF153 1000 14">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.9" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="1600" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DF233 320 14">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="2200" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DF243 1000 18">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.75" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="2500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DF253 630  25">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="4000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2700" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DF373 2000 36">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6280" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="4200" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="3800" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DF443 320 44">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="3.6" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="5000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="4600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DF473 2000 20">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6300" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="2500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DFL133 320 20">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="2400" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DFL153 630 20">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="3.2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="2300" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DFL243 1000 24">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="3800" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="3000" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DL133 500 14">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="True" EnableIH="True" EnableIHStrike="True" EnableIL="True" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="4000" VoltageLimitR="2200" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DL153 1250_32">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3925" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="4900" CurrentLimit="15" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="4000" Idrm="5" Irrm="15" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DL153 1600 32">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5024" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="4700" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="4000" Idrm="5" Irrm="15" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DL153 2000 20">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6280" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.8" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="3300" CurrentLimit="15" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2500" Idrm="5" Irrm="15" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DL153 800 60">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="1000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="DL253 1600 22">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5024" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="3600" CurrentLimit="15" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2750" Idrm="5" Irrm="15" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="KO  47_15409 26_15409 42_15409">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="True" EnableIHStrike="True" EnableIL="True" />
+      <Normatives Resistance="100" Igt="500" Vgt="3" IH="300" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="1" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="KO 30 1122">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="0" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.75" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1833" Vrrm="1969" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="KO 30_3536">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="260" Vgt="0.96" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3925" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1730" Vrrm="1640" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="KO 60 1027">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="165" Vgt="1.15" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.18" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2570" Vrrm="2460" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="New profile 2">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="False">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="500" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="1" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="1000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="New profile 3">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="False">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="500" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="1" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="1000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="T143 800 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.7" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2200" VoltageLimitR="2200" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="T163 1600 28">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5000" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.7" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2950" VoltageLimitR="2950" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2950" Vrrm="2950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="T173 1600 34">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5024" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.05" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="4200" VoltageLimitR="4200" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3600" Vrrm="3600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="T233 500 16">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.7" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="T343 800 18 [IXYS]">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="200" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2200" VoltageLimitR="2200" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="T353_TEST">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5024" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2400" Vrrm="2400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TBI133 400 12">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1300" VoltageLimitR="1300" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1280" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TBI153 800 12">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.6" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1350" VoltageLimitR="1350" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1300" Vrrm="1300" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TFI143 630 15">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1600" Vrrm="1600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TFI153 1250 12">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3925" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1700" VoltageLimitR="1700" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1300" Vrrm="1300" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TFI153 1250 14 INDUCTOTHERM">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="400" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3000" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.6" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1900" VoltageLimitR="1900" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1500" Vrrm="1500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TFI333 400 12">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.4" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1400" VoltageLimitR="1400" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1300" Vrrm="1300" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TFI353 1000 28">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.25" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3100" VoltageLimitR="3100" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3000" Vrrm="3000" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TFI393 2500 22">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="600" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6300" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.9" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="1000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TFI393 2500 28">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="600" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6300" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3050" VoltageLimitR="3050" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3000" Vrrm="3000" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TFI773 2000 25">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6280" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.05" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2750" VoltageLimitR="2750" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2700" Vrrm="2700" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TFIS143 400 15">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="3.2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1900" VoltageLimitR="1900" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1600" Vrrm="1600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБ143 400 22">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.85" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2600" VoltageLimitR="2600" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2350" Vrrm="2350" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБ143 500 16">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="3000" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.4" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБ143 630 22">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2800" VoltageLimitR="2800" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2350" Vrrm="2350" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБ153 1000 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.35" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБ173 1600 22">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5024" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.26" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2400" VoltageLimitR="2400" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2350" Vrrm="2350" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБ173 2000 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="400" Vgt="1.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6300" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБ243 500 14">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.4" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1750" VoltageLimitR="1750" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1500" Vrrm="1500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБ333 250 16">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="785" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБ333 250 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="785" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2600" VoltageLimitR="2600" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБ333 320 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБ333 400 14">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1500" Vrrm="1500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБ453 800 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.8" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2200" VoltageLimitR="2200" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБ933 250 36">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="785" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="4100" VoltageLimitR="4100" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3800" Vrrm="3800" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБИ153 1000 15">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.25" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1800" VoltageLimitR="1800" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1600" Vrrm="1600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБИ153 1250 15">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3925" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1900" VoltageLimitR="1900" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1600" Vrrm="1600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБИ233 320 24">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.6" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2700" VoltageLimitR="2700" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2600" Vrrm="2600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБИ253 1250 22">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2400" VoltageLimitR="2400" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2350" Vrrm="2350" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБИ253 800 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБИ353 700 30">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.85" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3400" VoltageLimitR="3400" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3200" Vrrm="3200" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="TБИ353 800 34">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.6" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3650" VoltageLimitR="3650" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3600" Vrrm="3600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Д123 200 60">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="628" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="1000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Д133 400 24">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Д133 800 12">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.6" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="2500" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1300" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Д143 800 24">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.55" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Д243 800 38">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="1.95" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="4700" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="4000" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Д253 2000 20">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6280" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.55" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="2600" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Д273 2500 50">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="7850" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.9" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="6000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="5200" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ДЛ153 1250 24">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3925" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.2" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="1000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ДЧ233 320 36">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="5000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="3800" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ДЧ243 630 20">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.8" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="2700" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ДЧ253 630 32">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="3500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="3400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ДЧ373 2000 24">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6280" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="2800" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ДЧЛ133 320 16">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ДЧЛ233 200 14">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="628" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="3.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ДЧЛ333 320 20">
+    <Gate Enable="False">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="500" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т 1 XXX 24">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2550" VoltageLimitR="2550" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2500" Vrrm="2500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т 233 500 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="150" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.7" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2700" VoltageLimitR="2700" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т 353 1600 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5024" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.65" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т123 250 14">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="785" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.75" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1500" Vrrm="1500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т123 320 16">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.75" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2700" VoltageLimitR="2700" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т123 320 16 IXIYS">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="200" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.75" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2700" VoltageLimitR="2700" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т133 320 14">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2200" VoltageLimitR="2200" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1500" Vrrm="1500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т133 320 16">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2100" VoltageLimitR="2100" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т133 320 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т133 400 16">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т133 400 24">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2800" VoltageLimitR="2800" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2600" Vrrm="2600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т133 500 8">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1500" VoltageLimitR="1500" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="900" Vrrm="900" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т143 1000 10">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="1.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1200" VoltageLimitR="1200" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1100" Vrrm="1100" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т143 400 24">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.15" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2800" VoltageLimitR="2800" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2600" Vrrm="2600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т143 500 15">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.8" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1600" Vrrm="1600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т143 500 9">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.8" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1000" Vrrm="1000" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т143 630 16">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.65" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т143 800 16">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.7" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2600" VoltageLimitR="2600" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т153 2000 8">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6280" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.45" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1350" VoltageLimitR="1350" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="900" Vrrm="900" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т153 630 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2400" VoltageLimitR="2400" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т153 630 24">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2900" VoltageLimitR="2900" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2600" Vrrm="2600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т153 800 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="1.9" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2300" VoltageLimitR="2300" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т163 2000 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5000" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.45" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2200" VoltageLimitR="2200" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т173 1600 32">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="1.77" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3500" VoltageLimitR="3500" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3400" Vrrm="3400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т173 1600 36">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5024" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.05" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="4300" VoltageLimitR="4300" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3800" Vrrm="3800" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т173 2000 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6280" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.6" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3050" VoltageLimitR="3050" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3000" Vrrm="3000" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т173 2000 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2000" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2250" VoltageLimitR="2250" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т173 2000 28">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6280" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.6" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3200" VoltageLimitR="3200" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2900" Vrrm="2900" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т173 2500 16">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="7850" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.55" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т173 2500 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="200" Vgt="1.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="False">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="7850" SinusTime="5000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.55" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2050" VoltageLimitR="2050" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т183 2500 42">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6300" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.9" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="4600" VoltageLimitR="4600" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="4400" Vrrm="4400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т193 2000 65">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6300" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.7" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="1000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т193 2500 46">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6300" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="5000" VoltageLimitR="5000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="4800" Vrrm="4800" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т193 5000 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3.5" IH="600" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6300" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.3" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="10" Irrm="10" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т2 XXX 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="False">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2000" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.14" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2200" VoltageLimitR="2200" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т233 500 16 INDUCTOTHERM">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="625" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.4" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т243 400 38">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.35" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="5000" VoltageLimitR="5000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="4000" Vrrm="4000" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т243 500 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т253 1000 16">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.8" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т253 1000 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="1.8" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2200" VoltageLimitR="2200" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т253 1000 24">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.8" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2700" VoltageLimitR="2700" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2600" Vrrm="2600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т253 1250 10">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3925" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.6" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1800" VoltageLimitR="1800" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т253 1250 16 РЕМПУТЬМАШ">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="150" Vgt="1.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3925" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.6" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т253 1250 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3925" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.6" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т253 1250 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="1.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3000" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т253 1390 24">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2650" VoltageLimitR="2650" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2500" Vrrm="2500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т253 500 65">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Reverse" MeasurementMode="ModeV" VoltageLimitD="1000" VoltageLimitR="1000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1400" Vrrm="1400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т253 800 22">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2350" Vrrm="2350" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т253 800 24">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2650" VoltageLimitR="2650" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2600" Vrrm="2600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т273 1250 44">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3925" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="4900" VoltageLimitR="4900" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="4600" Vrrm="4600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т273 3200 10">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="False">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="7850" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1300" VoltageLimitR="1300" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1100" Vrrm="1100" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т273 3200 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="7850" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.45" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2050" VoltageLimitR="2050" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т2ХХХ 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="500" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="1" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2050" VoltageLimitR="2050" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т343 630 28">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.9" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3400" VoltageLimitR="3400" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3000" Vrrm="3000" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т343 800 16">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т343 800 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="200" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2700" VoltageLimitR="2700" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т343 900 14">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.35" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1500" Vrrm="1500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т353 1000 24">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2650" VoltageLimitR="2650" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2600" Vrrm="2600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т353 1000 26">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2900" VoltageLimitR="2900" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2800" Vrrm="2800" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т353 1000 30">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="4000" VoltageLimitR="4000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3200" Vrrm="3200" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т353 1600 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5024" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="1.56" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2100" VoltageLimitR="2100" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т353 800 32">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3600" VoltageLimitR="3600" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3400" Vrrm="3400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т433 400 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="1.7" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т443 630 28">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="250" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.9" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3700" VoltageLimitR="3700" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3000" Vrrm="3000" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т453 1250 12">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3925" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.8" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1800" VoltageLimitR="1800" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1300" Vrrm="1300" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т453 800 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.8" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2800" VoltageLimitR="2800" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т453 800 32">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="1.95" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="4500" VoltageLimitR="4500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3400" Vrrm="3400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т453 800 36">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="4500" VoltageLimitR="4500" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3800" Vrrm="3800" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т553 800 44">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.6" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="5000" VoltageLimitR="5000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="4600" Vrrm="4600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т643 320 65">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="785" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.6" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="7000" VoltageLimitR="7000" CurrentLimit="5" PlateTime="2000" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="6500" Vrrm="6500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т653 800 65">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1500" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.4" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="6700" VoltageLimitR="6700" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="6700" Vrrm="6700" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т673 1250 65">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3925" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="7000" VoltageLimitR="7000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="6700" Vrrm="6700" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="Т743 320 65">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="True" EnableIHStrike="False" EnableIL="True" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="785" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.6" />
+    </SL>
+    <BVT Enabled="False">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="7000" VoltageLimitR="7000" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="6500" Vrrm="6500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБ 143 500 11">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.4" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1700" VoltageLimitR="1700" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1200" Vrrm="1200" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБ133 320 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2200" VoltageLimitR="2200" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБ143 400 12">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.85" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1300" Vrrm="1300" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБ143 500 22">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.4" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2350" Vrrm="2350" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБ173 1600 24">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5024" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.26" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2700" VoltageLimitR="2700" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2600" Vrrm="2600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБ173 2000 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="3" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6280" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.05" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2250" VoltageLimitR="2250" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБ333 400 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.1" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2200" VoltageLimitR="2200" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБ453 1000 18">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.35" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1950" Vrrm="1950" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБ453 630 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="3.2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2200" Vrrm="2200" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБ943 400 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ 353 1000 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.25" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2300" VoltageLimitR="2300" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ 473 1600 40">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="5024" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.7" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="4600" VoltageLimitR="4600" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="4200" Vrrm="4200" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ133 400 10">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="True" EnableIH="False" EnableIHStrike="True" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.4" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1300" VoltageLimitR="1300" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1100" Vrrm="1100" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ143 400 12">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.85" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1800" VoltageLimitR="1800" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="300" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1300" Vrrm="1300" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ243 500 12">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.4" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1300" Vrrm="1300" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ243 500 22">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.4" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2350" Vrrm="2350" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ243 630 16">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1750" Vrrm="1750" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ243 630 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2500" VoltageLimitR="2500" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ253 1000 22">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.35" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2450" VoltageLimitR="2450" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2350" Vrrm="2350" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ273 2000 20">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="True" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6280" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2300" VoltageLimitR="2300" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2150" Vrrm="2150" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ333 320 24">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1005" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.6" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3000" VoltageLimitR="3000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2600" Vrrm="2600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ333 400 10">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1256" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.4" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1100" Vrrm="1100" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ343 500 15">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1570" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.4" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1600" Vrrm="1600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ343 630 15">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1800" VoltageLimitR="1800" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1600" Vrrm="1600" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ353 630 32">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="1978" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="3.2" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="3500" VoltageLimitR="3500" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="3400" Vrrm="3400" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ373 2000 25">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="6280" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="False" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.05" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2800" VoltageLimitR="2800" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="2700" Vrrm="2700" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБИ453 800 14">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.5" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1500" Vrrm="1500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБЧ153 1000 14">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="150" IL="1000" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="3140" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="False" Count="3" />
+      <Normatives VTM="2.3" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="1800" VoltageLimitR="1800" CurrentLimit="5" PlateTime="800" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1500" Vrrm="1500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+  <Profile Name="ТБЧ153 800 14">
+    <Gate Enable="True">
+      <Parameters EnableCurrent="False" EnableIH="False" EnableIHStrike="False" EnableIL="False" />
+      <Normatives Resistance="100" Igt="300" Vgt="2.5" IH="0" IL="0" />
+    </Gate>
+    <SL Enable="True">
+      <Parameters Type="Sinus" RampCurrent="500" RampTime="1000" Heat="False" RampHeatCurrent="100" RampHeatTime="50" SinusCurrent="2512" SinusTime="10000" CurveCurrent="500" CurveTime="4000" CurveFactor="50" CurveAddTime="0" UseFullScale="True" UseLsqMethod="True" Count="3" />
+      <Normatives VTM="2.6" />
+    </SL>
+    <BVT Enabled="True">
+      <Parameters Type="Both" MeasurementMode="ModeV" VoltageLimitD="2000" VoltageLimitR="2000" CurrentLimit="5" PlateTime="400" RampupVoltage="2" StartVoltage="500" VoltageFrequency="50" FrequencyDivisor="1" />
+      <Normatives Vdrm="1500" Vrrm="1500" Idrm="5" Irrm="5" />
+    </BVT>
+    <Commutation CommutationType="Direct" />
+    <Clamping CustomForce="5" />
+  </Profile>
+</Profiles>

@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[ERRORS] (
+    [ERR_ID]         INT           IDENTITY (1, 1) NOT NULL,
+    [ERR_CODE]       INT           NOT NULL,
+    [ERR_NAME]       CHAR (20)     NOT NULL,
+    [ERR_NAME_LOCAL] NVARCHAR (32) NOT NULL,
+    CONSTRAINT [PK_ERRORS] PRIMARY KEY CLUSTERED ([ERR_ID] ASC)
+);
+

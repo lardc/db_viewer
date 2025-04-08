@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <SolidColorBrush x:Key="CustomBlue1" Color="#FFE0EBF5"/>
+    <SolidColorBrush x:Key="ValueInNrm" Color="#DBF1C5"/>
+    <SolidColorBrush x:Key="ValueOutSideTheNorm" Color="#FFD9FF"/>
+    <SolidColorBrush x:Key="NrmNotSetted" Color="#E0C69C"/>
+    <SolidColorBrush x:Key="NrmLegallyAbsent" Color="#EEEEEE"/>
+    <SolidColorBrush x:Key="GoodSatatus" Color="#8DCD47"/>
+    <SolidColorBrush x:Key="FaultSatatus" Color="#FF6565"/>
+    <SolidColorBrush x:Key="SelectedRow" Color="#D9E1F2"/>
+    <SolidColorBrush x:Key="ReadOnly" Color="#FFE5E5E5"/>
+</ResourceDictionary>

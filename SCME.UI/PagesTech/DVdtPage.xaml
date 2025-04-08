@@ -1,0 +1,193 @@
+﻿<Page x:Class="SCME.UI.PagesTech.DVdtPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:customControl="clr-namespace:SCME.UI.CustomControl" xmlns:ui="clr-namespace:SCME.UI"
+      xmlns:res="clr-namespace:SCME.UI.Properties"
+      mc:Ignorable="d" x:Name="dVdtPage" 
+      d:DesignWidth="1280" d:DesignHeight="924"
+      Title="{x:Static res:Resources.dVdt}">
+
+    <Page.Resources>
+
+        <ui:BooleanToVisibilityConverter x:Key="B2V" />
+        <ui:EnumValueToString x:Key="E2S" />
+        <ui:DvdtTestTypeToVisibilityConverter x:Key="DT2V"/>
+        <ui:DvdtTestTypeToVisibilityUnConverter x:Key="DT2VB"/>
+
+
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource CLabelStyle}">
+            <Setter Property="Padding" Value="5,0,0,0" />
+            <Setter Property="Height" Value="62" />
+        </Style>
+
+        <Style TargetType="{x:Type Button}" BasedOn="{StaticResource CButtonStyle}">
+            <Setter Property="Margin" Value="10,0" />
+        </Style>
+
+        <Style x:Key="StLblStyle" TargetType="{x:Type Label}" BasedOn="{StaticResource CLabelStyle}">
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Padding" Value="10,0" />
+        </Style>
+        
+        <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource CCheckBoxStyle}">
+            <Setter Property="Foreground" Value="{StaticResource xBlack1}" />
+            <Setter Property="Margin" Value="20,20" />
+            <Setter Property="Padding" Value="5,0" />
+        </Style>
+
+    </Page.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="3" Grid.Row="0" Margin="10,0,0,0">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Mode}" />
+                <ComboBox Grid.Column="1" Grid.Row="0" Padding="5" Margin="10"
+                              ItemsSource="{Binding Source={StaticResource DataFromTestdVdtTypeEnum}}"
+                              SelectedItem="{Binding ElementName=dVdtPage, Path=Parameters.Mode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource E2S}}"
+                              Style="{StaticResource CComboboxStyle}" />
+                
+                <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.DvDtVoltage}" />
+                <customControl:ValidatingTextBox Grid.Column="1" Grid.Row="1" Padding="5" Margin="10"
+                                                TextBlock.TextAlignment="Right" Maximum="10000" Minimum="0"
+                                                IsNumeric="True"
+                                                Text="{Binding Parameters.Voltage, ElementName=dVdtPage, UpdateSourceTrigger=PropertyChanged}" />
+               
+                <Label Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.DvdtVoltageRate}" 
+                        Visibility="{Binding ElementName=dVdtPage, Path=Parameters.Mode, Converter={StaticResource DT2V}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <ComboBox Grid.Column="1" Grid.Row="2" Padding="5" Margin="10"
+                              ItemsSource="{Binding Source={StaticResource DataFromTestdVdtVoltageRateEnum}}"
+                              SelectedItem="{Binding Parameters.VoltageRate, Converter={StaticResource E2S}, ElementName=dVdtPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                              Style="{StaticResource CComboboxStyle}" 
+                              Visibility="{Binding Parameters.Mode, Converter={StaticResource DT2V}, ElementName=dVdtPage,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+
+                
+
+                <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.DvdtVoltageRateOffSet}" 
+                        Visibility="{Binding ElementName=dVdtPage, Path=Parameters.Mode, Converter={StaticResource DT2VB}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <customControl:ValidatingTextBox Grid.Column="1" Grid.Row="3" Padding="5" Margin="10"
+                                                Visibility="{Binding ElementName=dVdtPage, Path=Parameters.Mode, Converter={StaticResource DT2VB}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                TextBlock.TextAlignment="Right" Maximum="2000" Minimum="50"
+                                                IsNumeric="True"
+                                                Text="{Binding Parameters.VoltageRateOffSet, ElementName=dVdtPage, UpdateSourceTrigger=PropertyChanged}" />       
+                       
+                <Label Grid.Column="0" Grid.Row="4" Content="{x:Static res:Resources.DvdtConfirmationCount}" 
+                        Visibility="{Binding ElementName=dVdtPage,Path=Parameters.Mode, Converter={StaticResource DT2V}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <customControl:ValidatingTextBox Grid.Column="1" Grid.Row="4" Padding="5" Margin="10"
+                                                Visibility="{Binding ElementName=dVdtPage, Path=Parameters.Mode, Converter={StaticResource DT2V}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                TextBlock.TextAlignment="Right" Maximum="100" Minimum="1"
+                                                IsNumeric="True"
+                                                Text="{Binding Parameters.ConfirmationCount, ElementName=dVdtPage, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Label Grid.Column="0" Grid.Row="5" Content="{x:Static res:Resources.DvdtVoltageRateLimit}" 
+                        Visibility="{Binding ElementName=dVdtPage, Path=Parameters.Mode, Converter={StaticResource DT2VB}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <customControl:ValidatingTextBox Grid.Column="1" Grid.Row="5" Padding="5" Margin="10"
+                                                Visibility="{Binding ElementName=dVdtPage, Path=Parameters.Mode, Converter={StaticResource DT2VB}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                TextBlock.TextAlignment="Right" Maximum="2500" Minimum="500"
+                                                IsNumeric="True"
+                                                Text="{Binding Parameters.VoltageRateLimit, ElementName=dVdtPage, UpdateSourceTrigger=PropertyChanged}" />
+
+
+
+
+
+                <Label Content="{x:Static res:Resources.Height_Prof}"   Grid.Column="0"  Grid.Row="6" />
+                <customControl:ValidatingTextBox Grid.Column="1"  Grid.Row="6" Padding="5" Margin="10"
+                          TextBlock.TextAlignment="Right" IsNumeric="True" Maximum="100000" Minimum="0"
+                          Text="{Binding ClampParameters.Height, ElementName=dVdtPage}" />
+                
+                <Label Content="{x:Static res:Resources.Temp}"  Grid.Column="0"  Grid.Row="7" />
+                <customControl:ValidatingTextBox Grid.Column="1" Grid.Row="7"  Padding="5" Margin="10"
+                          TextBlock.TextAlignment="Right" IsNumeric="True" Maximum="200" Minimum="5"
+                          Text="{Binding Temperature, ElementName=dVdtPage}" />
+
+                <Label Content="{x:Static res:Resources.Force}"  Grid.Column="0"  Grid.Row="8" />
+                <customControl:ValidatingTextBox Grid.Column="1" Grid.Row="8"  Padding="5" Margin="10"
+                          TextBlock.TextAlignment="Right" IsNumeric="True" Maximum="200" Minimum="0"
+                          Text="{Binding ClampParameters.CustomForce, ElementName=dVdtPage}" />
+
+                <Label Grid.Column="0" x:Name="lblTitleTop" Grid.Row="9" Content="{x:Static res:Resources.TopTempName}" />
+                <Label Grid.Column="1" Grid.Row="9" Content="0" x:Name="TopTempLabel" HorizontalAlignment="Right" Background="LightGreen" Margin="0,0,7,0" />
+
+                <Label Grid.Column="0"  x:Name="lblTitleBot" Grid.Row="10" Content="{x:Static res:Resources.BotTempName}" />
+                <Label Grid.Column="1" x:Name="BotTempLabel"  Grid.Row="10" HorizontalAlignment="Right" Content="0" Background="LightGreen" Height="Auto"  Margin="0,0,7,0" />
+
+                <Label Content="Результат" Grid.Column="0"  Grid.Row="11" />
+                <Label Name="labelResult" Grid.Column="1" Grid.Row="11" Margin="0,0,7,0" FontSize="{StaticResource FontSize26}" HorizontalContentAlignment="Right" />
+
+                <Label Content="{x:Static res:Resources.DvdtVoltageRate}" Grid.Column="0"  Grid.Row="12" 
+                              Visibility="{Binding  Parameters.Mode, ElementName=dVdtPage, Converter={StaticResource DT2VB}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <Label Name="labelVoltageRate" Grid.Column="1" Grid.Row="12" Margin="0,0,7,0"   
+                            Visibility="{Binding Parameters.Mode,ElementName=dVdtPage, Converter={StaticResource DT2VB}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       HorizontalContentAlignment="Right" FontSize="{StaticResource FontSize26}" Height="Auto" />
+
+                <Label Name="lblFault" x:FieldModifier="private" Background="Tomato" Height="Auto" Padding="10"
+                       Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="2" Content="Fault" />
+                <Label Name="lblWarning" x:FieldModifier="private" Background="Gold" Height="Auto" Padding="10"
+                       Grid.Column="0" Grid.Row="14" Grid.ColumnSpan="2" Content="Warning" />
+
+            </Grid>
+        </Border>
+
+        <Line HorizontalAlignment="Left" Stroke="{StaticResource xBlue1}" StrokeThickness="1"
+              X1="0" Y1="0" X2="0" Y2="{Binding ElementName=rGrid, Path=ActualHeight}"
+              Grid.Column="3" Grid.Row="0" Margin="0,20,0,20" />
+
+        <Button x:Name="btnBack" x:FieldModifier="private"
+                Grid.Column="0" Grid.Row="1" 
+                Content="{x:Static res:Resources.Back}"
+                Click="Back_Click"
+               Margin="6" />
+        <Button x:Name="btnTemp" x:FieldModifier="private"
+                Grid.Column="1" Grid.Row="1"
+                Content="{x:Static res:Resources.SetTemp}"
+                Click="BtnTemp_OnClick"
+                Margin="6" />
+        <Button Grid.Column="2" Grid.Row="1"
+                Content="{x:Static res:Resources.Stop}"
+                Click="Stop_Click"
+                Margin="6" Background="{StaticResource xRed1}" />
+        <Button x:Name="btnStart" x:FieldModifier="private"
+                Grid.Column="3" Grid.Row="1"
+                Content="{x:Static res:Resources.Start}"
+                Click="BtnStart_OnClick"
+                Margin="6" Background="{StaticResource xGreen1}" />
+    </Grid>
+</Page>

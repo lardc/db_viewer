@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Static losses parameters -->
+    <system:Single x:Key="MaxITM">12500</system:Single>
+    <system:Single x:Key="MinITM">300</system:Single>
+
+    <system:Single x:Key="MaxTimeITM">10000</system:Single>
+    <system:Single x:Key="MinTimeITM">10000</system:Single>
+
+    <system:Single x:Key="MaxPulsesITM">10</system:Single>
+    <system:Single x:Key="MinPulsesITM">1</system:Single>
+
+    <!-- Blocking voltage parameters -->
+    <system:Single x:Key="MaxIxRM">300</system:Single>
+    <system:Single x:Key="MinIxRM">0.5</system:Single>
+    
+    <system:Single x:Key="MaxVxRM">8000</system:Single>
+    <system:Single x:Key="MinVxRM">500</system:Single>
+    
+    <system:Single x:Key="MaxPlateVxRM">10000</system:Single>
+    <system:Single x:Key="MinPlateVxRM">100</system:Single>
+
+    <system:Single x:Key="MaxRampVxRM">5</system:Single>
+    <system:Single x:Key="MinRampVxRM">0.5</system:Single>
+
+    <system:Single x:Key="MaxStartVxRM">3000</system:Single>
+    <system:Single x:Key="MinStartVxRM">300</system:Single>
+
+    <!-- Clamping system parameters -->
+    <system:Single x:Key="MaxForceCS">100</system:Single>
+    <system:Single x:Key="MinForceCS">5</system:Single>
+
+    <system:Single x:Key="MaxTempCS">200</system:Single>
+    <system:Single x:Key="MinTempCS">0</system:Single>
+
+    <system:Single x:Key="MaxHeightCS">80</system:Single>
+    <system:Single x:Key="MinHeightCS">0</system:Single>
+
+    <!-- Gate parameters -->
+    <system:Single x:Key="MaxResGate">100</system:Single>
+    <system:Single x:Key="MinResGate">0</system:Single>
+
+    <system:Single x:Key="MaxIgtGate">1000</system:Single>
+    <system:Single x:Key="MinIgtGate">0</system:Single>
+
+    <system:Single x:Key="MaxVgtGate">5</system:Single>
+    <system:Single x:Key="MinVgtGate">0</system:Single>
+
+    <system:Single x:Key="MaxIhGate">1000</system:Single>
+    <system:Single x:Key="MinIhGate">0</system:Single>
+
+    <system:Single x:Key="MaxIlGate">1000</system:Single>
+    <system:Single x:Key="MinIlGate">0</system:Single>
+
+</ResourceDictionary>

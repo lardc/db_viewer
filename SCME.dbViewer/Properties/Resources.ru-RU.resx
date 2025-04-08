@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AverageCurrent" xml:space="preserve">
+    <value>ITAV</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>№ ГП (ППЭ)</value>
+  </data>
+  <data name="Constructive" xml:space="preserve">
+    <value>Констр.</value>
+  </data>
+  <data name="DeleteAllFilters" xml:space="preserve">
+    <value>Удалить все фильтры</value>
+  </data>
+  <data name="DeviceClass" xml:space="preserve">
+    <value>Класс</value>
+  </data>
+  <data name="DeviceType" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="DevID" xml:space="preserve">
+    <value>Идентификатор изделия</value>
+  </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>ПЗ ГП (ППЭ)</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Код ТМЦ</value>
+  </data>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>Работа с данными, собранными средствами КИП СПП в центральной базе данных.</value>
+  </data>
+  <data name="MmeCode" xml:space="preserve">
+    <value>КИП СПП</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>Нет данных</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="ProfileID" xml:space="preserve">
+    <value>Идентификатор профиля</value>
+  </data>
+  <data name="ProfileName" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="Reason" xml:space="preserve">
+    <value>Причина</value>
+  </data>
+  <data name="Records" xml:space="preserve">
+    <value>Записей:</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Отчёт</value>
+  </data>
+  <data name="ReportCannotBeGenerated" xml:space="preserve">
+    <value>Исходные данные для построения отчёта отсутствуют. Формирование отчёта не имеет смысла.</value>
+  </data>
+  <data name="SiOmnity" xml:space="preserve">
+    <value>УЭС</value>
+  </data>
+  <data name="SiType" xml:space="preserve">
+    <value>Si</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="Ts" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="Usr" xml:space="preserve">
+    <value>Оператор</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Обновить   F5</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Печать</value>
+  </data>
+  <data name="CodeOfNonMatch" xml:space="preserve">
+    <value>Код НП</value>
+  </data>
+  <data name="LoadDataFromDataBaseFault" xml:space="preserve">
+    <value>Ошибка при загрузке данных из базы данных</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="Begin" xml:space="preserve">
+    <value>Начать</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Завершить</value>
+  </data>
+  <data name="Session" xml:space="preserve">
+    <value>Сеанс</value>
+  </data>
+  <data name="Authentication" xml:space="preserve">
+    <value>Аутентификация</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Пользователь</value>
+  </data>
+  <data name="BitCalculator" xml:space="preserve">
+    <value>Управлять правами пользователя</value>
+  </data>
+  <data name="SetAdministrator" xml:space="preserve">
+    <value>Сделать пользователя администратором</value>
+  </data>
+  <data name="SelectDCUser" xml:space="preserve">
+    <value>Выбор пользователя DC</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="MiddleName" xml:space="preserve">
+    <value>Отчество</value>
+  </data>
+  <data name="Authenticate" xml:space="preserve">
+    <value>Аутентифицировать</value>
+  </data>
+  <data name="UserCredentials" xml:space="preserve">
+    <value>Ввод учётных данных пользователя</value>
+  </data>
+  <data name="SetUserPermissions" xml:space="preserve">
+    <value>Установка разрешений пользователя</value>
+  </data>
+  <data name="WorkWithAssemblyProtocol" xml:space="preserve">
+    <value>Работа с протоколом сборки</value>
+  </data>
+  <data name="ReadCreateComment" xml:space="preserve">
+    <value>Чтение и создание комментария</value>
+  </data>
+  <data name="CreateParameter" xml:space="preserve">
+    <value>Создание параметра</value>
+  </data>
+  <data name="EditParameter" xml:space="preserve">
+    <value>Редактирование параметра</value>
+  </data>
+  <data name="ReadingComments" xml:space="preserve">
+    <value>Чтение комментариев</value>
+  </data>
+  <data name="SelectAllRecords" xml:space="preserve">
+    <value>Выбрать все записи</value>
+  </data>
+  <data name="DeletePermissionsOfUser" xml:space="preserve">
+    <value>Удалить разрешения пользователя</value>
+  </data>
+  <data name="UserSelected" xml:space="preserve">
+    <value>Выбран пользователь</value>
+  </data>
+  <data name="ManageBySelfPermissions" xml:space="preserve">
+    <value>Управлять своими разрешениями</value>
+  </data>
+  <data name="ManagePermissionsOfUser" xml:space="preserve">
+    <value>Управлять разрешениями пользователя</value>
+  </data>
+  <data name="DeviceComments" xml:space="preserve">
+    <value>Комментарии к
+группе измерений</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Комментарии</value>
+  </data>
+  <data name="SetCommentForMeasurementGroup" xml:space="preserve">
+    <value>Установить комментарий для группы измерений</value>
+  </data>
+  <data name="RecordDate" xml:space="preserve">
+    <value>Дата создания</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Логин</value>
+  </data>
+  <data name="DescrEN" xml:space="preserve">
+    <value>Описание на английском</value>
+  </data>
+  <data name="DescrRU" xml:space="preserve">
+    <value>Описание на русском</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="TemperatureCondition" xml:space="preserve">
+    <value>Температурный режим</value>
+  </data>
+  <data name="Um" xml:space="preserve">
+    <value>Ед. изм.</value>
+  </data>
+  <data name="WorkWithManualInputParams" xml:space="preserve">
+    <value>Работа с параметрами введёнными вручную</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Создание</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Удаление</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редактирование</value>
+  </data>
+  <data name="ManualInputParams" xml:space="preserve">
+    <value>Параметры введённые вручную</value>
+  </data>
+  <data name="WorkWithComments" xml:space="preserve">
+    <value>Работа с комментариями</value>
+  </data>
+  <data name="ManualInputParamEditor" xml:space="preserve">
+    <value>Редактор параметров созданных вручную</value>
+  </data>
+  <data name="DataWillNotBeSaved" xml:space="preserve">
+    <value>Данные не будут сохранены.</value>
+  </data>
+  <data name="ParameterNameNotDefined" xml:space="preserve">
+    <value>Имя параметра не определено.</value>
+  </data>
+  <data name="UnitMeasureIsNotDefined" xml:space="preserve">
+    <value>Единица измерения не определена.</value>
+  </data>
+  <data name="NoEditingObjectSelected" xml:space="preserve">
+    <value>Объект редактирования не выбран.</value>
+  </data>
+  <data name="ObjectForDeleteNotSelected" xml:space="preserve">
+    <value>Объект для удаления не выбран.</value>
+  </data>
+  <data name="ConfirmationMessForDeleteManualInputParam" xml:space="preserve">
+    <value>Параметр '{0}' и все его сохранённые значения будут безвозвратно удалены. Продолжить?</value>
+  </data>
+  <data name="WorkWithValueOfManualInputParam" xml:space="preserve">
+    <value>Работа со значением введенного вручную параметра</value>
+  </data>
+  <data name="ValueOfManuallyEnteredParam" xml:space="preserve">
+    <value>Значение введенного вручную параметра</value>
+  </data>
+  <data name="EditValueOfManuallyEnteredParameter" xml:space="preserve">
+    <value>Редатирование значения введенного вручную параметра</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>Параметры</value>
+  </data>
+  <data name="SelectedParameterIsNotEditable" xml:space="preserve">
+    <value>Выбранный параметр '{0}' недоступен для редактирования. Значение данного параметра может быть получено только путём измерения на оборудовании.</value>
+  </data>
+  <data name="DeleteParameter" xml:space="preserve">
+    <value>Удаление параметра</value>
+  </data>
+  <data name="DeleteValueOfManuallyEnteredParameter" xml:space="preserve">
+    <value>Удаление значения введенного вручную параметра</value>
+  </data>
+  <data name="CreateValueOfManuallyEnteredParameter" xml:space="preserve">
+    <value>Создание значения вручную введенного параметра</value>
+  </data>
+  <data name="SelectedParameterIsNotDeletable" xml:space="preserve">
+    <value>Выбранный параметр '{0}' недоступен для удаления.</value>
+  </data>
+  <data name="PasswordIncorrect" xml:space="preserve">
+    <value>Неправильный пароль</value>
+  </data>
+  <data name="PasswordIsIncorrect" xml:space="preserve">
+    <value>Введённый пароль неверен, либо пользователя DC '{0}' не существует</value>
+  </data>
+  <data name="UserIisNotAnApplicationUser" xml:space="preserve">
+    <value>Пользователь '{0}' не является пользователем приложения '{1}'</value>
+  </data>
+  <data name="NoFiltersInstalled" xml:space="preserve">
+    <value>Ни один фильтр не установлен. Установите хотя бы один фильтр.</value>
+  </data>
+  <data name="ManualAddDevices" xml:space="preserve">
+    <value>Добавить изделия</value>
+  </data>
+  <data name="CreateDevices" xml:space="preserve">
+    <value>Создание изделий</value>
+  </data>
+  <data name="Devices" xml:space="preserve">
+    <value>Изделия</value>
+  </data>
+  <data name="ProfileDescription" xml:space="preserve">
+    <value>Описание профиля</value>
+  </data>
+  <data name="DateCreated" xml:space="preserve">
+    <value>Дата создания</value>
+  </data>
+  <data name="ManualEntryProfile" xml:space="preserve">
+    <value>Ввести профиль</value>
+  </data>
+  <data name="SelectProfile" xml:space="preserve">
+    <value>Выбор профиля</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Версия</value>
+  </data>
+  <data name="SelectGroupName" xml:space="preserve">
+    <value>Выбор ПЗ</value>
+  </data>
+  <data name="NotSetted" xml:space="preserve">
+    <value>не задано</value>
+  </data>
+  <data name="DescriptionOfDeviceParameters" xml:space="preserve">
+    <value>Описание параметров ГП (ППЭ)</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Значение</value>
+  </data>
+  <data name="ConditionsOfTest" xml:space="preserve">
+    <value>Условия теста</value>
+  </data>
+  <data name="DeviceParameters" xml:space="preserve">
+    <value>Параметры изделия</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>Удалено</value>
+  </data>
+  <data name="AllowedNumberOfCharacters" xml:space="preserve">
+    <value>Допустимое количество символов</value>
+  </data>
+  <data name="CheckValue" xml:space="preserve">
+    <value>Проверьте значение</value>
+  </data>
+  <data name="ValueIsNotGood" xml:space="preserve">
+    <value>Значение не выбрано, либо не корректно</value>
+  </data>
+  <data name="StatusByAssemblyProtocol" xml:space="preserve">
+    <value>Статус сборки</value>
+  </data>
+  <data name="InAssemblyProtocol" xml:space="preserve">
+    <value>Сборка</value>
+  </data>
+  <data name="NotInAssemblyProtocol" xml:space="preserve">
+    <value>НЗП</value>
+  </data>
+  <data name="CheckedDevice" xml:space="preserve">
+    <value>Выбор
+изделия</value>
+  </data>
+  <data name="ProfileBody" xml:space="preserve">
+    <value>Тело профиля</value>
+  </data>
+  <data name="StateAssembly" xml:space="preserve">
+    <value>Сборка</value>
+  </data>
+  <data name="StateInitialization" xml:space="preserve">
+    <value>НЗП</value>
+  </data>
+  <data name="UnSelectAllRecords" xml:space="preserve">
+    <value>Снять отметку выбора со всех показанных записей</value>
+  </data>
+  <data name="CreateAssemblyProtocol" xml:space="preserve">
+    <value>Сформировать протокол сборки</value>
+  </data>
+  <data name="AssemblyProtocol" xml:space="preserve">
+    <value>Протокол сборки</value>
+  </data>
+  <data name="SelectByNumberOfRecords" xml:space="preserve">
+    <value>Установить отметку выбора для заданного количества записей</value>
+  </data>
+  <data name="ValueIsNotInteger" xml:space="preserve">
+    <value>Значение '{0}' не является целым числом</value>
+  </data>
+  <data name="SelectedToInitState" xml:space="preserve">
+    <value>Перевести в состояние 'НЗП'</value>
+  </data>
+  <data name="dUdt" xml:space="preserve">
+    <value>dU/dt</value>
+  </data>
+  <data name="Climatic" xml:space="preserve">
+    <value>Климат</value>
+  </data>
+  <data name="tgt" xml:space="preserve">
+    <value>tgt</value>
+  </data>
+  <data name="tq" xml:space="preserve">
+    <value>tq</value>
+  </data>
+  <data name="trr" xml:space="preserve">
+    <value>trr</value>
+  </data>
+  <data name="SetAssemblyProtocolModeOn" xml:space="preserve">
+    <value>Включить режим просмотра протокола сборки</value>
+  </data>
+  <data name="NoPermissions" xml:space="preserve">
+    <value>Право на выполение этого дейстаия отсутствует.</value>
+  </data>
+  <data name="EditAssembly" xml:space="preserve">
+    <value>Linker: Редактировать сборку</value>
+  </data>
+  <data name="SelectedDataIsNotForChange" xml:space="preserve">
+    <value>Выбранные данные не подлежат изменению.</value>
+  </data>
+  <data name="WrongTermalConditions" xml:space="preserve">
+    <value>Параметр не создан. Температурные условия измерений и создаваемого параметра не совпадают.</value>
+  </data>
+  <data name="ParemeterIsInUse" xml:space="preserve">
+    <value>Параметр '{0}' уже используется. Параметр может быть использован только один раз.</value>
+  </data>
+  <data name="SubjectNotSetted" xml:space="preserve">
+    <value>"{0}" {1}. Введите значение "{0}".</value>
+  </data>
+  <data name="SelectedProfileParameters" xml:space="preserve">
+    <value>Параметры выбранного профиля:</value>
+  </data>
+  <data name="NothingHasBeenSelected" xml:space="preserve">
+    <value>Ничего не было выбрано.</value>
+  </data>
+  <data name="SaveWasSuccessful" xml:space="preserve">
+    <value>Сохранение было успешным.</value>
+  </data>
+  <data name="DataContainsAnError" xml:space="preserve">
+    <value>Введенные данные содержат ошибку.</value>
+  </data>
+  <data name="CanReloadList" xml:space="preserve">
+    <value>Вместо отображаемого списка из базы данных будет загружен другой список. Продолжить?</value>
+  </data>
+  <data name="DeleteCurrentRecord" xml:space="preserve">
+    <value>Удалить запись</value>
+  </data>
+  <data name="SaveFailed" xml:space="preserve">
+    <value>Сохранение не выполнено.</value>
+  </data>
+  <data name="NameAlreadyExistsInObject" xml:space="preserve">
+    <value>Параметр не может быть выбран. Значение параметра с таким именем уже имеется в объекте редактирования.</value>
+  </data>
+  <data name="WorkWithManualParamsOfAssemblyProtocol" xml:space="preserve">
+    <value>Работа с параметрами протокола сборки</value>
+  </data>
+  <data name="Omnity" xml:space="preserve">
+    <value>КОФ</value>
+  </data>
+  <data name="AssemblyJob" xml:space="preserve">
+    <value>ПЗ сборки</value>
+  </data>
+  <data name="WrongValueByMask" xml:space="preserve">
+    <value>Значение '{0}' не соответствует маске ввода '{1}'.</value>
+  </data>
+  <data name="NotFoundInSL" xml:space="preserve">
+    <value>'{0}' не найдено в SyteLine.</value>
+  </data>
+  <data name="Qrr" xml:space="preserve">
+    <value>Qrr</value>
+  </data>
+  <data name="FilterIsNotOn" xml:space="preserve">
+    <value>Фильтр по полю "{0}" не включен.</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>Операция не выполнена</value>
+  </data>
+  <data name="Modification" xml:space="preserve">
+    <value>Мод.</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ProcessedRecordCount" xml:space="preserve">
+    <value>Обработано записей {0}</value>
+  </data>
+  <data name="ReportBuildingError" xml:space="preserve">
+    <value>В исходных данных для построения отчёта обнаружена ошибка. Причина {0}.</value>
+  </data>
+  <data name="DeviceReferences" xml:space="preserve">
+    <value>Справочник норм на изделия</value>
+  </data>
+  <data name="References" xml:space="preserve">
+    <value>Справочники</value>
+  </data>
+  <data name="OutOfRange" xml:space="preserve">
+    <value>За пределами диапазона</value>
+  </data>
+  <data name="WrongDescription" xml:space="preserve">
+    <value>Обозначение не корректно</value>
+  </data>
+  <data name="ManageDeviceReferences" xml:space="preserve">
+    <value>Управление справочником норм на изделия</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Сформировать</value>
+  </data>
+  <data name="DeviceTypeEN" xml:space="preserve">
+    <value>Тип EN</value>
+  </data>
+  <data name="DeviceTypeRU" xml:space="preserve">
+    <value>Тип RU</value>
+  </data>
+  <data name="CaseType" xml:space="preserve">
+    <value>Тип корпуса</value>
+  </data>
+  <data name="IdrmMax" xml:space="preserve">
+    <value>IdrmMax</value>
+  </data>
+  <data name="IgtMax" xml:space="preserve">
+    <value>IgtMax</value>
+  </data>
+  <data name="PrsmMin" xml:space="preserve">
+    <value>PrsmMin</value>
+  </data>
+  <data name="QrrMax" xml:space="preserve">
+    <value>QrrMax</value>
+  </data>
+  <data name="TjMax" xml:space="preserve">
+    <value>TjMax</value>
+  </data>
+  <data name="UgtMax" xml:space="preserve">
+    <value>UgtMax</value>
+  </data>
+  <data name="UtmCorrection" xml:space="preserve">
+    <value>UtmCorrection</value>
+  </data>
+  <data name="UtmMax" xml:space="preserve">
+    <value>UtmMax</value>
+  </data>
+  <data name="WorkWithDeviceReferences" xml:space="preserve">
+    <value>Работа со справочником норм на изделия</value>
+  </data>
+  <data name="DeviceReferenceEditor" xml:space="preserve">
+    <value>Редактор норм на изделия</value>
+  </data>
+  <data name="DeleteCancelled" xml:space="preserve">
+    <value>Система отклонила операцию удаления. Количество ссылок на объект удаления больше нуля.</value>
+  </data>
+  <data name="DeleteColumn" xml:space="preserve">
+    <value>Удалить столбец</value>
+  </data>
+  <data name="DifferentTemperatureModes" xml:space="preserve">
+    <value>Температурный режим отображаемых параметров и выбранного профиля не совпадают.</value>
+  </data>
+  <data name="SelectedProfile" xml:space="preserve">
+    <value>Выбраный профиль</value>
+  </data>
+  <data name="ProfileOfDisplayedData" xml:space="preserve">
+    <value>Профиль отображаемых данных</value>
+  </data>
+  <data name="UnknownTemperatureCondition" xml:space="preserve">
+    <value>Температурный режим профиля не определён.</value>
+  </data>
+  <data name="NormMaxValue" xml:space="preserve">
+    <value>Норма Max</value>
+  </data>
+  <data name="NormMinValue" xml:space="preserve">
+    <value>Норма Min</value>
+  </data>
+  <data name="RecordSuccessfullyDeleted" xml:space="preserve">
+    <value>Запись успешно удалена</value>
+  </data>
+  <data name="DeleteSelectedRecords" xml:space="preserve">
+    <value>Удалить выбранные записи</value>
+  </data>
+  <data name="SelectedRecordsDeletedSuccessfully" xml:space="preserve">
+    <value>Выбранные записи успешно удалены.</value>
+  </data>
+  <data name="ChangeProhibited" xml:space="preserve">
+    <value>Изменение запрещено</value>
+  </data>
+  <data name="NotCreatedByHand" xml:space="preserve">
+    <value>Не создано вручную</value>
+  </data>
+  <data name="AssemblyProtocols" xml:space="preserve">
+    <value>Протоколы сборки</value>
+  </data>
+  <data name="ModeView" xml:space="preserve">
+    <value>Режим просмотра</value>
+  </data>
+  <data name="ProtocolDescr" xml:space="preserve">
+    <value>№ протокола</value>
+  </data>
+  <data name="ListOfAssemblyProtocols" xml:space="preserve">
+    <value>Список протоколов сборки</value>
+  </data>
+  <data name="DeviceCommentsOneString" xml:space="preserve">
+    <value>Комментарии к группе измерений</value>
+  </data>
+  <data name="ProcessingIsNotProvided" xml:space="preserve">
+    <value>Для {0} обработка не предусмотрена.</value>
+  </data>
+  <data name="FilterIsNotSingle" xml:space="preserve">
+    <value>Количество фильтров по полю "{0}" не равно 1. Для выполнения данного действия необходимо не более одного фильтра по полю "{0}".</value>
+  </data>
+  <data name="FilterValuesIsNotSingle" xml:space="preserve">
+    <value>Количество значений фильтра по полю "{0}" не равно 1. Для выполнения данного действия необходимо не более одного значения фильтра по полю "{0}".</value>
+  </data>
+  <data name="FilterComparisonTypeIsNotEqual" xml:space="preserve">
+    <value>Тип сравнения фильтра не '='.</value>
+  </data>
+  <data name="PleaseAuthenticate" xml:space="preserve">
+    <value>Данная операция не может быть выполнена для не известного пользователя. Требуется аутентификация пользователя.</value>
+  </data>
+  <data name="FailedToCreate" xml:space="preserve">
+    <value>Не удалось создать</value>
+  </data>
+  <data name="FiltersCountIsNotOne" xml:space="preserve">
+    <value>Количество активных фильтров не равно 1. Для выполнения данного действия требуется только один фильтр.</value>
+  </data>
+  <data name="SendSelectedToAssemblyProtocol" xml:space="preserve">
+    <value>Отправить выбранные группы измерений в протокол сборки №</value>
+  </data>
+  <data name="DoesNotExist" xml:space="preserve">
+    <value>не сущкствует</value>
+  </data>
+  <data name="SelectedSuccessfullySendedToAssemblyProtocol" xml:space="preserve">
+    <value>Выбранные группы измерений успешно отправлены в протокол сборки № {0}.</value>
+  </data>
+  <data name="ReadReason" xml:space="preserve">
+    <value>Чтение значения поля 'Причина'</value>
+  </data>
+  <data name="Destroy" xml:space="preserve">
+    <value>Уничтожить</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Кол-во</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Загрузить</value>
+  </data>
+  <data name="DataLoadingFailed" xml:space="preserve">
+    <value>Загрузка данных не выполнена</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Вырезать</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Вставить</value>
+  </data>
+  <data name="dUdtMin" xml:space="preserve">
+    <value>dU/dtMin</value>
+  </data>
+  <data name="IrrmMax" xml:space="preserve">
+    <value>IrrmMax</value>
+  </data>
+  <data name="RisolMin" xml:space="preserve">
+    <value>RisolMin</value>
+  </data>
+  <data name="TgtMax" xml:space="preserve">
+    <value>TgtMax</value>
+  </data>
+  <data name="TqMin" xml:space="preserve">
+    <value>TqMin</value>
+  </data>
+  <data name="TrrMin" xml:space="preserve">
+    <value>TrrMin</value>
+  </data>
+  <data name="UbrMin" xml:space="preserve">
+    <value>UbrMin</value>
+  </data>
+  <data name="UdsmMin" xml:space="preserve">
+    <value>UdsmMin</value>
+  </data>
+  <data name="UisolMin" xml:space="preserve">
+    <value>UisolMin</value>
+  </data>
+  <data name="UrsmMin" xml:space="preserve">
+    <value>UrsmMin</value>
+  </data>
+  <data name="ErrorCreateColumnByListOfRecordsIsEmpty" xml:space="preserve">
+    <value>Система запретила создание столбца для пустого списка записей.</value>
+  </data>
+  <data name="AssemblyStatusDescr" xml:space="preserve">
+    <value>Состояние</value>
+  </data>
+  <data name="UfmMax" xml:space="preserve">
+    <value>UfmMax</value>
+  </data>
+  <data name="FilterValueIsBad" xml:space="preserve">
+    <value>Значение фильтра по полю '{0}' не равно '{1}'.</value>
+  </data>
+</root>

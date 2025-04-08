@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Adapter" xml:space="preserve">
+    <value>Адаптер</value>
+  </data>
+  <data name="AdditionalTime_us" xml:space="preserve">
+    <value>Доп. время, мкс</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="ApplicationStartError" xml:space="preserve">
+    <value>Ошибка при запуске приложения</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="Bvt" xml:space="preserve">
+    <value>Классификатор</value>
+  </data>
+  <data name="Call" xml:space="preserve">
+    <value>Вызвать</value>
+  </data>
+  <data name="Calibration" xml:space="preserve">
+    <value>Калибровка</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="Commutation" xml:space="preserve">
+    <value>Блок коммутации</value>
+  </data>
+  <data name="Console" xml:space="preserve">
+    <value>Консоль</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Количество</value>
+  </data>
+  <data name="Curve" xml:space="preserve">
+    <value>S-кривая</value>
+  </data>
+  <data name="CurveFactor" xml:space="preserve">
+    <value>Коэффициент</value>
+  </data>
+  <data name="Direct" xml:space="preserve">
+    <value>Прямой</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Отключить</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Отключен</value>
+  </data>
+  <data name="Display" xml:space="preserve">
+    <value>Дисплей</value>
+  </data>
+  <data name="DisplayTimeout" xml:space="preserve">
+    <value>Таймаут дисплея</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Подключить</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>Введите пароль</value>
+  </data>
+  <data name="Fault" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="Gate" xml:space="preserve">
+    <value>Управление</value>
+  </data>
+  <data name="Gateway" xml:space="preserve">
+    <value>Шлюз</value>
+  </data>
+  <data name="Hardware" xml:space="preserve">
+    <value>Аппаратная часть</value>
+  </data>
+  <data name="HeatCurrent_A" xml:space="preserve">
+    <value>Ток откр., А</value>
+  </data>
+  <data name="HeatTime_us" xml:space="preserve">
+    <value>Время откр., мкс</value>
+  </data>
+  <data name="HoldingCurrent" xml:space="preserve">
+    <value>Ток удержания</value>
+  </data>
+  <data name="HoldingStrikeCurrent" xml:space="preserve">
+    <value>Доп. импульс</value>
+  </data>
+  <data name="Igt_mA" xml:space="preserve">
+    <value>IGT, мА</value>
+  </data>
+  <data name="Iholding_mA" xml:space="preserve">
+    <value>Ih, мА</value>
+  </data>
+  <data name="Ilatching_mA" xml:space="preserve">
+    <value>Il, мА</value>
+  </data>
+  <data name="IsHeatEnabled" xml:space="preserve">
+    <value>Открытие</value>
+  </data>
+  <data name="Kelvin" xml:space="preserve">
+    <value>Прозвонка</value>
+  </data>
+  <data name="LatchingCurrent" xml:space="preserve">
+    <value>Ток включения</value>
+  </data>
+  <data name="Logs" xml:space="preserve">
+    <value>Логи</value>
+  </data>
+  <data name="MaxIgt_mA" xml:space="preserve">
+    <value>Макс. IGT, мА</value>
+  </data>
+  <data name="MaxIh_mA" xml:space="preserve">
+    <value>Макс. IH, мА</value>
+  </data>
+  <data name="MaxIl_mA" xml:space="preserve">
+    <value>Макс. IL, мА</value>
+  </data>
+  <data name="MaxResistance_Ohm" xml:space="preserve">
+    <value>Макс. Rg, Ом</value>
+  </data>
+  <data name="MaxVgt_V" xml:space="preserve">
+    <value>Макс. UGT, В</value>
+  </data>
+  <data name="MaxVtm_V" xml:space="preserve">
+    <value>Макс. UTM, В</value>
+  </data>
+  <data name="MinVdrm_V" xml:space="preserve">
+    <value>Мин. UDRM, В</value>
+  </data>
+  <data name="MinVrrm_V" xml:space="preserve">
+    <value>Мин. URRM, В</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Далее</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Профили</value>
+  </data>
+  <data name="PureVgt" xml:space="preserve">
+    <value>Анодный ток</value>
+  </data>
+  <data name="Ramp" xml:space="preserve">
+    <value>Трапеция</value>
+  </data>
+  <data name="Read" xml:space="preserve">
+    <value>Чтение</value>
+  </data>
+  <data name="Resistance_Ohm" xml:space="preserve">
+    <value>Rg, Ом</value>
+  </data>
+  <data name="Restart" xml:space="preserve">
+    <value>Перезапуск</value>
+  </data>
+  <data name="Results" xml:space="preserve">
+    <value>Результаты</value>
+  </data>
+  <data name="Reverse" xml:space="preserve">
+    <value>Обратный</value>
+  </data>
+  <data name="Selftest" xml:space="preserve">
+    <value>Проверка</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Сервис</value>
+  </data>
+  <data name="Sinus" xml:space="preserve">
+    <value>Полусинус</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Старт</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Стоп</value>
+  </data>
+  <data name="Stopped" xml:space="preserve">
+    <value>Останов</value>
+  </data>
+  <data name="Technitian" xml:space="preserve">
+    <value>Наладчик</value>
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>Тест</value>
+  </data>
+  <data name="Timeout" xml:space="preserve">
+    <value>Timeout</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="UseFullScale" xml:space="preserve">
+    <value>Полный диапазон</value>
+  </data>
+  <data name="UseLsqMethod" xml:space="preserve">
+    <value>LSQ метод</value>
+  </data>
+  <data name="UserPage_Title" xml:space="preserve">
+    <value>Выберите профиль</value>
+  </data>
+  <data name="UserTestPage_Title" xml:space="preserve">
+    <value>Тестирование</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Значение</value>
+  </data>
+  <data name="VdrmV" xml:space="preserve">
+    <value>UDRM, В</value>
+  </data>
+  <data name="Vgt" xml:space="preserve">
+    <value>UGT</value>
+  </data>
+  <data name="VgtV" xml:space="preserve">
+    <value>UGT, В</value>
+  </data>
+  <data name="VrrmV" xml:space="preserve">
+    <value>URRM, В</value>
+  </data>
+  <data name="Vms" xml:space="preserve">
+    <value>В / мс</value>
+  </data>
+  <data name="Vtm" xml:space="preserve">
+    <value>Стат. потери</value>
+  </data>
+  <data name="VtmV" xml:space="preserve">
+    <value>UTM, В</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Предупреждение</value>
+  </data>
+  <data name="WelcomePage_Title" xml:space="preserve">
+    <value>Подключение</value>
+  </data>
+  <data name="Write" xml:space="preserve">
+    <value>Запись</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="ProfileName" xml:space="preserve">
+    <value>Имя профиля</value>
+  </data>
+  <data name="LoginPage_Title" xml:space="preserve">
+    <value>Авторизация</value>
+  </data>
+  <data name="DeviceName" xml:space="preserve">
+    <value>Сер. номер прибора</value>
+  </data>
+  <data name="ErrorWhileProfileParsing" xml:space="preserve">
+    <value>Ошибка при чтении конфигурационного файла профилей</value>
+  </data>
+  <data name="PartyNumber" xml:space="preserve">
+    <value>Номер ЗНП</value>
+  </data>
+  <data name="StructureName" xml:space="preserve">
+    <value>(Номер ППЭ)</value>
+  </data>
+  <data name="CurrentLimit_mA" xml:space="preserve">
+    <value>Ток, мА</value>
+  </data>
+  <data name="FreqRate_Hz" xml:space="preserve">
+    <value>Частота имп., Гц</value>
+  </data>
+  <data name="Frequency_Hz" xml:space="preserve">
+    <value>Частота, Гц</value>
+  </data>
+  <data name="Mode" xml:space="preserve">
+    <value>Режим</value>
+  </data>
+  <data name="PlateTime_ms" xml:space="preserve">
+    <value>Время, мс</value>
+  </data>
+  <data name="Rampup_Vms" xml:space="preserve">
+    <value>Наклон, В/мс</value>
+  </data>
+  <data name="StartVoltage_V" xml:space="preserve">
+    <value>Стартовое, В</value>
+  </data>
+  <data name="TestType" xml:space="preserve">
+    <value>Тип теста</value>
+  </data>
+  <data name="VoltageLimitD_V" xml:space="preserve">
+    <value>Напр. прям., В</value>
+  </data>
+  <data name="Current_A" xml:space="preserve">
+    <value>Ток, А</value>
+  </data>
+  <data name="Time_us" xml:space="preserve">
+    <value>Время, мкс</value>
+  </data>
+  <data name="VoltageLimitR_V" xml:space="preserve">
+    <value>Напр. обрат., В</value>
+  </data>
+  <data name="MaxIdrm_mA" xml:space="preserve">
+    <value>Макс. IDRM, мА</value>
+  </data>
+  <data name="MaxIrrm_mA" xml:space="preserve">
+    <value>Макс. IRRM, мА</value>
+  </data>
+  <data name="Idrm_mA" xml:space="preserve">
+    <value>IDRM, мА</value>
+  </data>
+  <data name="Irrm_mA" xml:space="preserve">
+    <value>IRRM, мА</value>
+  </data>
+  <data name="Both" xml:space="preserve">
+    <value>Полный</value>
+  </data>
+  <data name="mA" xml:space="preserve">
+    <value>мА</value>
+  </data>
+  <data name="V" xml:space="preserve">
+    <value>В</value>
+  </data>
+  <data name="AllUnitsAreDisabled" xml:space="preserve">
+    <value>Все модули отключены</value>
+  </data>
+  <data name="CanNotStartTest" xml:space="preserve">
+    <value>Невозможно начать тест</value>
+  </data>
+  <data name="CloseSafetyHood" xml:space="preserve">
+    <value>Закройте защитную заслонку</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="PullStopButton" xml:space="preserve">
+    <value>Отожмите кнопку Стоп</value>
+  </data>
+  <data name="SafetyCircuitIsOpen" xml:space="preserve">
+    <value>Защитная цепь разомкнута</value>
+  </data>
+  <data name="StopButtonIsPressed" xml:space="preserve">
+    <value>Нажата кнопка Стоп</value>
+  </data>
+  <data name="Itm_A" xml:space="preserve">
+    <value>ITM, A</value>
+  </data>
+  <data name="VgtmV" xml:space="preserve">
+    <value>UGT, мВ</value>
+  </data>
+  <data name="Graph_TimeMs" xml:space="preserve">
+    <value>Время, мс</value>
+  </data>
+  <data name="Graph_VI" xml:space="preserve">
+    <value>U, I</value>
+  </data>
+  <data name="Graph_TimeUs" xml:space="preserve">
+    <value>Время, мкс</value>
+  </data>
+  <data name="Graph_ImA" xml:space="preserve">
+    <value>I, мА</value>
+  </data>
+  <data name="Graph_V" xml:space="preserve">
+    <value>U</value>
+  </data>
+  <data name="Position_1" xml:space="preserve">
+    <value>Позиция 1</value>
+  </data>
+  <data name="Position_2" xml:space="preserve">
+    <value>Позиция 2</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Код</value>
+  </data>
+  <data name="CommutationType" xml:space="preserve">
+    <value>Коммутация</value>
+  </data>
+  <data name="CommutationTypeT" xml:space="preserve">
+    <value>Тип коммутации</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Период:</value>
+  </data>
+  <data name="GroupList" xml:space="preserve">
+    <value>Список партий</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Позиция</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Источник</value>
+  </data>
+  <data name="Timestamp" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Заказчик:</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Оператор</value>
+  </data>
+  <data name="Clamp" xml:space="preserve">
+    <value>Пресс</value>
+  </data>
+  <data name="Force" xml:space="preserve">
+    <value>Усилие, кН</value>
+  </data>
+  <data name="DoClamp" xml:space="preserve">
+    <value>Зажать</value>
+  </data>
+  <data name="DoUnclamp" xml:space="preserve">
+    <value>Разжать</value>
+  </data>
+  <data name="Device" xml:space="preserve">
+    <value>Тип п-ра:</value>
+  </data>
+  <data name="Last7Days" xml:space="preserve">
+    <value>За 7 дней</value>
+  </data>
+  <data name="LastMonth" xml:space="preserve">
+    <value>За месяц</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Сегодня</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>Вчера</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="Passed" xml:space="preserve">
+    <value>Годные</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Печать</value>
+  </data>
+  <data name="PrintingOptions" xml:space="preserve">
+    <value>Настройки печати:</value>
+  </data>
+  <data name="Rejected" xml:space="preserve">
+    <value>Брак</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Ошибка отправки</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>В очереди</value>
+  </data>
+  <data name="Successful" xml:space="preserve">
+    <value>Запрос отправлен</value>
+  </data>
+  <data name="Waiting" xml:space="preserve">
+    <value>Готов</value>
+  </data>
+  <data name="PasswordIncorrect" xml:space="preserve">
+    <value>Пароль неверен</value>
+  </data>
+  <data name="dVdt" xml:space="preserve">
+    <value>dUdt</value>
+  </data>
+  <data name="StructureOrder" xml:space="preserve">
+    <value>(Партия ППЭ)</value>
+  </data>
+  <data name="Profile_load_error" xml:space="preserve">
+    <value>Ошибка загрузки профилей</value>
+  </data>
+  <data name="Profile_load_error_ex" xml:space="preserve">
+    <value>Не могу загрузить профили с сервера компании. Временно используется локальная копия. Ошибка {0}</value>
+  </data>
+  <data name="ReadOnly" xml:space="preserve">
+    <value> - Только чтение</value>
+  </data>
+  <data name="MeasureDialog_Title" xml:space="preserve">
+    <value>Измерение высоты</value>
+  </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Верно</value>
+  </data>
+  <data name="NonCorrect" xml:space="preserve">
+    <value>Не верно</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Высота</value>
+  </data>
+  <data name="ParameterType" xml:space="preserve">
+    <value>Параметр</value>
+  </data>
+  <data name="Height_Prof" xml:space="preserve">
+    <value>Высота, мм</value>
+  </data>
+  <data name="BotTempName" xml:space="preserve">
+    <value>Нижняя пластина</value>
+  </data>
+  <data name="TopTempName" xml:space="preserve">
+    <value>Верхняя пластина</value>
+  </data>
+  <data name="SetTemp" xml:space="preserve">
+    <value>Установить температуру</value>
+  </data>
+  <data name="DvdtConfirmation" xml:space="preserve">
+    <value>Подтверждение</value>
+  </data>
+  <data name="DvdtDetection" xml:space="preserve">
+    <value>Определение</value>
+  </data>
+  <data name="DvdtVoltageRate" xml:space="preserve">
+    <value>Скорость нарастания, В / мкс</value>
+  </data>
+  <data name="Sctu" xml:space="preserve">
+    <value>Ударный ток</value>
+  </data>
+  <data name="WorkPlaceActivation" xml:space="preserve">
+    <value>Активировать рабочее место</value>
+  </data>
+  <data name="WorkPlaceIsBlocked" xml:space="preserve">
+    <value>Рабочее место заблокировано</value>
+  </data>
+  <data name="WorkPlaceIsFree" xml:space="preserve">
+    <value>Освободить рабочее место</value>
+  </data>
+  <data name="Graph_TimeMks" xml:space="preserve">
+    <value>Время, мкс</value>
+  </data>
+  <data name="Аdjustment" xml:space="preserve">
+    <value>Наладка</value>
+  </data>
+  <data name="SetCool" xml:space="preserve">
+    <value>Охлаждение</value>
+  </data>
+  <data name="SafetyOpticalAlarm" xml:space="preserve">
+    <value>Нарушен периметр безопасности!</value>
+  </data>
+</root>

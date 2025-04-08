@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AverageCurrent" xml:space="preserve">
+    <value>ITAV</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Subject num</value>
+  </data>
+  <data name="Constructive" xml:space="preserve">
+    <value>Constr.</value>
+  </data>
+  <data name="DeleteAllFilters" xml:space="preserve">
+    <value>Delete all filters</value>
+  </data>
+  <data name="DeviceClass" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="DeviceType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="DevID" xml:space="preserve">
+    <value>Device identificator</value>
+  </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>Job</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>Work with the data collected by means of MME hardware in the central database.</value>
+  </data>
+  <data name="MmeCode" xml:space="preserve">
+    <value>Code MME</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>No data</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="ProfileID" xml:space="preserve">
+    <value>Profile identificator</value>
+  </data>
+  <data name="ProfileName" xml:space="preserve">
+    <value>Profile name</value>
+  </data>
+  <data name="Reason" xml:space="preserve">
+    <value>Reason</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="ReportCannotBeGenerated" xml:space="preserve">
+    <value>The source data for building a report is empty. Report generation does not make sense.</value>
+  </data>
+  <data name="SiOmnity" xml:space="preserve">
+    <value>Omnity</value>
+  </data>
+  <data name="SiType" xml:space="preserve">
+    <value>Si</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Ts" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Usr" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh   F5</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="CodeOfNonMatch" xml:space="preserve">
+    <value>Code of non match</value>
+  </data>
+  <data name="LoadDataFromDataBaseFault" xml:space="preserve">
+    <value>Error loading data from database</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Begin" xml:space="preserve">
+    <value>To begin</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>To close</value>
+  </data>
+  <data name="Session" xml:space="preserve">
+    <value>Session</value>
+  </data>
+  <data name="Authentication" xml:space="preserve">
+    <value>Authentication</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="BitCalculator" xml:space="preserve">
+    <value>Manage user permissions</value>
+  </data>
+  <data name="SetAdministrator" xml:space="preserve">
+    <value>Set user as admin</value>
+  </data>
+  <data name="SelectDCUser" xml:space="preserve">
+    <value>Select DC user</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="MiddleName" xml:space="preserve">
+    <value>Middle name</value>
+  </data>
+  <data name="Authenticate" xml:space="preserve">
+    <value>Authenticate</value>
+  </data>
+  <data name="UserCredentials" xml:space="preserve">
+    <value>User credentials</value>
+  </data>
+  <data name="SetUserPermissions" xml:space="preserve">
+    <value>Set user permissions</value>
+  </data>
+  <data name="WorkWithAssemblyProtocol" xml:space="preserve">
+    <value>Work with assembly protocol</value>
+  </data>
+  <data name="ReadCreateComment" xml:space="preserve">
+    <value>Read and create comment</value>
+  </data>
+  <data name="CreateParameter" xml:space="preserve">
+    <value>Create parameter</value>
+  </data>
+  <data name="EditParameter" xml:space="preserve">
+    <value>Edit parameter</value>
+  </data>
+  <data name="ReadingComments" xml:space="preserve">
+    <value>Reading comments</value>
+  </data>
+  <data name="SelectAllRecords" xml:space="preserve">
+    <value>Select all records shown</value>
+  </data>
+  <data name="DeletePermissionsOfUser" xml:space="preserve">
+    <value>Delete permissions of user</value>
+  </data>
+  <data name="UserSelected" xml:space="preserve">
+    <value>User selected</value>
+  </data>
+  <data name="ManageBySelfPermissions" xml:space="preserve">
+    <value>Manage by self permissions</value>
+  </data>
+  <data name="ManagePermissionsOfUser" xml:space="preserve">
+    <value>Manage permissions of user</value>
+  </data>
+  <data name="DeviceComments" xml:space="preserve">
+    <value>Measurement
+group comments</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="SetCommentForMeasurementGroup" xml:space="preserve">
+    <value>Set comment for measurement group</value>
+  </data>
+  <data name="RecordDate" xml:space="preserve">
+    <value>Record date</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="DescrEN" xml:space="preserve">
+    <value>Description in english</value>
+  </data>
+  <data name="DescrRU" xml:space="preserve">
+    <value>Description in russian</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="TemperatureCondition" xml:space="preserve">
+    <value>Condition of temperature</value>
+  </data>
+  <data name="Um" xml:space="preserve">
+    <value>Um</value>
+  </data>
+  <data name="WorkWithManualInputParams" xml:space="preserve">
+    <value>Work with manually entered parameters</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ManualInputParams" xml:space="preserve">
+    <value>Manually entered parameters</value>
+  </data>
+  <data name="WorkWithComments" xml:space="preserve">
+    <value>Work with comments</value>
+  </data>
+  <data name="ManualInputParamEditor" xml:space="preserve">
+    <value>Manual input param editor</value>
+  </data>
+  <data name="DataWillNotBeSaved" xml:space="preserve">
+    <value>Data will not be saved.</value>
+  </data>
+  <data name="ParameterNameNotDefined" xml:space="preserve">
+    <value>Parameter name not defined.</value>
+  </data>
+  <data name="UnitMeasureIsNotDefined" xml:space="preserve">
+    <value>Unit measure is not defined.</value>
+  </data>
+  <data name="NoEditingObjectSelected" xml:space="preserve">
+    <value>No editing object selected.</value>
+  </data>
+  <data name="ObjectForDeleteNotSelected" xml:space="preserve">
+    <value>Object for delete not selected.</value>
+  </data>
+  <data name="ConfirmationMessForDeleteManualInputParam" xml:space="preserve">
+    <value>Parameter '{0}' and all its saved values ​​will be permanently deleted. Proceed?</value>
+  </data>
+  <data name="WorkWithValueOfManualInputParam" xml:space="preserve">
+    <value>Work with value of manually entered parameter</value>
+  </data>
+  <data name="ValueOfManuallyEnteredParam" xml:space="preserve">
+    <value>Value of manually entered parameter</value>
+  </data>
+  <data name="EditValueOfManuallyEnteredParameter" xml:space="preserve">
+    <value>Edit value of manually entered parameter</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="SelectedParameterIsNotEditable" xml:space="preserve">
+    <value>The selected parameter '{0}' is not editable. The value of this parameter can be obtained by measuring on equipment.</value>
+  </data>
+  <data name="DeleteParameter" xml:space="preserve">
+    <value>Delete parameter</value>
+  </data>
+  <data name="DeleteValueOfManuallyEnteredParameter" xml:space="preserve">
+    <value>Delete value of manually entered parameter</value>
+  </data>
+  <data name="CreateValueOfManuallyEnteredParameter" xml:space="preserve">
+    <value>Create value of manually entered parameter</value>
+  </data>
+  <data name="SelectedParameterIsNotDeletable" xml:space="preserve">
+    <value>The selected parameter '{0}' is not deletable.</value>
+  </data>
+  <data name="PasswordIncorrect" xml:space="preserve">
+    <value>The password is incorrect</value>
+  </data>
+  <data name="PasswordIsIncorrect" xml:space="preserve">
+    <value>The password is incorrect or the DC user '{0}' does not exist</value>
+  </data>
+  <data name="UserIisNotAnApplicationUser" xml:space="preserve">
+    <value>User '{0}' is not an application user '{1}'</value>
+  </data>
+  <data name="NoFiltersInstalled" xml:space="preserve">
+    <value>No filters installed. Install at least one filter.</value>
+  </data>
+  <data name="ManualAddDevices" xml:space="preserve">
+    <value>Manual add devices</value>
+  </data>
+  <data name="CreateDevices" xml:space="preserve">
+    <value>Create devices</value>
+  </data>
+  <data name="Devices" xml:space="preserve">
+    <value>Devices</value>
+  </data>
+  <data name="ProfileDescription" xml:space="preserve">
+    <value>Profile description</value>
+  </data>
+  <data name="DateCreated" xml:space="preserve">
+    <value>Date created</value>
+  </data>
+  <data name="ManualEntryProfile" xml:space="preserve">
+    <value>Manual entry profile</value>
+  </data>
+  <data name="SelectProfile" xml:space="preserve">
+    <value>Select profile</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="SelectGroupName" xml:space="preserve">
+    <value>Select job</value>
+  </data>
+  <data name="NotSetted" xml:space="preserve">
+    <value>not setted</value>
+  </data>
+  <data name="DescriptionOfDeviceParameters" xml:space="preserve">
+    <value>Description of device parameters</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="ConditionsOfTest" xml:space="preserve">
+    <value>Test conditions</value>
+  </data>
+  <data name="DeviceParameters" xml:space="preserve">
+    <value>Device parameters</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>Deleted</value>
+  </data>
+  <data name="AllowedNumberOfCharacters" xml:space="preserve">
+    <value>Allowed number of characters</value>
+  </data>
+  <data name="CheckValue" xml:space="preserve">
+    <value>Check value of</value>
+  </data>
+  <data name="ValueIsNotGood" xml:space="preserve">
+    <value>Value not selected, or not correct</value>
+  </data>
+  <data name="StatusByAssemblyProtocol" xml:space="preserve">
+    <value>Assembly status</value>
+  </data>
+  <data name="InAssemblyProtocol" xml:space="preserve">
+    <value>In assembly protocol</value>
+  </data>
+  <data name="NotInAssemblyProtocol" xml:space="preserve">
+    <value>Not in assembly protocol</value>
+  </data>
+  <data name="CheckedDevice" xml:space="preserve">
+    <value>Checked
+device</value>
+  </data>
+  <data name="ProfileBody" xml:space="preserve">
+    <value>Body of profile</value>
+  </data>
+  <data name="StateAssembly" xml:space="preserve">
+    <value>Assembly</value>
+  </data>
+  <data name="StateInitialization" xml:space="preserve">
+    <value>Initialization</value>
+  </data>
+  <data name="UnSelectAllRecords" xml:space="preserve">
+    <value>Uncheck the all records shown</value>
+  </data>
+  <data name="CreateAssemblyProtocol" xml:space="preserve">
+    <value>Create assembly protocol</value>
+  </data>
+  <data name="AssemblyProtocol" xml:space="preserve">
+    <value>Assembly protocol</value>
+  </data>
+  <data name="SelectByNumberOfRecords" xml:space="preserve">
+    <value>Select by number of records</value>
+  </data>
+  <data name="ValueIsNotInteger" xml:space="preserve">
+    <value>The value '{0}' is not an integer</value>
+  </data>
+  <data name="SelectedToInitState" xml:space="preserve">
+    <value>Selected to initialization state</value>
+  </data>
+  <data name="dUdt" xml:space="preserve">
+    <value>dU/dt</value>
+  </data>
+  <data name="Climatic" xml:space="preserve">
+    <value>Climatic</value>
+  </data>
+  <data name="tgt" xml:space="preserve">
+    <value>tgt</value>
+  </data>
+  <data name="tq" xml:space="preserve">
+    <value>tq</value>
+  </data>
+  <data name="trr" xml:space="preserve">
+    <value>trr</value>
+  </data>
+  <data name="SetAssemblyProtocolModeOn" xml:space="preserve">
+    <value>Set assembly protocol mode on</value>
+  </data>
+  <data name="NoPermissions" xml:space="preserve">
+    <value>No permission for this action.</value>
+  </data>
+  <data name="EditAssembly" xml:space="preserve">
+    <value>Linker: Edit assembly</value>
+  </data>
+  <data name="SelectedDataIsNotForChange" xml:space="preserve">
+    <value>Selected data is not for change.</value>
+  </data>
+  <data name="WrongTermalConditions" xml:space="preserve">
+    <value>The parameter was not created. The thermal conditions of the measurements and the created parameter do not match.</value>
+  </data>
+  <data name="ParemeterIsInUse" xml:space="preserve">
+    <value>Paremeter '{0}' is in use. The parameter can only be used once.</value>
+  </data>
+  <data name="SubjectNotSetted" xml:space="preserve">
+    <value>The "{0}" is {1}. Enter value of "{0}".</value>
+  </data>
+  <data name="SelectedProfileParameters" xml:space="preserve">
+    <value>Selected profile parameters:</value>
+  </data>
+  <data name="NothingHasBeenSelected" xml:space="preserve">
+    <value>Ничего не было выбрано.</value>
+  </data>
+  <data name="SaveWasSuccessful" xml:space="preserve">
+    <value>Save was successful.</value>
+  </data>
+  <data name="DataContainsAnError" xml:space="preserve">
+    <value>The entered data contains an error.</value>
+  </data>
+  <data name="CanReloadList" xml:space="preserve">
+    <value>The previously saved list will be loaded from the database instead of the displayed list. Proceed?</value>
+  </data>
+  <data name="DeleteCurrentRecord" xml:space="preserve">
+    <value>Delete record</value>
+  </data>
+  <data name="SaveFailed" xml:space="preserve">
+    <value>Save failed.</value>
+  </data>
+  <data name="NameAlreadyExistsInObject" xml:space="preserve">
+    <value>The parameter cannot be selected. The value of a parameter with the same name already exists in the editing object.</value>
+  </data>
+  <data name="WorkWithManualParamsOfAssemblyProtocol" xml:space="preserve">
+    <value>Work with params of assembly protocol</value>
+  </data>
+  <data name="Omnity" xml:space="preserve">
+    <value>Omnity</value>
+  </data>
+  <data name="AssemblyJob" xml:space="preserve">
+    <value>Assembly job</value>
+  </data>
+  <data name="NotFoundInSL" xml:space="preserve">
+    <value>'{0}'  not found in SyteLine.</value>
+  </data>
+  <data name="WrongValueByMask" xml:space="preserve">
+    <value>The value '{0}' does not match the mask '{1}'.</value>
+  </data>
+  <data name="Qrr" xml:space="preserve">
+    <value>Qrr</value>
+  </data>
+  <data name="FilterIsNotOn" xml:space="preserve">
+    <value>Filter by field "{0}" is off.</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>Operation failed</value>
+  </data>
+  <data name="Modification" xml:space="preserve">
+    <value>Mod.</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ProcessedRecordCount" xml:space="preserve">
+    <value>Processed record count {0}</value>
+  </data>
+  <data name="ReportBuildingError" xml:space="preserve">
+    <value>An error was found in the source data for building the report. Reason {0}.</value>
+  </data>
+  <data name="DeviceReferences" xml:space="preserve">
+    <value>References of devices norms</value>
+  </data>
+  <data name="References" xml:space="preserve">
+    <value>References</value>
+  </data>
+  <data name="OutOfRange" xml:space="preserve">
+    <value>Out of range</value>
+  </data>
+  <data name="WrongDescription" xml:space="preserve">
+    <value>Wrong description</value>
+  </data>
+  <data name="ManageDeviceReferences" xml:space="preserve">
+    <value>Manage device references</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="DeviceTypeEN" xml:space="preserve">
+    <value>Type EN</value>
+  </data>
+  <data name="DeviceTypeRU" xml:space="preserve">
+    <value>Type RU</value>
+  </data>
+  <data name="CaseType" xml:space="preserve">
+    <value>Case type</value>
+  </data>
+  <data name="IdrmMax" xml:space="preserve">
+    <value>IdrmMax</value>
+  </data>
+  <data name="IgtMax" xml:space="preserve">
+    <value>IgtMax</value>
+  </data>
+  <data name="PrsmMin" xml:space="preserve">
+    <value>PrsmMin</value>
+  </data>
+  <data name="QrrMax" xml:space="preserve">
+    <value>QrrMax</value>
+  </data>
+  <data name="TjMax" xml:space="preserve">
+    <value>TjMax</value>
+  </data>
+  <data name="UgtMax" xml:space="preserve">
+    <value>UgtMax</value>
+  </data>
+  <data name="UtmCorrection" xml:space="preserve">
+    <value>UtmCorrection</value>
+  </data>
+  <data name="UtmMax" xml:space="preserve">
+    <value>UtmMax</value>
+  </data>
+  <data name="WorkWithDeviceReferences" xml:space="preserve">
+    <value>Work with device references</value>
+  </data>
+  <data name="DeviceReferenceEditor" xml:space="preserve">
+    <value>Device reference editor</value>
+  </data>
+  <data name="DeleteCancelled" xml:space="preserve">
+    <value>The system rejected the delete operation. The number of references to the deletion object is greater than zero.</value>
+  </data>
+  <data name="DeleteColumn" xml:space="preserve">
+    <value>Delete column</value>
+  </data>
+  <data name="DifferentTemperatureModes" xml:space="preserve">
+    <value>The temperature mode of the displayed parameters and the selected profile do not match.</value>
+  </data>
+  <data name="SelectedProfile" xml:space="preserve">
+    <value>Selected profile</value>
+  </data>
+  <data name="CurrentProfile" xml:space="preserve">
+    <value>Current profile</value>
+  </data>
+  <data name="UnknownTemperatureCondition" xml:space="preserve">
+    <value>Temperature condition is unknown</value>
+  </data>
+  <data name="ProfileOfDisplayedData" xml:space="preserve">
+    <value>Profile of displayed data</value>
+  </data>
+  <data name="NormMaxValue" xml:space="preserve">
+    <value>Max value of norms</value>
+  </data>
+  <data name="NormMinValue" xml:space="preserve">
+    <value>Min value of norms</value>
+  </data>
+  <data name="RecordSuccessfullyDeleted" xml:space="preserve">
+    <value>Record successfully deleted</value>
+  </data>
+  <data name="DeleteSelectedRecords" xml:space="preserve">
+    <value>Delete selected records</value>
+  </data>
+  <data name="SelectedRecordsDeletedSuccessfully" xml:space="preserve">
+    <value>Selected records deleted successfully.</value>
+  </data>
+  <data name="ChangeProhibited" xml:space="preserve">
+    <value>Change prohibited</value>
+  </data>
+  <data name="NotCreatedByHand" xml:space="preserve">
+    <value>Not created by hand</value>
+  </data>
+  <data name="AssemblyProtocols" xml:space="preserve">
+    <value>Assembly protocols</value>
+  </data>
+  <data name="ModeView" xml:space="preserve">
+    <value>Mode view</value>
+  </data>
+  <data name="ProtocolDescr" xml:space="preserve">
+    <value>Protocol num</value>
+  </data>
+  <data name="ListOfAssemblyProtocols" xml:space="preserve">
+    <value>List of assembly protocols</value>
+  </data>
+  <data name="DeviceCommentsOneString" xml:space="preserve">
+    <value>Measurement group comments</value>
+  </data>
+  <data name="ProcessingIsNotProvided" xml:space="preserve">
+    <value>For {0} processing is not provided.</value>
+  </data>
+  <data name="FilterIsNotSingle" xml:space="preserve">
+    <value>The number of filters on the field "{0}" is not equal to 1. To perform this action, no more than one filter on the field "{0}" is required.</value>
+  </data>
+  <data name="FilterValuesIsNotSingle" xml:space="preserve">
+    <value>The number of filter values ​​for the field "{0}" is not equal to 1. To perform this action, no more than one filter value for the field "{0}" is required.</value>
+  </data>
+  <data name="FilterComparisonTypeIsNotEqual" xml:space="preserve">
+    <value>Filter comparison type is not '='.</value>
+  </data>
+  <data name="PleaseAuthenticate" xml:space="preserve">
+    <value>Please authenticate.</value>
+  </data>
+  <data name="FailedToCreate" xml:space="preserve">
+    <value>Failed to create</value>
+  </data>
+  <data name="FiltersCountIsNotOne" xml:space="preserve">
+    <value>The number of actived filters is not equal to 1. Only one filter is required to perform this action.</value>
+  </data>
+  <data name="SendSelectedToAssemblyProtocol" xml:space="preserve">
+    <value>Send selected measurement groups to assembly protocol №</value>
+  </data>
+  <data name="DoesNotExist" xml:space="preserve">
+    <value>does not exist</value>
+  </data>
+  <data name="SelectedSuccessfullySendedToAssemblyProtocol" xml:space="preserve">
+    <value>Selected measurement groups was successfully moved to assembly protocol № {0}.</value>
+  </data>
+  <data name="ReadReason" xml:space="preserve">
+    <value>Reading the value of the 'Reason' field</value>
+  </data>
+  <data name="Destroy" xml:space="preserve">
+    <value>Destroy</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quant.</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="DataLoadingFailed" xml:space="preserve">
+    <value>Data loading failed</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="Records" xml:space="preserve">
+    <value>Records:</value>
+  </data>
+  <data name="dUdtMin" xml:space="preserve">
+    <value>dU/dtMin</value>
+  </data>
+  <data name="IrrmMax" xml:space="preserve">
+    <value>IrrmMax</value>
+  </data>
+  <data name="RisolMin" xml:space="preserve">
+    <value>RisolMin</value>
+  </data>
+  <data name="TgtMax" xml:space="preserve">
+    <value>TgtMax</value>
+  </data>
+  <data name="TqMin" xml:space="preserve">
+    <value>TqMin</value>
+  </data>
+  <data name="TrrMin" xml:space="preserve">
+    <value>TrrMin</value>
+  </data>
+  <data name="UbrMin" xml:space="preserve">
+    <value>UbrMin</value>
+  </data>
+  <data name="UdsmMin" xml:space="preserve">
+    <value>UdsmMin</value>
+  </data>
+  <data name="UisolMin" xml:space="preserve">
+    <value>UisolMin</value>
+  </data>
+  <data name="UrsmMin" xml:space="preserve">
+    <value>UrsmMin</value>
+  </data>
+  <data name="ErrorCreateColumnByListOfRecordsIsEmpty" xml:space="preserve">
+    <value>The system prevented the creation of a column for an empty list of records.</value>
+  </data>
+  <data name="AssemblyStatusDescr" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="UfmMax" xml:space="preserve">
+    <value>UfmMax</value>
+  </data>
+  <data name="FilterValueIsBad" xml:space="preserve">
+    <value>The value of filter '{0}' is not equal '{1}'.</value>
+  </data>
+</root>

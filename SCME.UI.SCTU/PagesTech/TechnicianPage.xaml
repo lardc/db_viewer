@@ -1,0 +1,165 @@
+﻿<Page x:Class="SCME.UI.PagesTech.TechnicianPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:my="clr-namespace:SCME.UI"
+      xmlns:res="clr-namespace:SCME.UI.Properties"
+      mc:Ignorable="d"
+      d:DesignWidth="1280" d:DesignHeight="924"
+      Name="technicianPage" Title="{x:Static res:Resources.Technitian}">
+
+    <Page.Resources>
+
+        <my:BooleanToVisibilityConverter x:Key="B2V" />
+
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource CLabelStyle}">
+            <Setter Property="Foreground" Value="{StaticResource xWhite1}" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+        </Style>
+
+        <Style TargetType="{x:Type Path}">
+            <Setter Property="Stroke" Value="{StaticResource xWhite1}" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Margin" Value="20" />
+            <Setter Property="Width" Value="80" />
+            <Setter Property="Height" Value="80" />
+            <Setter Property="Stretch" Value="Uniform" />
+            <Setter Property="StrokeThickness" Value="3" />
+        </Style>
+
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Opacity" Value="1" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" Value="0.3" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Opacity" Value="0.7" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                        <ContentPresenter />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <EventSetter Event="Click" Handler="Button_Click" />
+        </Style>
+
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+
+        <UniformGrid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"
+                     Columns="3" Margin="80,20">
+            <Button CommandParameter="1" Name="btnGate"
+                    Visibility="{Binding Source={x:Static res:Settings.Default}, Path=GateIsVisible, Converter={StaticResource B2V}}">
+                <Grid Background="{StaticResource xOrange2}">
+                    <Path Data="{StaticResource GatePath}" />
+                    <Label Content="{x:Static res:Resources.Gate}" />
+                </Grid>
+            </Button>
+
+            <Button CommandParameter="2" Name="btnVtm"
+                    Visibility="{Binding Source={x:Static res:Settings.Default}, Path=VtmIsVisible, Converter={StaticResource B2V}}">
+                <Grid Background="{StaticResource xRed1}">
+                    <Path Data="{StaticResource VtmPath}" />
+                    <Label Content="{x:Static res:Resources.Vtm}" />
+                </Grid>
+            </Button>
+
+            <Button CommandParameter="3" Name="btnBvt"
+                    Visibility="{Binding Source={x:Static res:Settings.Default}, Path=BvtIsVisible, Converter={StaticResource B2V}}">
+                <Grid Background="{StaticResource xBlue2}">
+                    <Path Data="{StaticResource BvtPath}" />
+                    <Label Content="{x:Static res:Resources.Bvt}" />
+                </Grid>
+            </Button>
+
+            <Button CommandParameter="4"
+                Visibility="Collapsed">
+                <Grid Background="{StaticResource xGreen3}">
+                    <Path Data="{StaticResource SelftestPath}" />
+                    <Label Content="{x:Static res:Resources.Selftest}" />
+                </Grid>
+            </Button>
+
+            <Button CommandParameter="5"
+                Visibility="Collapsed">
+                <Grid Background="{StaticResource xGreen1}">
+                    <Path Data="{StaticResource CalibrationPath}" />
+                    <Label Content="{x:Static res:Resources.Calibration}" />
+                </Grid>
+            </Button>
+
+            <Button CommandParameter="6">
+                <Grid Background="{StaticResource xOrange1}">
+                    <Path Data="{StaticResource ConsolePath}" />
+                    <Label Content="{x:Static res:Resources.Console}" />
+                </Grid>
+            </Button>
+
+            <Button CommandParameter="7"
+                    Visibility="{Binding Source={x:Static res:Settings.Default}, Path=ReadOnlyProfiles, Converter={StaticResource B2V}, ConverterParameter=!}">
+                <Grid Background="{StaticResource xPurple1}">
+                    <Path Data="{StaticResource EditPath}" />
+                    <Label Content="{x:Static res:Resources.Profile}" />
+                </Grid>
+            </Button>
+
+            <Button CommandParameter="8">
+                <Grid Background="{StaticResource xBlue1}">
+                    <Path Data="{StaticResource LogsPath}" />
+                    <Label Content="{x:Static res:Resources.Logs}" />
+                </Grid>
+            </Button>
+
+            <Button CommandParameter="9"
+                Visibility="Collapsed">
+                <Grid Background="{StaticResource xGreen2}">
+                    <Path Data="{StaticResource ResultsPath}" />
+                    <Label Content="{x:Static res:Resources.Results}" />
+                </Grid>
+            </Button>
+
+            <Button CommandParameter="10">
+                <Grid Background="{StaticResource xBlue3}">
+                    <Path Data="{StaticResource TechPath}" />
+                    <Label Content="{x:Static res:Resources.Hardware}" />
+                </Grid>
+            </Button>
+
+            <Button CommandParameter="11"
+                Visibility="{Binding Source={x:Static res:Settings.Default}, Path=ClampIsVisible, Converter={StaticResource B2V}}">
+                <Grid Background="{StaticResource xOrange1}">
+                    <Path Data="{StaticResource ClampPath}" />
+                    <Label Content="{x:Static res:Resources.Clamp}" />
+                </Grid>
+            </Button>
+        </UniformGrid>
+
+        <Button Grid.Column="0" Grid.Row="1"
+                Content="{x:Static res:Resources.Back}"
+                Click="BtnBack_Click"
+                Margin="0,0,0,0"
+                Style="{StaticResource CButtonStyle}" />
+    </Grid>
+</Page>

@@ -1,0 +1,54 @@
+﻿<Window x:Class="SCME.dbViewer.ForFilters.FiltersInput"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SCME.dbViewer.ForFilters"
+        xmlns:customControl="clr-namespace:SCME.dbViewer.CustomControl"
+        xmlns:res="clr-namespace:SCME.dbViewer.Properties"
+        mc:Ignorable="d"
+        Title="StringInput" Height="auto" Width="430" SizeToContent="Height" Background="{StaticResource CustomBlue1}"
+        WindowStyle="None" ShowInTaskbar="False" ResizeMode="CanResizeWithGrip" AllowsTransparency="True" PreviewKeyDown="Window_PreviewKeyDown" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+
+    <Window.Resources>
+        <Style x:Key="closeWindowPath" TargetType="Path">
+            <Setter Property="Data" Value="M 0 0 L 8 8 M 0 8 L 8 0"/>
+            <Setter Property="StrokeThickness" Value="1"/>
+            <Setter Property="Stroke" Value="Black"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="BtDeleteAllFilters" Grid.Column="0" Content="{x:Static res:Resources.DeleteAllFilters}" FontSize="11" Click="BtDeleteAllFilters_Click"/>
+
+            <Button Grid.Column="1" MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" Background="LightPink" IsCancel="True" Click="BtCancel_Click" FontSize="10" Margin="5,0,0,0">
+                <Path Style="{StaticResource closeWindowPath}"/>
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="3"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+
+        <customControl:ListViewFilters x:Name="lvFilters" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsSource="{Binding Filters}"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Height="50" VerticalAlignment="Bottom">
+            <Button Content="OK" MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" IsDefault="True" Click="BtOK_Click" FontSize="10" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,844 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SCME_ResultsDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CONDITIONS">
+          <Key>
+            <PropertyRef Name="COND_ID" />
+          </Key>
+          <Property Name="COND_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="COND_NAME" Type="char" MaxLength="32" Nullable="false" />
+          <Property Name="COND_NAME_LOCAL" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="COND_IS_TECH" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DEV_ERR">
+          <Key>
+            <PropertyRef Name="DEV_ID" />
+            <PropertyRef Name="ERR_ID" />
+          </Key>
+          <Property Name="DEV_ID" Type="int" Nullable="false" />
+          <Property Name="ERR_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DEV_PARAM">
+          <Key>
+            <PropertyRef Name="DEV_PARAM_ID" />
+          </Key>
+          <Property Name="DEV_PARAM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DEV_ID" Type="int" Nullable="false" />
+          <Property Name="PARAM_ID" Type="int" Nullable="false" />
+          <Property Name="VALUE" Type="decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="TEST_TYPE_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DEVICES">
+          <Key>
+            <PropertyRef Name="DEV_ID" />
+          </Key>
+          <Property Name="DEV_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GROUP_ID" Type="int" Nullable="false" />
+          <Property Name="PROFILE_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CODE" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="SIL_N_1" Type="nvarchar" MaxLength="64" />
+          <Property Name="SIL_N_2" Type="nvarchar" MaxLength="64" />
+          <Property Name="TS" Type="datetime" Nullable="false" />
+          <Property Name="USR" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="POS" Type="bit" Nullable="false" />
+          <Property Name="MME_CODE" Type="nvarchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="ERRORS">
+          <Key>
+            <PropertyRef Name="ERR_ID" />
+          </Key>
+          <Property Name="ERR_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ERR_CODE" Type="int" Nullable="false" />
+          <Property Name="ERR_NAME" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="ERR_NAME_LOCAL" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GROUPS">
+          <Key>
+            <PropertyRef Name="GROUP_ID" />
+          </Key>
+          <Property Name="GROUP_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GROUP_NAME" Type="nchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PARAMS">
+          <Key>
+            <PropertyRef Name="PARAM_ID" />
+          </Key>
+          <Property Name="PARAM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PARAM_NAME" Type="char" MaxLength="16" Nullable="false" />
+          <Property Name="PARAM_NAME_LOCAL" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="PARAM_IS_HIDE" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PROF_COND">
+          <Key>
+            <PropertyRef Name="PROF_TESTTYPE_ID" />
+            <PropertyRef Name="PROF_ID" />
+            <PropertyRef Name="COND_ID" />
+          </Key>
+          <Property Name="PROF_TESTTYPE_ID" Type="int" Nullable="false" />
+          <Property Name="PROF_ID" Type="int" Nullable="false" />
+          <Property Name="COND_ID" Type="int" Nullable="false" />
+          <Property Name="VALUE" Type="char" MaxLength="16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PROF_PARAM">
+          <Key>
+            <PropertyRef Name="PROF_TESTTYPE_ID" />
+            <PropertyRef Name="PROF_ID" />
+            <PropertyRef Name="PARAM_ID" />
+          </Key>
+          <Property Name="PROF_TESTTYPE_ID" Type="int" Nullable="false" />
+          <Property Name="PROF_ID" Type="int" Nullable="false" />
+          <Property Name="PARAM_ID" Type="int" Nullable="false" />
+          <Property Name="MIN_VAL" Type="float" />
+          <Property Name="MAX_VAL" Type="float" />
+        </EntityType>
+        <EntityType Name="PROF_TEST_TYPE">
+          <Key>
+            <PropertyRef Name="PTT_ID" />
+          </Key>
+          <Property Name="PTT_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PROF_ID" Type="int" Nullable="false" />
+          <Property Name="TEST_TYPE_ID" Type="int" Nullable="false" />
+          <Property Name="ORD" Type="int" />
+        </EntityType>
+        <EntityType Name="PROFILES">
+          <Key>
+            <PropertyRef Name="PROF_ID" />
+          </Key>
+          <Property Name="PROF_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PROF_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="PROF_GUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PROF_TS" Type="datetime" Nullable="false" />
+          <Property Name="PROF_VERS" Type="int" Nullable="false" />
+          <Property Name="IS_DELETED" Type="bit" />
+        </EntityType>
+        <EntityType Name="TEST_TYPE">
+          <Key>
+            <PropertyRef Name="TEST_TYPE_ID" />
+          </Key>
+          <Property Name="TEST_TYPE_ID" Type="int" Nullable="false" />
+          <Property Name="TEST_TYPE_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_DEV_ERR_DEVICES">
+          <End Role="DEVICES" Type="Self.DEVICES" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DEV_ERR" Type="Self.DEV_ERR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEVICES">
+              <PropertyRef Name="DEV_ID" />
+            </Principal>
+            <Dependent Role="DEV_ERR">
+              <PropertyRef Name="DEV_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DEV_ERR_ERRORS">
+          <End Role="ERRORS" Type="Self.ERRORS" Multiplicity="1" />
+          <End Role="DEV_ERR" Type="Self.DEV_ERR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ERRORS">
+              <PropertyRef Name="ERR_ID" />
+            </Principal>
+            <Dependent Role="DEV_ERR">
+              <PropertyRef Name="ERR_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DEV_PARAM_DEVICES">
+          <End Role="DEVICES" Type="Self.DEVICES" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DEV_PARAM" Type="Self.DEV_PARAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEVICES">
+              <PropertyRef Name="DEV_ID" />
+            </Principal>
+            <Dependent Role="DEV_PARAM">
+              <PropertyRef Name="DEV_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DEV_PARAM_PARAMS">
+          <End Role="PARAMS" Type="Self.PARAMS" Multiplicity="1" />
+          <End Role="DEV_PARAM" Type="Self.DEV_PARAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PARAMS">
+              <PropertyRef Name="PARAM_ID" />
+            </Principal>
+            <Dependent Role="DEV_PARAM">
+              <PropertyRef Name="PARAM_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DEVICES_GROUPS">
+          <End Role="GROUPS" Type="Self.GROUPS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DEVICES" Type="Self.DEVICES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GROUPS">
+              <PropertyRef Name="GROUP_ID" />
+            </Principal>
+            <Dependent Role="DEVICES">
+              <PropertyRef Name="GROUP_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_COND_PROF_COND">
+          <End Role="CONDITIONS" Type="Self.CONDITIONS" Multiplicity="1" />
+          <End Role="PROF_COND" Type="Self.PROF_COND" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CONDITIONS">
+              <PropertyRef Name="COND_ID" />
+            </Principal>
+            <Dependent Role="PROF_COND">
+              <PropertyRef Name="COND_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_COND_PROF_TEST_TYPE">
+          <End Role="PROF_TEST_TYPE" Type="Self.PROF_TEST_TYPE" Multiplicity="1" />
+          <End Role="PROF_COND" Type="Self.PROF_COND" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROF_TEST_TYPE">
+              <PropertyRef Name="PTT_ID" />
+            </Principal>
+            <Dependent Role="PROF_COND">
+              <PropertyRef Name="PROF_TESTTYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_COND_PROFILES">
+          <End Role="PROFILES" Type="Self.PROFILES" Multiplicity="1" />
+          <End Role="PROF_COND" Type="Self.PROF_COND" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROFILES">
+              <PropertyRef Name="PROF_ID" />
+            </Principal>
+            <Dependent Role="PROF_COND">
+              <PropertyRef Name="PROF_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_PARAM_PARAMS">
+          <End Role="PARAMS" Type="Self.PARAMS" Multiplicity="1" />
+          <End Role="PROF_PARAM" Type="Self.PROF_PARAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PARAMS">
+              <PropertyRef Name="PARAM_ID" />
+            </Principal>
+            <Dependent Role="PROF_PARAM">
+              <PropertyRef Name="PARAM_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_PARAM_PROFILES">
+          <End Role="PROFILES" Type="Self.PROFILES" Multiplicity="1" />
+          <End Role="PROF_PARAM" Type="Self.PROF_PARAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROFILES">
+              <PropertyRef Name="PROF_ID" />
+            </Principal>
+            <Dependent Role="PROF_PARAM">
+              <PropertyRef Name="PROF_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_PARAM_TEST_TYPE">
+          <End Role="PROF_TEST_TYPE" Type="Self.PROF_TEST_TYPE" Multiplicity="1" />
+          <End Role="PROF_PARAM" Type="Self.PROF_PARAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROF_TEST_TYPE">
+              <PropertyRef Name="PTT_ID" />
+            </Principal>
+            <Dependent Role="PROF_PARAM">
+              <PropertyRef Name="PROF_TESTTYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_TEST_TYPE_PROFILES">
+          <End Role="PROFILES" Type="Self.PROFILES" Multiplicity="1" />
+          <End Role="PROF_TEST_TYPE" Type="Self.PROF_TEST_TYPE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROFILES">
+              <PropertyRef Name="PROF_ID" />
+            </Principal>
+            <Dependent Role="PROF_TEST_TYPE">
+              <PropertyRef Name="PROF_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_TEST_TYPE_TEST_TYPE">
+          <End Role="TEST_TYPE" Type="Self.TEST_TYPE" Multiplicity="1" />
+          <End Role="PROF_TEST_TYPE" Type="Self.PROF_TEST_TYPE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEST_TYPE">
+              <PropertyRef Name="TEST_TYPE_ID" />
+            </Principal>
+            <Dependent Role="PROF_TEST_TYPE">
+              <PropertyRef Name="TEST_TYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SCME_ResultsDBModelStoreContainer">
+          <EntitySet Name="CONDITIONS" EntityType="Self.CONDITIONS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DEV_ERR" EntityType="Self.DEV_ERR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DEV_PARAM" EntityType="Self.DEV_PARAM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DEVICES" EntityType="Self.DEVICES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ERRORS" EntityType="Self.ERRORS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GROUPS" EntityType="Self.GROUPS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PARAMS" EntityType="Self.PARAMS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PROF_COND" EntityType="Self.PROF_COND" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PROF_PARAM" EntityType="Self.PROF_PARAM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PROF_TEST_TYPE" EntityType="Self.PROF_TEST_TYPE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PROFILES" EntityType="Self.PROFILES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TEST_TYPE" EntityType="Self.TEST_TYPE" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_DEV_ERR_DEVICES" Association="Self.FK_DEV_ERR_DEVICES">
+            <End Role="DEVICES" EntitySet="DEVICES" />
+            <End Role="DEV_ERR" EntitySet="DEV_ERR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DEV_ERR_ERRORS" Association="Self.FK_DEV_ERR_ERRORS">
+            <End Role="ERRORS" EntitySet="ERRORS" />
+            <End Role="DEV_ERR" EntitySet="DEV_ERR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DEV_PARAM_DEVICES" Association="Self.FK_DEV_PARAM_DEVICES">
+            <End Role="DEVICES" EntitySet="DEVICES" />
+            <End Role="DEV_PARAM" EntitySet="DEV_PARAM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DEV_PARAM_PARAMS" Association="Self.FK_DEV_PARAM_PARAMS">
+            <End Role="PARAMS" EntitySet="PARAMS" />
+            <End Role="DEV_PARAM" EntitySet="DEV_PARAM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DEVICES_GROUPS" Association="Self.FK_DEVICES_GROUPS">
+            <End Role="GROUPS" EntitySet="GROUPS" />
+            <End Role="DEVICES" EntitySet="DEVICES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_COND_PROF_COND" Association="Self.FK_PROF_COND_PROF_COND">
+            <End Role="CONDITIONS" EntitySet="CONDITIONS" />
+            <End Role="PROF_COND" EntitySet="PROF_COND" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_COND_PROF_TEST_TYPE" Association="Self.FK_PROF_COND_PROF_TEST_TYPE">
+            <End Role="PROF_TEST_TYPE" EntitySet="PROF_TEST_TYPE" />
+            <End Role="PROF_COND" EntitySet="PROF_COND" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_COND_PROFILES" Association="Self.FK_PROF_COND_PROFILES">
+            <End Role="PROFILES" EntitySet="PROFILES" />
+            <End Role="PROF_COND" EntitySet="PROF_COND" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_PARAM_PARAMS" Association="Self.FK_PROF_PARAM_PARAMS">
+            <End Role="PARAMS" EntitySet="PARAMS" />
+            <End Role="PROF_PARAM" EntitySet="PROF_PARAM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_PARAM_PROFILES" Association="Self.FK_PROF_PARAM_PROFILES">
+            <End Role="PROFILES" EntitySet="PROFILES" />
+            <End Role="PROF_PARAM" EntitySet="PROF_PARAM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_PARAM_TEST_TYPE" Association="Self.FK_PROF_PARAM_TEST_TYPE">
+            <End Role="PROF_TEST_TYPE" EntitySet="PROF_TEST_TYPE" />
+            <End Role="PROF_PARAM" EntitySet="PROF_PARAM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_TEST_TYPE_PROFILES" Association="Self.FK_PROF_TEST_TYPE_PROFILES">
+            <End Role="PROFILES" EntitySet="PROFILES" />
+            <End Role="PROF_TEST_TYPE" EntitySet="PROF_TEST_TYPE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_TEST_TYPE_TEST_TYPE" Association="Self.FK_PROF_TEST_TYPE_TEST_TYPE">
+            <End Role="TEST_TYPE" EntitySet="TEST_TYPE" />
+            <End Role="PROF_TEST_TYPE" EntitySet="PROF_TEST_TYPE" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SCME_ResultsDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DEVICES" EntityType="SCME_ResultsDBModel.DEVICE" />
+          <EntitySet Name="GROUPS" EntityType="SCME_ResultsDBModel.GROUP" />
+          <AssociationSet Name="FK_DEVICES_GROUPS" Association="SCME_ResultsDBModel.FK_DEVICES_GROUPS">
+            <End Role="GROUP" EntitySet="GROUPS" />
+            <End Role="DEVICE" EntitySet="DEVICES" />
+          </AssociationSet>
+          <EntitySet Name="DEV_PARAM" EntityType="SCME_ResultsDBModel.DEV_PARAM" />
+          <EntitySet Name="ERRORS" EntityType="SCME_ResultsDBModel.ERROR" />
+          <EntitySet Name="PARAMS" EntityType="SCME_ResultsDBModel.PARAM" />
+          <AssociationSet Name="FK_DEV_PARAM_DEVICES" Association="SCME_ResultsDBModel.FK_DEV_PARAM_DEVICES">
+            <End Role="DEVICE" EntitySet="DEVICES" />
+            <End Role="DEV_PARAM" EntitySet="DEV_PARAM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DEV_PARAM_PARAMS" Association="SCME_ResultsDBModel.FK_DEV_PARAM_PARAMS">
+            <End Role="PARAM" EntitySet="PARAMS" />
+            <End Role="DEV_PARAM" EntitySet="DEV_PARAM" />
+          </AssociationSet>
+          <AssociationSet Name="DEV_ERR" Association="SCME_ResultsDBModel.DEV_ERR">
+            <End Role="DEVICE" EntitySet="DEVICES" />
+            <End Role="ERROR" EntitySet="ERRORS" />
+          </AssociationSet>
+          <EntitySet Name="CONDITIONS" EntityType="SCME_ResultsDBModel.CONDITION" />
+          <EntitySet Name="PROF_COND" EntityType="SCME_ResultsDBModel.PROF_COND" />
+          <EntitySet Name="PROF_PARAM" EntityType="SCME_ResultsDBModel.PROF_PARAM" />
+          <EntitySet Name="PROF_TEST_TYPE" EntityType="SCME_ResultsDBModel.PROF_TEST_TYPE" />
+          <EntitySet Name="PROFILES" EntityType="SCME_ResultsDBModel.PROFILE" />
+          <EntitySet Name="TEST_TYPE" EntityType="SCME_ResultsDBModel.TEST_TYPE" />
+          <AssociationSet Name="FK_PROF_COND_PROF_COND" Association="SCME_ResultsDBModel.FK_PROF_COND_PROF_COND">
+            <End Role="CONDITION" EntitySet="CONDITIONS" />
+            <End Role="PROF_COND" EntitySet="PROF_COND" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_PARAM_PARAMS" Association="SCME_ResultsDBModel.FK_PROF_PARAM_PARAMS">
+            <End Role="PARAM" EntitySet="PARAMS" />
+            <End Role="PROF_PARAM" EntitySet="PROF_PARAM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_COND_PROF_TEST_TYPE" Association="SCME_ResultsDBModel.FK_PROF_COND_PROF_TEST_TYPE">
+            <End Role="PROF_TEST_TYPE" EntitySet="PROF_TEST_TYPE" />
+            <End Role="PROF_COND" EntitySet="PROF_COND" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_COND_PROFILES" Association="SCME_ResultsDBModel.FK_PROF_COND_PROFILES">
+            <End Role="PROFILE" EntitySet="PROFILES" />
+            <End Role="PROF_COND" EntitySet="PROF_COND" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_PARAM_PROFILES" Association="SCME_ResultsDBModel.FK_PROF_PARAM_PROFILES">
+            <End Role="PROFILE" EntitySet="PROFILES" />
+            <End Role="PROF_PARAM" EntitySet="PROF_PARAM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_PARAM_TEST_TYPE" Association="SCME_ResultsDBModel.FK_PROF_PARAM_TEST_TYPE">
+            <End Role="PROF_TEST_TYPE" EntitySet="PROF_TEST_TYPE" />
+            <End Role="PROF_PARAM" EntitySet="PROF_PARAM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_TEST_TYPE_PROFILES" Association="SCME_ResultsDBModel.FK_PROF_TEST_TYPE_PROFILES">
+            <End Role="PROFILE" EntitySet="PROFILES" />
+            <End Role="PROF_TEST_TYPE" EntitySet="PROF_TEST_TYPE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROF_TEST_TYPE_TEST_TYPE" Association="SCME_ResultsDBModel.FK_PROF_TEST_TYPE_TEST_TYPE">
+            <End Role="TEST_TYPE" EntitySet="TEST_TYPE" />
+            <End Role="PROF_TEST_TYPE" EntitySet="PROF_TEST_TYPE" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DEVICE">
+          <Key>
+            <PropertyRef Name="DEV_ID" />
+          </Key>
+          <Property Name="DEV_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GROUP_ID" Type="Int32" Nullable="false" />
+          <Property Name="PROFILE_ID" Type="Guid" Nullable="false" />
+          <Property Name="CODE" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="SIL_N_1" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="SIL_N_2" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="TS" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="USR" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="POS" Type="Boolean" Nullable="false" />
+          <Property Name="MME_CODE" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GROUP" Relationship="SCME_ResultsDBModel.FK_DEVICES_GROUPS" FromRole="DEVICE" ToRole="GROUP" />
+          <NavigationProperty Name="DEV_PARAM" Relationship="SCME_ResultsDBModel.FK_DEV_PARAM_DEVICES" FromRole="DEVICE" ToRole="DEV_PARAM" />
+          <NavigationProperty Name="ERRORS" Relationship="SCME_ResultsDBModel.DEV_ERR" FromRole="DEVICE" ToRole="ERROR" />
+        </EntityType>
+        <EntityType Name="GROUP">
+          <Key>
+            <PropertyRef Name="GROUP_ID" />
+          </Key>
+          <Property Name="GROUP_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GROUP_NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="DEVICES" Relationship="SCME_ResultsDBModel.FK_DEVICES_GROUPS" FromRole="GROUP" ToRole="DEVICE" />
+        </EntityType>
+        <Association Name="FK_DEVICES_GROUPS">
+          <End Type="SCME_ResultsDBModel.GROUP" Role="GROUP" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SCME_ResultsDBModel.DEVICE" Role="DEVICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GROUP">
+              <PropertyRef Name="GROUP_ID" />
+            </Principal>
+            <Dependent Role="DEVICE">
+              <PropertyRef Name="GROUP_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="DEV_PARAM">
+          <Key>
+            <PropertyRef Name="DEV_PARAM_ID" />
+          </Key>
+          <Property Name="DEV_ID" Type="Int32" Nullable="false" />
+          <Property Name="PARAM_ID" Type="Int32" Nullable="false" />
+          <Property Name="VALUE" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="TEST_TYPE_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="DEVICE" Relationship="SCME_ResultsDBModel.FK_DEV_PARAM_DEVICES" FromRole="DEV_PARAM" ToRole="DEVICE" />
+          <NavigationProperty Name="PARAM" Relationship="SCME_ResultsDBModel.FK_DEV_PARAM_PARAMS" FromRole="DEV_PARAM" ToRole="PARAM" />
+          <Property Name="DEV_PARAM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="ERROR">
+          <Key>
+            <PropertyRef Name="ERR_ID" />
+          </Key>
+          <Property Name="ERR_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ERR_CODE" Type="Int32" Nullable="false" />
+          <Property Name="ERR_NAME" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="ERR_NAME_LOCAL" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DEVICES" Relationship="SCME_ResultsDBModel.DEV_ERR" FromRole="ERROR" ToRole="DEVICE" />
+        </EntityType>
+        <EntityType Name="PARAM">
+          <Key>
+            <PropertyRef Name="PARAM_ID" />
+          </Key>
+          <Property Name="PARAM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PARAM_NAME" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="PARAM_NAME_LOCAL" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="PARAM_IS_HIDE" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="DEV_PARAM" Relationship="SCME_ResultsDBModel.FK_DEV_PARAM_PARAMS" FromRole="PARAM" ToRole="DEV_PARAM" />
+          <NavigationProperty Name="PROF_PARAM" Relationship="SCME_ResultsDBModel.FK_PROF_PARAM_PARAMS" FromRole="PARAM" ToRole="PROF_PARAM" />
+        </EntityType>
+        <Association Name="FK_DEV_PARAM_DEVICES">
+          <End Type="SCME_ResultsDBModel.DEVICE" Role="DEVICE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SCME_ResultsDBModel.DEV_PARAM" Role="DEV_PARAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEVICE">
+              <PropertyRef Name="DEV_ID" />
+            </Principal>
+            <Dependent Role="DEV_PARAM">
+              <PropertyRef Name="DEV_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DEV_PARAM_PARAMS">
+          <End Type="SCME_ResultsDBModel.PARAM" Role="PARAM" Multiplicity="1" />
+          <End Type="SCME_ResultsDBModel.DEV_PARAM" Role="DEV_PARAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PARAM">
+              <PropertyRef Name="PARAM_ID" />
+            </Principal>
+            <Dependent Role="DEV_PARAM">
+              <PropertyRef Name="PARAM_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DEV_ERR">
+          <End Type="SCME_ResultsDBModel.DEVICE" Role="DEVICE" Multiplicity="*" />
+          <End Type="SCME_ResultsDBModel.ERROR" Role="ERROR" Multiplicity="*" />
+        </Association>
+        <EntityType Name="CONDITION">
+          <Key>
+            <PropertyRef Name="COND_ID" />
+          </Key>
+          <Property Name="COND_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COND_NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="COND_NAME_LOCAL" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="COND_IS_TECH" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="PROF_COND" Relationship="SCME_ResultsDBModel.FK_PROF_COND_PROF_COND" FromRole="CONDITION" ToRole="PROF_COND" />
+        </EntityType>
+        <EntityType Name="PROF_COND">
+          <Key>
+            <PropertyRef Name="PROF_TESTTYPE_ID" />
+            <PropertyRef Name="PROF_ID" />
+            <PropertyRef Name="COND_ID" />
+          </Key>
+          <Property Name="PROF_TESTTYPE_ID" Type="Int32" Nullable="false" />
+          <Property Name="PROF_ID" Type="Int32" Nullable="false" />
+          <Property Name="COND_ID" Type="Int32" Nullable="false" />
+          <Property Name="VALUE" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="CONDITION" Relationship="SCME_ResultsDBModel.FK_PROF_COND_PROF_COND" FromRole="PROF_COND" ToRole="CONDITION" />
+          <NavigationProperty Name="PROF_TEST_TYPE" Relationship="SCME_ResultsDBModel.FK_PROF_COND_PROF_TEST_TYPE" FromRole="PROF_COND" ToRole="PROF_TEST_TYPE" />
+          <NavigationProperty Name="PROFILE" Relationship="SCME_ResultsDBModel.FK_PROF_COND_PROFILES" FromRole="PROF_COND" ToRole="PROFILE" />
+        </EntityType>
+        <EntityType Name="PROF_PARAM">
+          <Key>
+            <PropertyRef Name="PROF_TESTTYPE_ID" />
+            <PropertyRef Name="PROF_ID" />
+            <PropertyRef Name="PARAM_ID" />
+          </Key>
+          <Property Name="PROF_TESTTYPE_ID" Type="Int32" Nullable="false" />
+          <Property Name="PROF_ID" Type="Int32" Nullable="false" />
+          <Property Name="PARAM_ID" Type="Int32" Nullable="false" />
+          <Property Name="MIN_VAL" Type="Double" />
+          <Property Name="MAX_VAL" Type="Double" />
+          <NavigationProperty Name="PARAM" Relationship="SCME_ResultsDBModel.FK_PROF_PARAM_PARAMS" FromRole="PROF_PARAM" ToRole="PARAM" />
+          <NavigationProperty Name="PROFILE" Relationship="SCME_ResultsDBModel.FK_PROF_PARAM_PROFILES" FromRole="PROF_PARAM" ToRole="PROFILE" />
+          <NavigationProperty Name="PROF_TEST_TYPE" Relationship="SCME_ResultsDBModel.FK_PROF_PARAM_TEST_TYPE" FromRole="PROF_PARAM" ToRole="PROF_TEST_TYPE" />
+        </EntityType>
+        <EntityType Name="PROF_TEST_TYPE">
+          <Key>
+            <PropertyRef Name="PTT_ID" />
+          </Key>
+          <Property Name="PTT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PROF_ID" Type="Int32" Nullable="false" />
+          <Property Name="TEST_TYPE_ID" Type="Int32" Nullable="false" />
+          <Property Name="ORD" Type="Int32" />
+          <NavigationProperty Name="PROF_COND" Relationship="SCME_ResultsDBModel.FK_PROF_COND_PROF_TEST_TYPE" FromRole="PROF_TEST_TYPE" ToRole="PROF_COND" />
+          <NavigationProperty Name="PROF_PARAM" Relationship="SCME_ResultsDBModel.FK_PROF_PARAM_TEST_TYPE" FromRole="PROF_TEST_TYPE" ToRole="PROF_PARAM" />
+          <NavigationProperty Name="PROFILE" Relationship="SCME_ResultsDBModel.FK_PROF_TEST_TYPE_PROFILES" FromRole="PROF_TEST_TYPE" ToRole="PROFILE" />
+          <NavigationProperty Name="TEST_TYPE" Relationship="SCME_ResultsDBModel.FK_PROF_TEST_TYPE_TEST_TYPE" FromRole="PROF_TEST_TYPE" ToRole="TEST_TYPE" />
+        </EntityType>
+        <EntityType Name="PROFILE">
+          <Key>
+            <PropertyRef Name="PROF_ID" />
+          </Key>
+          <Property Name="PROF_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PROF_NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="PROF_GUID" Type="Guid" Nullable="false" />
+          <Property Name="PROF_TS" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PROF_VERS" Type="Int32" Nullable="false" />
+          <Property Name="IS_DELETED" Type="Boolean" />
+          <NavigationProperty Name="PROF_COND" Relationship="SCME_ResultsDBModel.FK_PROF_COND_PROFILES" FromRole="PROFILE" ToRole="PROF_COND" />
+          <NavigationProperty Name="PROF_PARAM" Relationship="SCME_ResultsDBModel.FK_PROF_PARAM_PROFILES" FromRole="PROFILE" ToRole="PROF_PARAM" />
+          <NavigationProperty Name="PROF_TEST_TYPE" Relationship="SCME_ResultsDBModel.FK_PROF_TEST_TYPE_PROFILES" FromRole="PROFILE" ToRole="PROF_TEST_TYPE" />
+        </EntityType>
+        <EntityType Name="TEST_TYPE">
+          <Key>
+            <PropertyRef Name="TEST_TYPE_ID" />
+          </Key>
+          <Property Name="TEST_TYPE_ID" Type="Int32" Nullable="false" />
+          <Property Name="TEST_TYPE_NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PROF_TEST_TYPE" Relationship="SCME_ResultsDBModel.FK_PROF_TEST_TYPE_TEST_TYPE" FromRole="TEST_TYPE" ToRole="PROF_TEST_TYPE" />
+        </EntityType>
+        <Association Name="FK_PROF_COND_PROF_COND">
+          <End Type="SCME_ResultsDBModel.CONDITION" Role="CONDITION" Multiplicity="1" />
+          <End Type="SCME_ResultsDBModel.PROF_COND" Role="PROF_COND" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CONDITION">
+              <PropertyRef Name="COND_ID" />
+            </Principal>
+            <Dependent Role="PROF_COND">
+              <PropertyRef Name="COND_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_PARAM_PARAMS">
+          <End Type="SCME_ResultsDBModel.PARAM" Role="PARAM" Multiplicity="1" />
+          <End Type="SCME_ResultsDBModel.PROF_PARAM" Role="PROF_PARAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PARAM">
+              <PropertyRef Name="PARAM_ID" />
+            </Principal>
+            <Dependent Role="PROF_PARAM">
+              <PropertyRef Name="PARAM_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_COND_PROF_TEST_TYPE">
+          <End Type="SCME_ResultsDBModel.PROF_TEST_TYPE" Role="PROF_TEST_TYPE" Multiplicity="1" />
+          <End Type="SCME_ResultsDBModel.PROF_COND" Role="PROF_COND" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROF_TEST_TYPE">
+              <PropertyRef Name="PTT_ID" />
+            </Principal>
+            <Dependent Role="PROF_COND">
+              <PropertyRef Name="PROF_TESTTYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_COND_PROFILES">
+          <End Type="SCME_ResultsDBModel.PROFILE" Role="PROFILE" Multiplicity="1" />
+          <End Type="SCME_ResultsDBModel.PROF_COND" Role="PROF_COND" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROFILE">
+              <PropertyRef Name="PROF_ID" />
+            </Principal>
+            <Dependent Role="PROF_COND">
+              <PropertyRef Name="PROF_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_PARAM_PROFILES">
+          <End Type="SCME_ResultsDBModel.PROFILE" Role="PROFILE" Multiplicity="1" />
+          <End Type="SCME_ResultsDBModel.PROF_PARAM" Role="PROF_PARAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROFILE">
+              <PropertyRef Name="PROF_ID" />
+            </Principal>
+            <Dependent Role="PROF_PARAM">
+              <PropertyRef Name="PROF_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_PARAM_TEST_TYPE">
+          <End Type="SCME_ResultsDBModel.PROF_TEST_TYPE" Role="PROF_TEST_TYPE" Multiplicity="1" />
+          <End Type="SCME_ResultsDBModel.PROF_PARAM" Role="PROF_PARAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROF_TEST_TYPE">
+              <PropertyRef Name="PTT_ID" />
+            </Principal>
+            <Dependent Role="PROF_PARAM">
+              <PropertyRef Name="PROF_TESTTYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_TEST_TYPE_PROFILES">
+          <End Type="SCME_ResultsDBModel.PROFILE" Role="PROFILE" Multiplicity="1" />
+          <End Type="SCME_ResultsDBModel.PROF_TEST_TYPE" Role="PROF_TEST_TYPE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROFILE">
+              <PropertyRef Name="PROF_ID" />
+            </Principal>
+            <Dependent Role="PROF_TEST_TYPE">
+              <PropertyRef Name="PROF_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROF_TEST_TYPE_TEST_TYPE">
+          <End Type="SCME_ResultsDBModel.TEST_TYPE" Role="TEST_TYPE" Multiplicity="1" />
+          <End Type="SCME_ResultsDBModel.PROF_TEST_TYPE" Role="PROF_TEST_TYPE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEST_TYPE">
+              <PropertyRef Name="TEST_TYPE_ID" />
+            </Principal>
+            <Dependent Role="PROF_TEST_TYPE">
+              <PropertyRef Name="TEST_TYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SCME_ResultsDBModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="DEVICES">
+            <EntityTypeMapping TypeName="SCME_ResultsDBModel.DEVICE">
+              <MappingFragment StoreEntitySet="DEVICES">
+                <ScalarProperty Name="MME_CODE" ColumnName="MME_CODE" />
+                <ScalarProperty Name="POS" ColumnName="POS" />
+                <ScalarProperty Name="USR" ColumnName="USR" />
+                <ScalarProperty Name="TS" ColumnName="TS" />
+                <ScalarProperty Name="SIL_N_2" ColumnName="SIL_N_2" />
+                <ScalarProperty Name="SIL_N_1" ColumnName="SIL_N_1" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="PROFILE_ID" ColumnName="PROFILE_ID" />
+                <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+                <ScalarProperty Name="DEV_ID" ColumnName="DEV_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GROUPS">
+            <EntityTypeMapping TypeName="SCME_ResultsDBModel.GROUP">
+              <MappingFragment StoreEntitySet="GROUPS">
+                <ScalarProperty Name="GROUP_NAME" ColumnName="GROUP_NAME" />
+                <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DEV_PARAM">
+            <EntityTypeMapping TypeName="SCME_ResultsDBModel.DEV_PARAM">
+              <MappingFragment StoreEntitySet="DEV_PARAM">
+                <ScalarProperty Name="DEV_PARAM_ID" ColumnName="DEV_PARAM_ID" />
+                <ScalarProperty Name="TEST_TYPE_ID" ColumnName="TEST_TYPE_ID" />
+                <ScalarProperty Name="VALUE" ColumnName="VALUE" />
+                <ScalarProperty Name="PARAM_ID" ColumnName="PARAM_ID" />
+                <ScalarProperty Name="DEV_ID" ColumnName="DEV_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ERRORS">
+            <EntityTypeMapping TypeName="SCME_ResultsDBModel.ERROR">
+              <MappingFragment StoreEntitySet="ERRORS">
+                <ScalarProperty Name="ERR_NAME_LOCAL" ColumnName="ERR_NAME_LOCAL" />
+                <ScalarProperty Name="ERR_NAME" ColumnName="ERR_NAME" />
+                <ScalarProperty Name="ERR_CODE" ColumnName="ERR_CODE" />
+                <ScalarProperty Name="ERR_ID" ColumnName="ERR_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PARAMS">
+            <EntityTypeMapping TypeName="SCME_ResultsDBModel.PARAM">
+              <MappingFragment StoreEntitySet="PARAMS">
+                <ScalarProperty Name="PARAM_IS_HIDE" ColumnName="PARAM_IS_HIDE" />
+                <ScalarProperty Name="PARAM_NAME_LOCAL" ColumnName="PARAM_NAME_LOCAL" />
+                <ScalarProperty Name="PARAM_NAME" ColumnName="PARAM_NAME" />
+                <ScalarProperty Name="PARAM_ID" ColumnName="PARAM_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="DEV_ERR" TypeName="SCME_ResultsDBModel.DEV_ERR" StoreEntitySet="DEV_ERR">
+            <EndProperty Name="ERROR">
+              <ScalarProperty Name="ERR_ID" ColumnName="ERR_ID" />
+            </EndProperty>
+            <EndProperty Name="DEVICE">
+              <ScalarProperty Name="DEV_ID" ColumnName="DEV_ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="CONDITIONS">
+            <EntityTypeMapping TypeName="SCME_ResultsDBModel.CONDITION">
+              <MappingFragment StoreEntitySet="CONDITIONS">
+                <ScalarProperty Name="COND_IS_TECH" ColumnName="COND_IS_TECH" />
+                <ScalarProperty Name="COND_NAME_LOCAL" ColumnName="COND_NAME_LOCAL" />
+                <ScalarProperty Name="COND_NAME" ColumnName="COND_NAME" />
+                <ScalarProperty Name="COND_ID" ColumnName="COND_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PROF_COND">
+            <EntityTypeMapping TypeName="SCME_ResultsDBModel.PROF_COND">
+              <MappingFragment StoreEntitySet="PROF_COND">
+                <ScalarProperty Name="VALUE" ColumnName="VALUE" />
+                <ScalarProperty Name="COND_ID" ColumnName="COND_ID" />
+                <ScalarProperty Name="PROF_ID" ColumnName="PROF_ID" />
+                <ScalarProperty Name="PROF_TESTTYPE_ID" ColumnName="PROF_TESTTYPE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PROF_PARAM">
+            <EntityTypeMapping TypeName="SCME_ResultsDBModel.PROF_PARAM">
+              <MappingFragment StoreEntitySet="PROF_PARAM">
+                <ScalarProperty Name="MAX_VAL" ColumnName="MAX_VAL" />
+                <ScalarProperty Name="MIN_VAL" ColumnName="MIN_VAL" />
+                <ScalarProperty Name="PARAM_ID" ColumnName="PARAM_ID" />
+                <ScalarProperty Name="PROF_ID" ColumnName="PROF_ID" />
+                <ScalarProperty Name="PROF_TESTTYPE_ID" ColumnName="PROF_TESTTYPE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PROF_TEST_TYPE">
+            <EntityTypeMapping TypeName="SCME_ResultsDBModel.PROF_TEST_TYPE">
+              <MappingFragment StoreEntitySet="PROF_TEST_TYPE">
+                <ScalarProperty Name="ORD" ColumnName="ORD" />
+                <ScalarProperty Name="TEST_TYPE_ID" ColumnName="TEST_TYPE_ID" />
+                <ScalarProperty Name="PROF_ID" ColumnName="PROF_ID" />
+                <ScalarProperty Name="PTT_ID" ColumnName="PTT_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PROFILES">
+            <EntityTypeMapping TypeName="SCME_ResultsDBModel.PROFILE">
+              <MappingFragment StoreEntitySet="PROFILES">
+                <ScalarProperty Name="IS_DELETED" ColumnName="IS_DELETED" />
+                <ScalarProperty Name="PROF_VERS" ColumnName="PROF_VERS" />
+                <ScalarProperty Name="PROF_TS" ColumnName="PROF_TS" />
+                <ScalarProperty Name="PROF_GUID" ColumnName="PROF_GUID" />
+                <ScalarProperty Name="PROF_NAME" ColumnName="PROF_NAME" />
+                <ScalarProperty Name="PROF_ID" ColumnName="PROF_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TEST_TYPE">
+            <EntityTypeMapping TypeName="SCME_ResultsDBModel.TEST_TYPE">
+              <MappingFragment StoreEntitySet="TEST_TYPE">
+                <ScalarProperty Name="TEST_TYPE_NAME" ColumnName="TEST_TYPE_NAME" />
+                <ScalarProperty Name="TEST_TYPE_ID" ColumnName="TEST_TYPE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

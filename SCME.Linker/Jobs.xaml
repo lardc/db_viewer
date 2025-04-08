@@ -1,0 +1,42 @@
+﻿<Window x:Class="SCME.Linker.Jobs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SCME.Linker"
+        xmlns:common="clr-namespace:SCME.Common;assembly=Common"
+        xmlns:res="clr-namespace:SCME.Linker.Properties"
+        xmlns:customControls="clr-namespace:SCME.CustomControls;assembly=SCME.CustomControls"
+        mc:Ignorable="d"
+        Title="{x:Static res:Resources.StatisticsByJobs}" Height="1080" Width="1280"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        PreviewKeyDown="Window_PreviewKeyDown">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type DataGridCell}" x:Key="LeftBodyContentDataGridStyle">
+            <Setter Property="TextBlock.TextAlignment" Value="Left"/>
+        </Style>
+
+        <Style TargetType="{x:Type DataGridCell}" x:Key="CenterBodyContentDataGridStyle">
+            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <customControls:DataGridSqlResult x:Name="dgJobs" Grid.Row="0" SelectedCellsChanged="dgJobs_SelectedCellsChanged" SelectionChanged="dgJobs_SelectionChanged" MouseDoubleClick="dgJobs_MouseDoubleClick" LoadingRow="dgJobs_LoadingRow">
+            <DataGrid.Columns>
+                <DataGridTextColumn CellStyle="{StaticResource LeftBodyContentDataGridStyle}" Header="{x:Static res:Resources.GroupName}" Binding="{Binding {x:Static common:Constants.GroupName}}"/>
+                <DataGridTextColumn CellStyle="{StaticResource CenterBodyContentDataGridStyle}" Header="{x:Static res:Resources.LastTS}" Binding="{Binding Path=LASTTS, StringFormat=dd.MM.yyyy}"/>
+                <DataGridTextColumn CellStyle="{StaticResource LeftBodyContentDataGridStyle}" Header="{x:Static res:Resources.LinksCount}" Binding="{Binding Path=LINKSCOUNT}"/>
+            </DataGrid.Columns>
+        </customControls:DataGridSqlResult>
+
+        <Button x:Name="btManualEntryGroupName" Grid.Row="1" Background="LightGreen" Content="{x:Static res:Resources.ManualEntryGroupName}" HorizontalAlignment="Left" Width="150" Height="40" VerticalAlignment="Top" Click="btManualEntryGroupName_Click"/>
+    </Grid>
+</Window>

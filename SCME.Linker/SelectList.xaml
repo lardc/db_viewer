@@ -1,0 +1,27 @@
+﻿<Window x:Class="SCME.Linker.SelectList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SCME.Linker"
+        xmlns:res="clr-namespace:SCME.Linker.Properties"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Background="{StaticResource CustomBlue1}"
+        Title="{x:Static res:Resources.SelectingWayToSearchGroupName}"
+        Height="200" Width="600"
+        PreviewKeyDown="Window_PreviewKeyDown">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.05*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.05*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.05*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Column="1" x:Name="btByGroupNameList" Margin="0 50 0 50" Content="{x:Static res:Resources.ByGroupNameList}" FontSize="24" Background="LightBlue" Click="btByGroupNameList_Click"/>
+        <Button Grid.Column="3" x:Name="btByPackage" Margin="0 50 0 50" Content="{x:Static res:Resources.ByPackageSerialNum}" FontSize="24" Background="LightPink" Click="btByPackage_Click"/>
+    </Grid>
+</Window>

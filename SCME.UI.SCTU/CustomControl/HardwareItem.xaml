@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="SCME.UI.CustomControl.HardwareItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:my="clr-namespace:SCME.UI"
+             xmlns:res="clr-namespace:SCME.UI.Properties"
+             mc:Ignorable="d" d:DesignHeight="150" d:DesignWidth="500"
+             Name="userControlItem">
+    <UserControl.Resources>
+
+        <my:BooleanToVisibilityConverter x:Key="B2V" />
+
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource CLabelStyle}">
+            <Setter Property="VerticalContentAlignment" Value="Bottom" />
+        </Style>
+
+        <Style TargetType="{x:Type Button}" BasedOn="{StaticResource CButtonStyle}" />
+
+        <Style TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource CProgressBarStyle}" />
+
+    </UserControl.Resources>
+
+    <DockPanel>
+        <Grid Background="{Binding ElementName=userControlItem, Path=Backcolor}"
+              Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}">
+            <Path Data="{Binding ElementName=userControlItem, Path=Logo}"
+                  Stretch="Uniform" Stroke="{StaticResource xWhite1}"
+                  StrokeThickness="4" Margin="10" />
+            <Button VerticalAlignment="Bottom" Height="40"
+                    Visibility="{Binding ElementName=userControlItem, Path=DisableButtonVisibility}"
+                    Content="{Binding ElementName=userControlItem, Path=DisableButtonContent}"
+                    FontSize="{StaticResource FontSize22}"
+                    Click="ButtonDisable_Click" />
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border Background="{Binding ElementName=userControlItem, Path=Backcolor}"
+                    Grid.RowSpan="3" OpacityMask="White" Opacity="0.05" />
+            <Label Grid.Row="0" Content="{Binding ElementName=userControlItem, Path=Title}"
+                   FontSize="{StaticResource FontSize32}" Margin="10,0" />
+
+            <Label Grid.Row="0" Content="{x:Static res:Resources.Disabled}" FontSize="{StaticResource FontSize22}"
+                   Margin="10,0"
+                   HorizontalAlignment="Right" Foreground="{StaticResource xRed1}"
+                   Visibility="{Binding ElementName=userControlItem, Path=IsDisabled, Converter={StaticResource B2V}}" />
+
+            <ProgressBar x:Name="progressBar" x:FieldModifier="private" Margin="10,0" Orientation="Horizontal"
+                         Background="{Binding ElementName=userControlItem, Path=ProgressBarBackground}"
+                         Grid.Row="1" Minimum="0" Value="0" Maximum="100" Height="10" />
+
+            <TextBlock Grid.Row="2" TextWrapping="Wrap"
+                       FontFamily="Helvetica Neue LT Std" Margin="10,0"
+                       FontSize="14"
+                       Foreground="{StaticResource xRed1}"
+                       Text="{Binding ElementName=userControlItem, Path=Error}" />
+        </Grid>
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="SCME.dbViewer.ManualInputParamValueEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SCME.dbViewer"
+        mc:Ignorable="d"
+        xmlns:res="clr-namespace:SCME.dbViewer.Properties"
+        ShowInTaskbar = "false"
+        WindowStartupLocation="CenterScreen"
+        Background="#FFF0F0F0"
+        PreviewKeyDown="Window_PreviewKeyDown"
+        Title="{x:Static res:Resources.WorkWithValueOfManualInputParam}" Height="140" Width="300">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="{x:Static res:Resources.ValueOfManuallyEnteredParam}"/>
+        <TextBox x:Name="tbManualInputDevParamValue" Grid.Row="1" PreviewTextInput="OnPreviewTextInput" FontSize="24"/>
+        <Button x:Name="btOK" Grid.Row="2" Content="OK" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="50" Height="25" Margin="0,6,5,5" Click="BtOK_Click"/>
+    </Grid>
+</Window>

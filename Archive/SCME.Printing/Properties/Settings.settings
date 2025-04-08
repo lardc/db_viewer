@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SCME.NetworkPrinting.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DatabaseServerAddressTemplate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">net.tcp://{0}:801/SCME/SCME.IO.DatabaseService</Value>
+    </Setting>
+    <Setting Name="ClientsListPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ClientsList.xml</Value>
+    </Setting>
+    <Setting Name="LogPathTemplate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Logs\NetworkPrinting_{0}.log</Value>
+    </Setting>
+    <Setting Name="TemplateTabDev" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Templates\TemplateReportDevRT1.xls</Value>
+    </Setting>
+    <Setting Name="TemplateModDev" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Templates\TemplateReportModRT1.xls</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

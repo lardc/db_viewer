@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SCME.NetworkPrinting.ClientRecord">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAIAAAAAAIAAAAQAAACAAA=</HashCode>
+      <FileName>ClientsDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.NetworkPrinting.ClientsEngine">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClientsDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.NetworkPrinting.NetworkPrintingService">
+    <Position X="4.5" Y="3" Width="2" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAEACAAAACAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>NetworkPrintingService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.NetworkPrinting.PrintingServer" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="0.5" Width="3" />
+    <Members>
+      <Field Name="DATABASE_SERVER_ENDPOINT_NAME" Hidden="true" />
+      <Field Name="m_DatabaseClient" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQQBAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>PrintingServer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SCME.NetworkPrinting.SystemHost">
+    <Position X="2.75" Y="3" Width="1.5" />
+    <Members>
+      <Field Name="ms_ServiceHost" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAACAAAAgEBAAAAAAAAAAAAA=</HashCode>
+      <FileName>SystemHost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Accounts>
+  <Account ID="0" Name="TM001" Password="001"/>
+  <Account ID="1" Name="TM002" Password="002"/>
+  <Account ID="2" Name="TM003" Password="003"/>
+  <Account ID="3" Name="TM004" Password="004"/>
+</Accounts>

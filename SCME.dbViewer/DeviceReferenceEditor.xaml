@@ -1,0 +1,171 @@
+﻿<Window x:Class="SCME.dbViewer.DeviceReferenceEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SCME.dbViewer"
+        xmlns:res="clr-namespace:SCME.dbViewer.Properties"
+        mc:Ignorable="d"
+        ShowInTaskbar = "false"
+        WindowStartupLocation="CenterScreen"
+        Background="#FFF0F0F0"
+        Title="{x:Static res:Resources.DeviceReferenceEditor}" Height="480" Width="800"
+        PreviewKeyDown="Window_PreviewKeyDown">
+
+    <Window.Resources>
+        <ObjectDataProvider x:Key="DeviceTypeList" ObjectType="{x:Type local:ListOfDeviceType}" MethodName="GetDeviceTypeList"/>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.AverageCurrent}" FontSize="12"/>
+            <TextBox x:Name="TbItav" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.DeviceType}" FontSize="12"/>
+            <ComboBox x:Name="CmbDeviceType" ItemsSource="{Binding Source={StaticResource DeviceTypeList}}" IsEditable="False" FontSize="16" MaxDropDownHeight="Auto">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="2,0,0,0" Text="{Binding [1]}" Width="50"/>
+                            <TextBlock Margin="30,0,0,0" Text="{Binding [2]}" Width="50"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="4" Grid.Row="0" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.Constructive}" FontSize="12"/>
+            <TextBox x:Name="TbConstructive" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.Modification}" FontSize="12"/>
+            <TextBox x:Name="TbModification" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.IgtMax}" FontSize="12"/>
+            <TextBox x:Name="TbIgtMax" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="4" Grid.Row="1" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.UgtMax}" FontSize="12"/>
+            <TextBox x:Name="TbUgtMax" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.TgtMax}" FontSize="12"/>
+            <TextBox x:Name="TbTgtMax" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.UbrMin}" FontSize="12"/>
+            <TextBox x:Name="TbUbrMin" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="4" Grid.Row="2" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.UdsmMin}" FontSize="12"/>
+            <TextBox x:Name="TbUdsmMin" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.UrsmMin}" FontSize="12"/>
+            <TextBox x:Name="TbUrsmMin" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="3" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.UtmMax}" FontSize="12"/>
+            <TextBox x:Name="TbUtmMax" FontSize="16"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="4" Grid.Row="3" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.UfmMax}" FontSize="12"/>
+            <TextBox x:Name="TbUfmMax" FontSize="16"/>
+        </StackPanel>        
+
+        <StackPanel Grid.Column="0" Grid.Row="4" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.IdrmMax}" FontSize="12"/>
+            <TextBox x:Name="TbIdrmMax" FontSize="16" LostFocus="TbIdrmMax_LostFocus" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="4" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.IrrmMax}" FontSize="12"/>
+            <TextBox x:Name="TbIrrmMax" FontSize="16" LostFocus="TbIrrmMax_LostFocus" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="4" Grid.Row="4" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.dUdtMin}" FontSize="12"/>
+            <TextBox x:Name="TbdUdtMin" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="5" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.PrsmMin}" FontSize="12"/>
+            <TextBox x:Name="TbPrsmMin" FontSize="16"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="2" Grid.Row="5" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.TrrMin}" FontSize="12"/>
+            <TextBox x:Name="TbTrrMin" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="4" Grid.Row="5" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.TqMin}" FontSize="12"/>
+            <TextBox x:Name="TbTqMin" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="6" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.RisolMin}" FontSize="12"/>
+            <TextBox x:Name="TbRisolMin" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="6" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.UisolMin}" FontSize="12"/>
+            <TextBox x:Name="TbUisolMin" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="4" Grid.Row="6" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.QrrMax}" FontSize="12"/>
+            <TextBox x:Name="TbQrrMax" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.TjMax}" FontSize="12"/>
+            <TextBox x:Name="TbTjMax" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="7" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.CaseType}" FontSize="12"/>
+            <TextBox x:Name="TbCaseType" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="4" Grid.Row="7" Orientation="Vertical">
+            <Label Content="{x:Static res:Resources.UtmCorrection}" FontSize="12"/>
+            <TextBox x:Name="TbUtmCorrection" FontSize="16"/>
+        </StackPanel>
+
+        <Button x:Name="BtOK" Grid.Row="8" Grid.Column="4" Content="OK" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="50" Height="25" Margin="0,5,5,5" Click="BtOK_Click"/>
+    </Grid>
+</Window>

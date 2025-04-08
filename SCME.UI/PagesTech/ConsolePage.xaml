@@ -1,0 +1,248 @@
+﻿<Page x:Class="SCME.UI.PagesTech.ConsolePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:my="clr-namespace:SCME.UI"
+      xmlns:res="clr-namespace:SCME.UI.Properties"
+      xmlns:customControl="clr-namespace:SCME.UI.CustomControl"
+      mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="924"
+      Name="consolePage" Title="{x:Static res:Resources.Console}"
+      >
+
+    <Page.Resources>
+
+        <my:BooleanToVisibilityConverter x:Key="B2V" />
+
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource CLabelStyle}">
+            <Setter Property="FontSize" Value="{StaticResource FontSize32}" />
+        </Style>
+
+        <Style TargetType="{x:Type Button}" BasedOn="{StaticResource CButtonStyle}" />
+
+        <Style TargetType="{x:Type customControl:ValidatingTextBox}">
+            <Setter Property="TextBlock.TextAlignment" Value="Right" />
+            <Setter Property="Text" Value="0" />
+        </Style>
+
+        <Style TargetType="{x:Type TabControl}">
+            <Setter Property="TabStripPlacement" Value="Top" />
+            <Setter Property="Margin" Value="0,0,0,0" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabControl}">
+                        <Grid ClipToBounds="True" SnapsToDevicePixels="True">
+                            <Grid Name="ContentPanel">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter Content="{TemplateBinding SelectedContent}"
+                                                      ContentTemplate="{TemplateBinding SelectedContentTemplate}"
+                                                      ContentStringFormat="{TemplateBinding SelectedContentStringFormat}"
+                                                      ContentSource="SelectedContent"
+                                                      Name="PART_SelectedContentHost"
+                                                      Margin="{TemplateBinding Padding}"
+                                                      SnapsToDevicePixels="true" />
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SpcButton" TargetType="{x:Type Button}">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="{StaticResource xWhite1}" />
+            <Setter Property="Margin" Value="50,30,15,15" />
+            <Setter Property="Padding" Value="20,10" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Width" Value="Auto" />
+            <Setter Property="Height" Value="Auto" />
+            <Setter Property="IsEnabled" Value="True" />
+            <Setter Property="FontFamily" Value="Helvetica Neue LT Std" />
+            <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+            <Setter Property="FontWeight" Value="ExtraLight" />
+            <Setter Property="VerticalContentAlignment" Value="Bottom" />
+            <Setter Property="HorizontalContentAlignment" Value="Right" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Border Name="border" SnapsToDevicePixels="True"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                  Margin="{TemplateBinding Padding}" />
+                            </Border>
+                            
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Opacity" Value="0.3" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Opacity" Value="0.7" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <EventSetter Event="Click" Handler="Button_Click" />
+        </Style>
+
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+
+
+        <TabControl Name="tabControl" Background="Transparent" Margin="150,0"
+                    SelectionChanged="TabControl_SelectionChanged">
+            <TabItem IsSelected="True">
+                <UniformGrid Columns="2" Rows="5">
+                    <Button Background="{StaticResource xGreen2}"
+                            Content="{x:Static res:Resources.Gateway}" CommandParameter="1"
+                            Style="{StaticResource SpcButton}" />
+                    <Button Background="{StaticResource xBlue3}"
+                            Content="{x:Static res:Resources.Commutation}" CommandParameter="2"
+                            Style="{StaticResource SpcButton}"
+                            Visibility="{Binding Source={x:Static res:Settings.Default}, Path=CommIsVisible, Converter={StaticResource B2V}}" />
+                    <Button Background="{StaticResource xOrange2}"
+                            Content="{x:Static res:Resources.Gate}" CommandParameter="3"
+                            Style="{StaticResource SpcButton}" Name="btnGate"
+                            Visibility="{Binding Source={x:Static res:Settings.Default}, Path=GateIsVisible, Converter={StaticResource B2V}}" />
+                    <Button Background="{StaticResource xRed1}"
+                            Content="{x:Static res:Resources.Vtm}" CommandParameter="4"
+                            Style="{StaticResource SpcButton}" Name="btnVtm"
+                            Visibility="{Binding Source={x:Static res:Settings.Default}, Path=SLIsVisible, Converter={StaticResource B2V}}" />
+                    <Button Background="{StaticResource xBlue2}"
+                            Content="{x:Static res:Resources.Bvt}" CommandParameter="5"
+                            Style="{StaticResource SpcButton}" Name="btnBvt"
+                            Visibility="{Binding Source={x:Static res:Settings.Default}, Path=BvtIsVisible, Converter={StaticResource B2V}}" />
+                    <Button Background="{StaticResource xOrange2}"
+                            Content="{x:Static res:Resources.Commutation}" CommandParameter="6"
+                            Style="{StaticResource SpcButton}" Name="btnCommEx"
+                            Visibility="{Binding Source={x:Static res:Settings.Default}, Path=CommExIsVisible, Converter={StaticResource B2V}}" />
+                    <Button Background="{StaticResource xPurple1}"
+                            Content="{x:Static res:Resources.Clamp}" CommandParameter="7"
+                            Style="{StaticResource SpcButton}" Name="btnClamp"
+                            Visibility="{Binding Source={x:Static res:Settings.Default}, Path=ClampIsVisible, Converter={StaticResource B2V}}" />
+                    <Button Background="{StaticResource xBlue2}"
+                            Content="{x:Static res:Resources.dVdt}" CommandParameter="8"
+                            Style="{StaticResource SpcButton}" Name="btndVdt"
+                            Visibility="{Binding Source={x:Static res:Settings.Default}, Path=dVdtIsVisible, Converter={StaticResource B2V}}" />
+                    <Button Background="{StaticResource xGreen4}"
+                            Content="{x:Static res:Resources.ATU}" CommandParameter="9"
+                            Style="{StaticResource SpcButton}" Name="btnAtu"
+                            Visibility="{Binding Source={x:Static res:Settings.Default}, Path=ATUIsVisible, Converter={StaticResource B2V}}" />
+                    <Button Background="{StaticResource xGreen1}"
+                            Content="{x:Static res:Resources.QrrTq}" CommandParameter="10"
+                            Style="{StaticResource SpcButton}" Name="btnQrrTq"
+                            Visibility="{Binding Source={x:Static res:Settings.Default}, Path=QrrTqIsVisible, Converter={StaticResource B2V}}" />
+                    <Button Background="{StaticResource xGreen3}"
+                            Content="{x:Static res:Resources.RAC}" CommandParameter="11"
+                            Style="{StaticResource SpcButton}" Name="btnRAC"
+                            Visibility="{Binding Source={x:Static res:Settings.Default}, Path=RACIsVisible, Converter={StaticResource B2V}}" />
+                </UniformGrid>
+            </TabItem>
+
+            <TabItem>
+                <Grid Margin="50,30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label Name="lblTitle" x:FieldModifier="private"
+                           Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" HorizontalAlignment="Center"
+                           Content="Title" />
+
+                    <Label Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Center"
+                           VerticalContentAlignment="Bottom" Content="{x:Static res:Resources.Address}" />
+                    <Label Grid.Column="2" Grid.Row="1" HorizontalContentAlignment="Center"
+                           VerticalContentAlignment="Bottom" Content="{x:Static res:Resources.Value}" />
+
+                    <Label Grid.Column="0" Grid.Row="2" Margin="40,5,0,5" Content="{x:Static res:Resources.Write}" />
+                    <customControl:ValidatingTextBox x:Name="tbWriteAddress" x:FieldModifier="private"
+                                            Grid.Column="1" Grid.Row="2" Maximum="65535" Minimum="0" IsNumeric="True"
+                                            Text="0" FontSize="{StaticResource DefaultFontSize}"
+                                            TextBlock.TextAlignment="Right" Margin="20,30" />
+                    <customControl:ValidatingTextBox x:Name="tbWriteValue" x:FieldModifier="private"
+                                            Grid.Column="2" Grid.Row="2" Maximum="65535" Minimum="-32767" IsNumeric="True"
+                                            Text="0" FontSize="{StaticResource DefaultFontSize}"
+                                            TextBlock.TextAlignment="Right" Margin="20,30" />
+                    <Button Grid.Column="3" Grid.Row="2" Margin="20,30" Content="{x:Static res:Resources.Write}"
+                            Click="Write_Click" />
+
+                    <Label Grid.Column="0" Grid.Row="3" Margin="40,5,0,5" Content="{x:Static res:Resources.Read}" />
+                    <customControl:ValidatingTextBox x:Name="tbReadAddress" x:FieldModifier="private"
+                                            Grid.Column="1" Grid.Row="3" Maximum="99999" Minimum="0" IsNumeric="True"
+                                            Text="0" FontSize="{StaticResource DefaultFontSize}"
+                                            TextBlock.TextAlignment="Right" Margin="20,30" />
+                    <Label x:Name="lblReadValue" x:FieldModifier="private"
+                           Grid.Column="2" Grid.Row="3" Margin="20,30,35,30"
+                           FontSize="{StaticResource DefaultFontSize}"
+                           HorizontalContentAlignment="Right" Content="0" />
+                    <Button Grid.Column="3" Grid.Row="3" Margin="20,30" Content="{x:Static res:Resources.Read}"
+                            Click="Read_Click" />
+
+                    <Label Grid.Column="0" Grid.Row="4" Margin="40,5,0,5" Content="{x:Static res:Resources.Call}" />
+                    <customControl:ValidatingTextBox x:Name="tbCallAddress" x:FieldModifier="private"
+                                            Grid.Column="1" Grid.Row="4" Maximum="65535" Minimum="0" IsNumeric="True"
+                                            Text="0" FontSize="{StaticResource DefaultFontSize}"
+                                            TextBlock.TextAlignment="Right" Margin="20,30" />
+                    <Button Grid.Column="3" Grid.Row="4" Margin="20,30" Content="{x:Static res:Resources.Call}"
+                            Click="Call_Click" />
+
+                    <TextBlock Name="lblError" x:FieldModifier="private"
+                               Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4"
+                               VerticalAlignment="Stretch" Margin="10"
+                               FontFamily="{StaticResource DefaultFontFamily}"
+                               FontSize="{StaticResource FontSize22}"
+                               Text="Error" TextWrapping="Wrap"
+                               Foreground="{StaticResource xRed1}" />
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Grid.Row="0"
+                    Content="{x:Static res:Resources.Back}"
+                    Click="Back_Click"
+                    Margin="0,0,0,0" />
+        </Grid>
+    </Grid>
+</Page>

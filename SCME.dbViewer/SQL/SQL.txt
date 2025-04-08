@@ -1,0 +1,119 @@
+ALTER TABLE ManualInputDevParam
+ADD CONSTRAINT FK_DEV_ID_For_ManualInputDevParam FOREIGN KEY (DEV_ID)
+REFERENCES DEVICES (DEV_ID)
+
+ALTER TABLE ManualInputDevParam
+ADD CONSTRAINT FK_ManualInputParamID_For_ManualInputDevParam FOREIGN KEY (ManualInputParamID)
+REFERENCES ManualInputParams (ManualInputParamID)
+
+ALTER TABLE ManualInputDevParam
+ADD CONSTRAINT UNIQUE_DEV_ID_ManualInputParamID_For_ManualInputDevParam UNIQUE(DEV_ID, ManualInputParamID)
+---------------------------------------------------------------------------------------------------------------
+ALTER TABLE DeviceTypes
+ADD CONSTRAINT UNIQUE_DeviceTypeRU_For_DeviceTypes UNIQUE(DeviceTypeRU)
+
+ALTER TABLE DeviceTypes
+ADD CONSTRAINT UNIQUE_DeviceTypeEN_For_DeviceTypes UNIQUE(DeviceTypeEN)
+---------------------------------------------------------------------------------------------------------------
+ALTER TABLE ProfileBodies
+ADD CONSTRAINT UNIQUE_ProfileBody_For_ProfileBodies UNIQUE(ProfileBody)
+---------------------------------------------------------------------------------------------------------------
+ALTER TABLE HumanReasons
+ADD CONSTRAINT UNIQUE_HumanReason_For_HumanReasons UNIQUE(HumanReason)
+---------------------------------------------------------------------------------------------------------------
+ALTER TABLE DeviceReferences
+ADD CONSTRAINT FK_DeviceTypeID_For_DeviceReferences FOREIGN KEY (DeviceTypeID)
+REFERENCES DeviceTypes (DeviceTypeID)
+
+ALTER TABLE DeviceReferences
+ADD CONSTRAINT UNIQUE_ITAV_DeviceTypeID_Сonstructive_Modification_For_DeviceReferences UNIQUE(ITAV, DeviceTypeID, Сonstructive, Modification)
+
+---------------------------------------------------------------------------------------------------------------
+ALTER TABLE ManualInputAssemblyProtocolParam
+ADD CONSTRAINT FK_AssemblyProtocolID_For_ManualInputAssemblyProtocolParam FOREIGN KEY (AssemblyProtocolID)
+REFERENCES AssemblyProtocols (AssemblyProtocolID)
+
+ALTER TABLE ManualInputAssemblyProtocolParam
+ADD CONSTRAINT FK_ManualInputParamID_For_ManualInputAssemblyProtocolParam FOREIGN KEY (ManualInputParamID)
+REFERENCES ManualInputParams (ManualInputParamID)
+
+ALTER TABLE ManualInputAssemblyProtocolParam
+ADD CONSTRAINT UNIQUE_AssemblyProtocolID_ManualInputParamID_For_ManualInputAssemblyProtocolParam UNIQUE(AssemblyProtocolID, ManualInputParamID)
+---------------------------------------------------------------------------------------------------------------
+ALTER TABLE ManualInputParamNorms
+ADD CONSTRAINT FK_ManualInputParamID_For_ManualInputParamNorms FOREIGN KEY (ManualInputParamID)
+REFERENCES ManualInputParams (ManualInputParamID)
+
+ALTER TABLE ManualInputParamNorms
+ADD CONSTRAINT FK_Prof_ID_For_ManualInputParamNorms FOREIGN KEY (Prof_ID)
+REFERENCES PROFILES (Prof_ID)
+
+ALTER TABLE ManualInputParamNorms
+ADD CONSTRAINT UNIQUE_ManualInputParamID_Prof_ID_For_ManualInputParamNorms UNIQUE(ManualInputParamID, Prof_ID)
+---------------------------------------------------------------------------------------------------------------
+ALTER TABLE DEVICES
+ADD CONSTRAINT FK_DeviceTypeID_For_DEVICES FOREIGN KEY (DeviceTypeID)
+REFERENCES DeviceTypes (DeviceTypeID)
+
+ALTER TABLE DEVICES
+ADD CONSTRAINT FK_ProfileBodyID_For_DEVICES FOREIGN KEY (ProfileBodyID)
+REFERENCES ProfileBodies (ProfileBodyID)
+
+ALTER TABLE DEVICES
+ADD CONSTRAINT FK_AssemblyProtocolID_For_DEVICES FOREIGN KEY (AssemblyProtocolID)
+REFERENCES AssemblyProtocols (AssemblyProtocolID)
+
+/*
+ALTER TABLE DEVICES
+ADD CONSTRAINT FK_SapID_For_DEVICES FOREIGN KEY (SapID)
+REFERENCES StatusByAssemblyProtocol (SapID)
+*/
+
+ALTER TABLE DEVICES
+ADD CONSTRAINT FK_AssemblyStatusID_For_DEVICES FOREIGN KEY (AssemblyStatusID)
+REFERENCES AssemblyStatuses (AssemblyStatusID)
+
+ALTER TABLE DEVICES
+ADD CONSTRAINT FK_HumanReasonID_For_DEVICES FOREIGN KEY (HumanReasonID)
+REFERENCES HumanReasons (HumanReasonID)
+
+CREATE INDEX IX_DEVICES_CODE
+ON DEVICES(CODE)
+
+CREATE INDEX IX_DEVICES_PROFILE_ID
+ON DEVICES(PROFILE_ID)
+
+CREATE INDEX IX_DEVICES_CODE_GROUP_ID_DEVICETYPEID_PROFILEBODY
+ON DEVICES(CODE, GROUP_ID, DEVICETYPEID, PROFILEBODY)
+
+  CREATE INDEX IX_DEVICES_GROUP_ID_CODE_PARTPROFILENAME_MME_CODE_DEV_ID
+  ON DEVICES(GROUP_ID ASC, CODE ASC, PARTPROFILENAME ASC, MME_CODE ASC, DEV_ID DESC)
+
+  CREATE INDEX IX_DEVICES_CODE_GROUP_ID_PROFILEBODY_MEMBER
+  ON DEVICES(CODE ASC, GROUP_ID ASC, PROFILEBODY ASC, MEMBER ASC)
+
+  CREATE NONCLUSTERED INDEX IX_DEVICES_GROUP_ID_PARTPROFILENAME_INCLUDE_DEV_ID_CODE_MME_CODE_PROFILEBODY
+  ON DEVICES(GROUP_ID, PARTPROFILENAME)
+  INCLUDE (DEV_ID, CODE, MME_CODE, PROFILEBODY)
+---------------------------------------------------------------------------------------------------------------
+ALTER TABLE AssemblyProtocols
+ADD CONSTRAINT FK_DeviceTypeID_For_AssemblyProtocols FOREIGN KEY (DeviceTypeID)
+REFERENCES DeviceTypes (DeviceTypeID)
+
+---------------------------------------------------------------------------------------------------------------
+ALTER TABLE DeviceStatusByAssemblyProtocol
+ADD CONSTRAINT UNIQUE_Descr_For_DeviceStatusByAssemblyProtocol UNIQUE(Descr)
+
+ALTER TABLE DeviceStatusByAssemblyProtocol
+ADD CONSTRAINT UNIQUE_Descr_For_DeviceStatusByAssemblyProtocol UNIQUE(Descr)
+
+---------------------------------------------------------------------------------------------------------------
+ALTER TABLE AssemblyStatuses
+ADD CONSTRAINT UNIQUE_Descr_For_AssemblyStatuses UNIQUE(Descr)
+
+---------------------------------------------------------------------------------------------------------------
+CREATE INDEX IX_DEV_PARAM_PARAM_ID_TEST_TYPE_ID
+ON DEV_PARAM(PARAM_ID, TEST_TYPE_ID)
+
+CREATE INDEX IX_DEV_PARAM_TEST_TYPE_ID_PARAM_ID_VALUE
+ON DEV_PARAM(TEST_TYPE_ID, PARAM_ID, VALUE)

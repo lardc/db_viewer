@@ -1,0 +1,76 @@
+﻿<Window x:Class="SCME.dbViewer.AssemblyProtocols"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SCME.dbViewer"
+        xmlns:res="clr-namespace:SCME.dbViewer.Properties"
+        xmlns:customcontrols="clr-namespace:SCME.CustomControls;assembly=SCME.CustomControls"
+        xmlns:common="clr-namespace:SCME.Common;assembly=Common"
+        mc:Ignorable="d"
+        Title="{x:Static res:Resources.AssemblyProtocols}"
+        Height="600" Width="1180"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        ShowInTaskbar="False"
+        PreviewKeyUp="Window_PreviewKeyUp" PreviewKeyDown="Window_PreviewKeyDown">
+
+    <Window.Resources>
+        <common:ObjectToBoolConverter x:Key="OBJ2B"/>
+        
+        <Style TargetType="{x:Type CheckBox}" x:Key="CheckBoxStyle">
+            <Setter Property="IsEnabled" Value="True"/>
+            <Setter Property="IsHitTestVisible" Value="False"/>
+            <Setter Property="IsThreeState" Value="False"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="LayoutTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1.4" ScaleY="1.4"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0" Background="Transparent">
+            <MenuItem Header="{x:Static res:Resources.AssemblyProtocol}">
+                <MenuItem x:Name="MnuAssemblyProtocolDestroy" Header="{x:Static res:Resources.Destroy}" Click="MnuAssemblyProtocolDestroyClick"/>
+            </MenuItem>
+            
+            <MenuItem Header="{x:Static res:Resources.Report}">
+                <MenuItem x:Name="MnuReportBuild" Header="{x:Static res:Resources.Build}" Click="MnuReportBuildClick"/>
+            </MenuItem>
+        </Menu>
+
+        <customcontrols:DataGridSqlResultBigData x:Name="DgAssemblyProtocols" Grid.Row="1" ItemsSource="{Binding DataSource, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" ColumnHeaderHeight="60" Sorting="DgAssemblyProtocols_Sorting" MouseDoubleClick="DgAssemblyProtocols_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{x:Static res:Resources.ProtocolDescr}" Binding="{Binding {x:Static common:Constants.Descr}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.Descr}"/>
+                <DataGridTextColumn Header="{x:Static res:Resources.DateCreated}" Binding="{Binding {x:Static common:Constants.Ts}, UpdateSourceTrigger=PropertyChanged, StringFormat=dd.MM.yyyy}" SortMemberPath="{x:Static common:Constants.Ts}"/>
+                <DataGridTextColumn Header="{x:Static res:Resources.Quantity}" Binding="{Binding {x:Static common:Constants.RecordCount}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.RecordCount}"/>
+                <DataGridTextColumn Header="{x:Static res:Resources.AssemblyJob}" Binding="{Binding {x:Static common:Constants.AssemblyJob}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.AssemblyJob}"/>
+                <DataGridTextColumn Header="{x:Static res:Resources.DeviceTypeRU}" Binding="{Binding {x:Static common:Constants.DeviceTypeRU}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.DeviceTypeRU}"/>
+                <DataGridTextColumn Header="{x:Static res:Resources.DeviceTypeEN}" Binding="{Binding {x:Static common:Constants.DeviceTypeEN}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.DeviceTypeEN}"/>
+                <DataGridTextColumn Header="{x:Static res:Resources.Constructive}" Binding="{Binding {x:Static common:Constants.Constructive}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.Constructive}"/>
+                <DataGridTextColumn Header="{x:Static res:Resources.AverageCurrent}" Binding="{Binding {x:Static common:Constants.AverageCurrent}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.AverageCurrent}"/>
+                <DataGridTextColumn Header="{x:Static res:Resources.DeviceClass}" Binding="{Binding {x:Static common:Constants.DeviceClass}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.DeviceClass}"/>
+
+                <DataGridCheckBoxColumn ElementStyle="{StaticResource CheckBoxStyle}" Header="{x:Static res:Resources.Export}" Binding="{Binding {x:Static common:Constants.Export}, Converter={StaticResource OBJ2B}, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.Export}"/>
+
+                <DataGridTextColumn Header="{x:Static common:Constants.DUdt}" Binding="{Binding {x:Static common:Constants.SqlDUdt}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.SqlDUdt}"/>
+                <DataGridTextColumn Header="{x:Static common:Constants.Trr}" Binding="{Binding {x:Static common:Constants.Trr}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.Trr}"/>
+                <DataGridTextColumn Header="{x:Static common:Constants.Tq}" Binding="{Binding {x:Static common:Constants.Tq}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.Tq}"/>
+                <DataGridTextColumn Header="{x:Static common:Constants.Tgt}" Binding="{Binding {x:Static common:Constants.Tgt}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.Tgt}"/>
+                <DataGridTextColumn Header="{x:Static common:Constants.Qrr}" Binding="{Binding {x:Static common:Constants.Qrr}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.Qrr}"/>
+                <DataGridTextColumn Header="{x:Static res:Resources.Climatic}" Binding="{Binding {x:Static common:Constants.Climatic}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.Climatic}"/>
+                <DataGridTextColumn Header="{x:Static res:Resources.Omnity}" Binding="{Binding {x:Static common:Constants.Omnity}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.Omnity}"/>
+                <DataGridTextColumn Header="{x:Static res:Resources.User}" Binding="{Binding {x:Static common:Constants.Usr}, UpdateSourceTrigger=PropertyChanged}" SortMemberPath="{x:Static common:Constants.Usr}"/>
+            </DataGrid.Columns>
+        </customcontrols:DataGridSqlResultBigData>
+    </Grid>
+</Window>

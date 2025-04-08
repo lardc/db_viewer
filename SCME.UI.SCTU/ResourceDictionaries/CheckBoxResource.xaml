@@ -1,0 +1,67 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/ResourceDictionaries/CommonResources.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <sys:Double      x:Key="ChBStrokeThickness"     >2</sys:Double>
+    <Thickness       x:Key="ChBBorderThickness"     >2</Thickness>
+    <PathGeometry    x:Key="ChBCheckMark"           >M 0 3 L 4 8 L 8 0</PathGeometry>
+
+    <Style x:Key="CCheckBoxStyle" TargetType="{x:Type CheckBox}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Foreground" Value="{StaticResource xWhite1}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="FontSize" Value="{StaticResource FontSize24}"/>
+        <Setter Property="FontWeight" Value="ExtraLight"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="7"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type CheckBox}" >
+                    <Border Name="border" Background="{TemplateBinding Background}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Name="cBorder" Grid.Column="0" Margin="{TemplateBinding Padding}"
+                                        Width="{Binding ElementName=cBorder, Path=ActualHeight}"
+                                        BorderBrush="{TemplateBinding Foreground}" 
+                                        Background="Transparent"  CornerRadius="0"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        SnapsToDevicePixels="True"
+                                        >
+                                <Path Name="checkMark" Stretch="Fill" SnapsToDevicePixels="True" Margin="3"
+                                          Stroke="{TemplateBinding Foreground}" StrokeThickness="{TemplateBinding BorderThickness}" 
+                                          Data="M 0 1.5 L 1.5 3 L 3 0" />
+                            </Border>
+                            <ContentPresenter Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" RecognizesAccessKey="True"
+                                                  TextBlock.Foreground="{TemplateBinding Foreground}" TextBlock.FontFamily="{StaticResource DefaultFontFamily}"
+                                                  TextBlock.FontSize="{TemplateBinding FontSize}" Margin="{TemplateBinding Padding}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="false">
+                            <Setter TargetName="checkMark" Property="Opacity" Value="0.2"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="{x:Null}">
+                            <Setter TargetName="checkMark" Property="Opacity" Value="0.2" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="checkMark" Property="Margin" Value="3" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter TargetName="border" Property="Opacity" Value="{StaticResource DisableOpacity}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

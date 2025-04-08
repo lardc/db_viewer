@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SCME.SQLDatabaseClient.WelcomePage" BaseTypeListCollapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAlBgQIAAAEQEAAKAAAjAAAgAAACAgAAAAABIApAAA=</HashCode>
+      <FileName>WelcomePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SCME.SQLDatabaseClient.ViewDataPage" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>RARCwxABEkDQRQgwphAQAQCYlpAA4DBwAoBggCAhBEg=</HashCode>
+      <FileName>ViewDataPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SCME.SQLDatabaseClient.ParameterAndVisibility" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="5.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAIAAAACAAgAAgAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.SQLDatabaseClient.VisibleParameter">
+    <Position X="15" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.SQLDatabaseClient.ParameterValueChunk">
+    <Position X="15" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAA=</HashCode>
+      <FileName>Models.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.SQLDatabaseClient.ParameterValue" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABAAEAAAAAAAEAAIQgAAABAgAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Models.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.SQLDatabaseClient.DeviceAndParametersWithProfile">
+    <Position X="12.25" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAABAAAAAAJAAAAAAAAA=</HashCode>
+      <FileName>Models.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.SQLDatabaseClient.ParametersReportItemBase">
+    <Position X="7.75" Y="7.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.SQLDatabaseClient.RestrictionValues">
+    <Position X="6" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Models.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.SQLDatabaseClient.Restriction">
+    <Position X="9.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.SQLDatabaseClient.ConditionValues">
+    <Position X="6" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.SQLDatabaseClient.RestrictionsAndConditions">
+    <Position X="7.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Models.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCME.SQLDatabaseClient.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCME.SQLDatabaseClient.ChangesViewer" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>ChangesViewer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SCME.SQLDatabaseClient.Cache">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAACAAABAAAAAA=</HashCode>
+      <FileName>Cache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

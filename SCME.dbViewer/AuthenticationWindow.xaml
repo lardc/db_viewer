@@ -1,0 +1,71 @@
+﻿<Window x:Class="SCME.dbViewer.AuthenticationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SCME.dbViewer"
+        xmlns:res="clr-namespace:SCME.dbViewer.Properties"
+        mc:Ignorable="d"
+        Title="{x:Static res:Resources.UserCredentials}" Height="300" Width="300"
+        Background="{StaticResource CustomBlue1}"
+        ShowInTaskbar="False" WindowStyle="ToolWindow" 
+        WindowStartupLocation="CenterScreen"
+        PreviewKeyDown="Window_PreviewKeyDown">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="1" Content="{x:Static res:Resources.Authentication}" HorizontalAlignment="Center" FontSize="20"/>
+
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="1" Content="{x:Static res:Resources.User}" HorizontalAlignment="Left" FontSize="15"/>
+            <TextBox x:Name="tb_User" Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Left" FontSize="16" LostFocus="tb_User_LostFocus"/>
+        </Grid>
+
+        <Grid Grid.Row="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="1" Content="{x:Static res:Resources.Password}" HorizontalAlignment="Left" FontSize="15"/>
+            <PasswordBox x:Name="pbPassword" Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Left" FontSize="16" LostFocus="pbPassword_LostFocus"/>
+        </Grid>
+
+        <Grid Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="70"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="1" x:Name="btAuthenticate" Height="35" Content="{x:Static res:Resources.Authenticate}" Click="BtAuthenticate_Click"/>
+        </Grid>
+    </Grid>
+</Window>

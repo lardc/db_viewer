@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48620FC9-598E-4DAC-B66F-0858269A48C1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCME.SQLDatabaseClient</RootNamespace>
+    <AssemblyName>SCME.SQLDatabaseClient</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SCME.SQLDatabaseClient.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FastReport, Version=2017.1.19.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ChangesViewer.xaml.cs">
+      <DependentUpon>ChangesViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters.cs" />
+    <Compile Include="EntityAccounts\ACCOUNT.cs">
+      <DependentUpon>ModelAccounts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityAccounts\ModelAccounts.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAccounts.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityAccounts\ModelAccounts.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAccounts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityAccounts\ModelAccounts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAccounts.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityAccounts\Security.cs">
+      <DependentUpon>ModelAccounts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityData\CONDITION.cs">
+      <DependentUpon>ModelGroups.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityData\DEVICE.cs">
+      <DependentUpon>ModelGroups.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityData\DEV_PARAM.cs">
+      <DependentUpon>ModelGroups.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityData\ERROR.cs">
+      <DependentUpon>ModelGroups.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityData\GROUP.cs">
+      <DependentUpon>ModelGroups.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityData\ModelGroups.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelGroups.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityData\ModelGroups.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelGroups.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityData\ModelGroups.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelGroups.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityData\PARAM.cs">
+      <DependentUpon>ModelGroups.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityData\PROFILE.cs">
+      <DependentUpon>ModelGroups.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityData\PROF_COND.cs">
+      <DependentUpon>ModelGroups.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityData\PROF_PARAM.cs">
+      <DependentUpon>ModelGroups.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityData\PROF_TEST_TYPE.cs">
+      <DependentUpon>ModelGroups.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityData\TEST_TYPE.cs">
+      <DependentUpon>ModelGroups.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="ViewDataPage.xaml.cs">
+      <DependentUpon>ViewDataPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomePage.xaml.cs">
+      <DependentUpon>WelcomePage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ChangesViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cache.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ViewDataPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WelcomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EntityDeploy Include="EntityAccounts\ModelAccounts.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelAccounts.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClassDiagram.cd" />
+    <None Include="EntityAccounts\ModelAccounts.edmx.diagram">
+      <DependentUpon>ModelAccounts.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="EntityData\ModelGroups.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelGroups.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EntityData\ModelGroups.edmx.diagram">
+      <DependentUpon>ModelGroups.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="ReportTemplates\По умолчанию.frx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="EntityData\ModelGroups.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelGroups.edmx</DependentUpon>
+      <LastGenOutput>ModelGroups.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityData\ModelGroups.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelGroups.edmx</DependentUpon>
+      <LastGenOutput>ModelGroups.cs</LastGenOutput>
+    </Content>
+    <Resource Include="App.ico" />
+    <Content Include="EntityAccounts\ModelAccounts.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelAccounts.edmx</DependentUpon>
+      <LastGenOutput>ModelAccounts.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityAccounts\ModelAccounts.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelAccounts.edmx</DependentUpon>
+      <LastGenOutput>ModelAccounts.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
