@@ -187,8 +187,7 @@ namespace SCME.dbViewer.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Checked
-        ///device.
+        ///   Ищет локализованную строку, похожую на Checked.
         /// </summary>
         public static string CheckedDevice {
             get {
@@ -521,8 +520,7 @@ namespace SCME.dbViewer.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Measurement
-        ///group comments.
+        ///   Ищет локализованную строку, похожую на Comments.
         /// </summary>
         public static string DeviceComments {
             get {

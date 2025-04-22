@@ -1853,6 +1853,8 @@ namespace SCME.dbViewer
                 this.FDataSource = null;
                 this.dgDevices.ItemsSource = this.DataSource;
             }));
+
+            UtmMarginCollection.Clear();
         }
 
         private void DataGridCellCheckBox_Click(object sender, RoutedEventArgs e)
@@ -1904,6 +1906,34 @@ namespace SCME.dbViewer
                 SCME.Common.Routines.ShowProcessWaitVisualizerSortingFiltering(this, this.ProcessWaitVisualizerHWnd);
 
                 DbRoutines.SetChoiceForAllDevicesInCache();
+                //HideProcessWaitVisualizerSortingFiltering будет вызван при полном выгребании отложенной очереди исполняемой в потоке System.Windows.Threading.DispatcherTimer
+
+                this.RefreshShowingData();
+            }
+            else
+                MessageBox.Show(Properties.Resources.NoPermissions, Application.ResourceAssembly.GetName().Name, MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
+
+        public List<DynamicObj> UtmMarginCollection
+        {
+            get;
+        } = new List<DynamicObj>();
+
+        private void ContextMenuSelectUtmMarginRecords_Click(object sender, RoutedEventArgs e)
+        {
+            //установка отметок выбора для всех показанных групп изделий с тех. запасом Utm
+            if (Common.Routines.IsUserCanWorkWithAssemblyProtocol(this.PermissionsLo))
+            {
+                //данное действие предполагает фильтрацию данных
+                SCME.Common.Routines.ShowProcessWaitVisualizerSortingFiltering(this, this.ProcessWaitVisualizerHWnd);
+
+                List<DynamicObj> DistinctList = UtmMarginCollection.Distinct().ToList();
+                foreach (DynamicObj Dev in DistinctList)
+                {
+                    Dev.GetMember(Common.Constants.DevID, out object devIDs);
+                    IEnumerable<string> devIDEnumerable = Routines.DelimetedStringsToEnumerable(devIDs.ToString(), SCME.Common.Constants.cString_AggDelimeter.ToString());
+                    DbRoutines.SetDevicesChoice(devIDEnumerable, true);
+                }
                 //HideProcessWaitVisualizerSortingFiltering будет вызван при полном выгребании отложенной очереди исполняемой в потоке System.Windows.Threading.DispatcherTimer
 
                 this.RefreshShowingData();
@@ -3339,8 +3369,34 @@ namespace SCME.dbViewer
             Common.Routines.TextBoxOnlyNumericPaste(sender, e);
         }
 
+        private double utmMargin = 0;
+        public string UtmMargin
+        {
+            get => utmMargin.ToString();
+            set
+            {
+                utmMargin = double.TryParse(value, out double result) ? result : 0;
+                this.NotifyPropertyChanged();
+                RefreshShowingData();
+            }
+        }
+
+        private void TbOnlyDouble_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Common.Routines.TextBoxOnlyDouble_PreviewTextInput(sender, e);
+        }
+
+        private void TbOnlyDoublePaste(object sender, DataObjectPastingEventArgs e)
+        {
+            Common.Routines.TextBoxOnlyDoublePaste(sender, e);
+        }
+
         private void TbDisableSpace_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            TextBox Sender = ((TextBox)sender);
+            if (Sender.Name == "TbUtmMargin" && e.Key == Key.Enter)
+                dgDevices.Focus();
+
             Common.Routines.TextBoxDisableSpace_PreviewKeyDown(sender, e);
         }
 
@@ -3607,9 +3663,61 @@ namespace SCME.dbViewer
             }
         }
 
+        private void StatusContextMenu_Loaded(object sender, RoutedEventArgs e)
+        {
+            ContextMenu Menu = (ContextMenu)sender;
+            switch (Common.Routines.IsUserAdmin(this.PermissionsLo))
+            {
+                case true:
+                    ((MenuItem)Menu.Items[1]).Visibility = Visibility.Visible;
+                    ((MenuItem)Menu.Items[2]).Visibility = Visibility.Visible;
+                    ((MenuItem)Menu.Items[3]).Visibility = Visibility.Visible;
+                    break;
+                default:
+                    ((MenuItem)Menu.Items[1]).Visibility = Visibility.Collapsed;
+                    ((MenuItem)Menu.Items[2]).Visibility = Visibility.Collapsed;
+                    ((MenuItem)Menu.Items[3]).Visibility = Visibility.Collapsed;
+                    break;
+            }
+        }
+
+        private void ChangeStatusManually_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MenuItem Item = (MenuItem)sender;
+                string Status = (string)Item.Tag;
+                DynamicObj Obj = (DynamicObj)Item.DataContext;
+                Obj.GetMember(Common.Constants.DevID, out object devIDs);
+                int[] devIDArray = ObjectToArrayOfInt(devIDs);
+                //сохраняем в базу данных введённый пользователем статус
+                if (devIDArray != null)
+                {
+                    foreach (int devID in devIDArray)
+                    {
+                        Routines.UpdateManuallySetStatus(devID, Status);
+                    }
+                }
+                Obj.SetMember(Common.Constants.Status, Status == "Empty" ? DBNull.Value : (object)Status);
+                DataGridCell OwnerCell = (DataGridCell)((ContextMenu)Item.Parent).PlacementTarget;
+                OwnerCell.Background = Status == "Empty" ? Brushes.White : (SolidColorBrush)new BrushConverter().ConvertFrom(Status == "OK" ? "#8DCD47" : "#FF6565");
+                OwnerCell.ToolTip = Status == "Empty" ? null : (Status == "OK" ? "Manually set: OK" : "Manually set: Fault");
+            }
+            catch { }
+        }
+
         private void MnuAboutClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Просмотр результатов с КИП СПП\nВерсия проекта: 1.12");
+            string Name = "Просмотр результатов с КИП СПП";
+            string Version = "1.14.1";
+            string Descr = "Описание версии:\n" +
+                "- Корректные заголовки столбцов;\n" +
+                "- Добавление к системе управления версиями Git;\n" +
+                "- Установка статуса по определенным измерениям;\n" +
+                "- Ручное редактирование статуса;\n" +
+                "- Уменьшение высоты заголовков таблицы;\n" +
+                "- Работа с тех. запасом Utm (отображение и выбор).";
+            MessageBox.Show(Descr, string.Format("{0} (версия {1})", Name, Version));
         }
 
         /*
@@ -3780,6 +3888,9 @@ namespace SCME.dbViewer
         NotSetted = 3,
 
         [EnumMember]
-        LegallyAbsent = 4
+        LegallyAbsent = 4,
+
+        [EnumMember]
+        UtmMargin = 5
     }
 }

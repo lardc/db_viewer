@@ -163,6 +163,10 @@ namespace SCME.dbViewer
                         //за пределами норм
                         return dataGrid.FindResource("ValueOutSideTheNorm");
 
+                    case NrmStatus.UtmMargin:
+                        //в тех. запасе Utm
+                        return dataGrid.FindResource("ValueInUtmMargin");
+
                     case (NrmStatus.NotSetted):
                         //норма не установлена
                         return dataGrid.FindResource("NrmNotSetted");
@@ -187,6 +191,7 @@ namespace SCME.dbViewer
                                 //значение реквизита не подлежит проверке
                                 return DependencyProperty.UnsetValue;
                         }
+
                     default:
                         return DependencyProperty.UnsetValue;
                 }

@@ -1,20 +1,20 @@
 ﻿using SCME.CustomControls;
+using SCME.Types;
 using SCME.Types.BaseTestParams;
 using SCME.Types.Profiles;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Globalization;
-using System.Runtime.Serialization;
+using System.IO;
 using System.Linq;
-using System.Xml;
-using SCME.Types;
+using System.Runtime.Serialization;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Collections.Concurrent;
-using System.Windows;
-using System.IO;
-using System.Windows.Controls.Primitives;
+using System.Xml;
 
 namespace SCME.dbViewer
 {
@@ -932,8 +932,16 @@ namespace SCME.dbViewer
             return (resultList.Count > 0) ? true : false;
         }
 
-        public static object CalcDeviceStatus(byte statusColdSum, byte statusColdCount, byte statusHotSum, byte statusHotCount)
+        public static object CalcDeviceStatus(byte statusColdSum, byte statusColdCount, byte statusHotSum, byte statusHotCount, bool dynamic)
         {
+            //Измерение на горячую производилось только на динамике
+            if (dynamic && statusHotSum == 1)
+            {
+                if (statusColdSum == statusColdCount)
+                    return DBNull.Value;
+                return Constants.FaultSatatus;
+            }
+
             //если есть хотя-бы один статус не OK - результат Fault;
             //чтобы вычислить результат в OK необходимо проверить, что эти статусы получены при температурных режимах и Cold и Hot и все статусы есть 1 (OK);
             //если нет хотя-бы одного из температурных режимов Cold или Hot - возвращаем не определённый статус - NULL
@@ -956,7 +964,53 @@ namespace SCME.dbViewer
             }
         }
 
-        public static string CalcDeviceStatusHelp(byte statusColdSum, byte statusColdCount, byte statusHotSum, byte statusHotCount)
+        private static readonly string ConnectionString = "Data Source=192.168.2.170; Initial Catalog=SCME_ResultsDB; User ID=sa; Password=Hpl1520;";
+        private static bool? CheckManuallySetStatus(string code)
+        {
+            try
+            {
+                using (SqlConnection Connection = new SqlConnection(ConnectionString))
+                using (SqlCommand Command = Connection.CreateCommand())
+                {
+                    Connection.Open();
+                    Command.CommandText = "SELECT STATUS FROM dbo.DEVICES WHERE CODE = @CODE AND STATUS IS NOT NULL";
+                    Command.Parameters.AddWithValue("CODE", code);
+                    string Status = (string)Command.ExecuteScalar();
+                    if (Status == null)
+                        return null;
+                    return Status == "1";
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public static void UpdateManuallySetStatus(int devID, string status)
+        {
+            try
+            {
+                object Status = status == "OK" ? "1" : "0";
+                if (status == "Empty")
+                    Status = DBNull.Value;
+                using (SqlConnection Connection = new SqlConnection(ConnectionString))
+                using (SqlCommand Command = Connection.CreateCommand())
+                {
+                    Connection.Open();
+                    Command.CommandText = "UPDATE dbo.DEVICES SET STATUS = @STATUS WHERE DEV_ID = @DEV_ID";
+                    Command.Parameters.AddWithValue("STATUS", Status);
+                    Command.Parameters.AddWithValue("DEV_ID", devID);
+                    Command.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public static string CalcDeviceStatusHelp(byte statusColdSum, byte statusColdCount, byte statusHotSum, byte statusHotCount, bool dynamic)
         {
             //возвращает историю формирования статуса сформированной группы изделий - как был получен игоговый статус группы изделий
             string result = string.Empty;
@@ -979,6 +1033,10 @@ namespace SCME.dbViewer
                 result = string.Concat(result, "RT:Fault");
             }
 
+            //Измерение на горячую производилось только на динамике
+            if (dynamic && statusHotSum == 1)
+                return result;
+
             //формируем историю вычисления горячих статусов
             for (int i = 0; i < statusHotSum; i++)
             {
@@ -987,7 +1045,6 @@ namespace SCME.dbViewer
 
                 result = string.Concat(result, "TM:OK");
             }
-
             int statusHotFaultCount = statusHotCount - statusHotSum;
             for (int i = 0; i < statusHotFaultCount; i++)
             {
@@ -1335,7 +1392,10 @@ namespace SCME.dbViewer
 
                 name = Common.Constants.Code;
                 index = reader.GetOrdinal(name);
-                SaveValue(isReload, item, name, Convert.ToString(reader[index]));
+                
+                string Code = Convert.ToString(reader[index]);
+                
+                SaveValue(isReload, item, name, Code);
 
                 name = Common.Constants.MmeCode;
                 index = reader.GetOrdinal(name);
@@ -1411,10 +1471,33 @@ namespace SCME.dbViewer
                 byte statusHotSum = Convert.ToByte(reader[reader.GetOrdinal("STATUSHOTSUM")]);
                 byte statusHotCount = Convert.ToByte(reader[reader.GetOrdinal("STATUSHOTCOUNT")]);
                 name = Common.Constants.Status;
-                SaveValue(isReload, item, name, CalcDeviceStatus(statusColdSum, statusColdCount, statusHotSum, statusHotCount));
-                name = NameOfHiddenColumn(name);
-                //запоминаем как был вычислен итоговый статус группы
-                SaveValue(isReload, item, name, CalcDeviceStatusHelp(statusColdSum, statusColdCount, statusHotSum, statusHotCount));
+
+                //Проверка статуса, измененного вручную
+                bool? Status = CheckManuallySetStatus(Code);
+                switch (Status)
+                {
+                    case true:
+                        SaveValue(isReload, item, name, Constants.GoodSatatus);
+
+                        name = NameOfHiddenColumn(name);
+                        SaveValue(isReload, item, name, "Manually set: OK");
+                        break;
+                    case false:
+                        SaveValue(isReload, item, name, Constants.FaultSatatus);
+
+                        name = NameOfHiddenColumn(name);
+                        SaveValue(isReload, item, name, "Manually set: Fault");
+                        break;
+                    default:
+                        //Измерение на динамике
+                        bool Dynamic = reader[reader.GetOrdinal("MME_CODE")].ToString().Contains("MME013");
+                        SaveValue(isReload, item, name, CalcDeviceStatus(statusColdSum, statusColdCount, statusHotSum, statusHotCount, Dynamic));
+
+                        name = NameOfHiddenColumn(name);
+                        //запоминаем как был вычислен итоговый статус группы
+                        SaveValue(isReload, item, name, CalcDeviceStatusHelp(statusColdSum, statusColdCount, statusHotSum, statusHotCount, Dynamic));
+                        break;
+                }
 
                 //вычисляем значение класса группы
                 //итоговое значение класса сформированной группы есть минимум из максимумов по холодному и горячему классам
@@ -2251,6 +2334,19 @@ namespace SCME.dbViewer
                                             //имеем дело с описанием норм на float параметры
                                             double dValue = double.Parse(value.ToString());
                                             double dNrmMax = double.Parse(nrmMax.ToString());
+
+                                            //имеем дело с тех. запасом Utm
+                                            if (nameOfNrmMaxParametersColumn.Contains("vtmnrmmaxparameters"))
+                                            {
+                                                //значение тех. запаса
+                                                double UtmMargin = double.Parse(((MainWindow)Application.Current.MainWindow).UtmMargin);
+                                                if (UtmMargin > 0)
+                                                    if (dValue <= dNrmMax - UtmMargin)
+                                                    {
+                                                        ((MainWindow)Application.Current.MainWindow).UtmMarginCollection.Add(item);
+                                                        return NrmStatus.UtmMargin;
+                                                    }
+                                            }
 
                                             result = (dValue <= dNrmMax) ? NrmStatus.Good : NrmStatus.Defective;
 

@@ -277,8 +277,7 @@
     <value>Manage permissions of user</value>
   </data>
   <data name="DeviceComments" xml:space="preserve">
-    <value>Measurement
-group comments</value>
+    <value>Comments</value>
   </data>
   <data name="Comments" xml:space="preserve">
     <value>Comments</value>
@@ -452,8 +451,7 @@ group comments</value>
     <value>Not in assembly protocol</value>
   </data>
   <data name="CheckedDevice" xml:space="preserve">
-    <value>Checked
-device</value>
+    <value>Checked</value>
   </data>
   <data name="ProfileBody" xml:space="preserve">
     <value>Body of profile</value>

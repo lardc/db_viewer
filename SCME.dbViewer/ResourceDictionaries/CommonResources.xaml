@@ -4,6 +4,7 @@
     <SolidColorBrush x:Key="CustomBlue1" Color="#FFE0EBF5"/>
     <SolidColorBrush x:Key="ValueInNrm" Color="#DBF1C5"/>
     <SolidColorBrush x:Key="ValueOutSideTheNorm" Color="#FFD9FF"/>
+    <SolidColorBrush x:Key="ValueInUtmMargin" Color="#90D5FF"/>
     <SolidColorBrush x:Key="NrmNotSetted" Color="#E0C69C"/>
     <SolidColorBrush x:Key="NrmLegallyAbsent" Color="#EEEEEE"/>
     <SolidColorBrush x:Key="GoodSatatus" Color="#8DCD47"/>

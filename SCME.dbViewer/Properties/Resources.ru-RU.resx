@@ -165,9 +165,6 @@
   <data name="Reason" xml:space="preserve">
     <value>Причина</value>
   </data>
-  <data name="Records" xml:space="preserve">
-    <value>Записей:</value>
-  </data>
   <data name="Report" xml:space="preserve">
     <value>Отчёт</value>
   </data>
@@ -280,8 +277,7 @@
     <value>Управлять разрешениями пользователя</value>
   </data>
   <data name="DeviceComments" xml:space="preserve">
-    <value>Комментарии к
-группе измерений</value>
+    <value>Комментарии</value>
   </data>
   <data name="Comments" xml:space="preserve">
     <value>Комментарии</value>
@@ -455,8 +451,7 @@
     <value>НЗП</value>
   </data>
   <data name="CheckedDevice" xml:space="preserve">
-    <value>Выбор
-изделия</value>
+    <value>Выбор</value>
   </data>
   <data name="ProfileBody" xml:space="preserve">
     <value>Тело профиля</value>
@@ -554,11 +549,11 @@
   <data name="AssemblyJob" xml:space="preserve">
     <value>ПЗ сборки</value>
   </data>
-  <data name="WrongValueByMask" xml:space="preserve">
-    <value>Значение '{0}' не соответствует маске ввода '{1}'.</value>
-  </data>
   <data name="NotFoundInSL" xml:space="preserve">
     <value>'{0}' не найдено в SyteLine.</value>
+  </data>
+  <data name="WrongValueByMask" xml:space="preserve">
+    <value>Значение '{0}' не соответствует маске ввода '{1}'.</value>
   </data>
   <data name="Qrr" xml:space="preserve">
     <value>Qrr</value>
@@ -650,11 +645,11 @@
   <data name="SelectedProfile" xml:space="preserve">
     <value>Выбраный профиль</value>
   </data>
-  <data name="ProfileOfDisplayedData" xml:space="preserve">
-    <value>Профиль отображаемых данных</value>
-  </data>
   <data name="UnknownTemperatureCondition" xml:space="preserve">
     <value>Температурный режим профиля не определён.</value>
+  </data>
+  <data name="ProfileOfDisplayedData" xml:space="preserve">
+    <value>Профиль отображаемых данных</value>
   </data>
   <data name="NormMaxValue" xml:space="preserve">
     <value>Норма Max</value>
@@ -742,6 +737,9 @@
   </data>
   <data name="Paste" xml:space="preserve">
     <value>Вставить</value>
+  </data>
+  <data name="Records" xml:space="preserve">
+    <value>Записей:</value>
   </data>
   <data name="dUdtMin" xml:space="preserve">
     <value>dU/dtMin</value>
