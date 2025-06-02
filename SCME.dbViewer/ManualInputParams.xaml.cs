@@ -44,6 +44,8 @@ namespace SCME.dbViewer
             {
                 DbRoutines.GetManualInputParams(this.FDataTable, this.FProfID, this.FListTemperatureCondition);
 
+                this.FDataTable.DefaultView.Sort = "TEMPERATURECONDITION, NAME";
+
                 return this.FDataTable.DefaultView;
             }
         }

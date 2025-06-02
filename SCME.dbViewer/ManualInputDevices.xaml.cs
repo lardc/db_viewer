@@ -77,7 +77,7 @@ namespace SCME.dbViewer
                     int index = this.CmbProfileName.Items.IndexOf(item);
                     this.CmbProfileName.SelectedIndex = index;
 
-                    //this.LoadData(groupName, item.ProfGUID);
+                    this.LoadData(groupName, item.ProfGUID);
                 }
             }
 
@@ -403,7 +403,7 @@ namespace SCME.dbViewer
                 if (profID == -1)
                 {
                     MessageBox.Show(string.Format(Properties.Resources.SubjectNotSetted, Properties.Resources.ProfileName, Properties.Resources.NotSetted), Application.ResourceAssembly.GetName().Name, MessageBoxButton.OK, MessageBoxImage.Exclamation);
-
+                    
                     return;
                 }
 
@@ -412,7 +412,10 @@ namespace SCME.dbViewer
                 Types.Profiles.TemperatureCondition tc = (temperature == null) ? Types.Profiles.TemperatureCondition.None : Routines.TemperatureConditionByTemperature((double)temperature);
                 List<Types.Profiles.TemperatureCondition> listTemperatureCondition = new List<Types.Profiles.TemperatureCondition>()
                 {
-                    tc
+                    //tc
+                    
+                    Types.Profiles.TemperatureCondition.RT,
+                    Types.Profiles.TemperatureCondition.TM
                 };
 
                 ManualInputParams manualInputParams = new ManualInputParams(profID, listTemperatureCondition);

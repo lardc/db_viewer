@@ -41,7 +41,7 @@ namespace SCME.Linker
             string sqlText = @"SELECT RTRIM(GROUP_NAME) AS GROUP_NAME, MAX(TS) AS LASTTS, COUNT(*) AS LINKSCOUNT
                                FROM ASSEMBLYS WITH (NOLOCK)
                                GROUP BY GROUP_NAME
-                               ORDER BY GROUP_NAME";
+                               ORDER BY MAX(TS) DESC";
 
             dgJobs.ViewSqlResultByThread(sqlText);
         }

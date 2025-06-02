@@ -32,7 +32,7 @@
         <customControls:DataGridSqlResult x:Name="dgJobs" Grid.Row="0" SelectedCellsChanged="dgJobs_SelectedCellsChanged" SelectionChanged="dgJobs_SelectionChanged" MouseDoubleClick="dgJobs_MouseDoubleClick" LoadingRow="dgJobs_LoadingRow">
             <DataGrid.Columns>
                 <DataGridTextColumn CellStyle="{StaticResource LeftBodyContentDataGridStyle}" Header="{x:Static res:Resources.GroupName}" Binding="{Binding {x:Static common:Constants.GroupName}}"/>
-                <DataGridTextColumn CellStyle="{StaticResource CenterBodyContentDataGridStyle}" Header="{x:Static res:Resources.LastTS}" Binding="{Binding Path=LASTTS, StringFormat=dd.MM.yyyy}"/>
+                <DataGridTextColumn CellStyle="{StaticResource CenterBodyContentDataGridStyle}" Header="{x:Static res:Resources.TS}" Binding="{Binding Path=LASTTS, StringFormat=dd.MM.yyyy}"/>
                 <DataGridTextColumn CellStyle="{StaticResource LeftBodyContentDataGridStyle}" Header="{x:Static res:Resources.LinksCount}" Binding="{Binding Path=LINKSCOUNT}"/>
             </DataGrid.Columns>
         </customControls:DataGridSqlResult>

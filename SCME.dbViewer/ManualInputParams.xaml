@@ -12,7 +12,7 @@
         WindowStartupLocation="CenterScreen"
         Background="#FFF0F0F0"
         PreviewKeyDown="Window_PreviewKeyDown"
-        Title="{x:Static res:Resources.ManualInputParams}" Height="400" Width="1500">
+        Title="{x:Static res:Resources.ManualInputParams}" Height="600" Width="1500">
 
     <Window.Resources>
         <common:DoubleValueConverter x:Key="DoubleValueConverter"/>

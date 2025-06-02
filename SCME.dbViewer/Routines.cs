@@ -1,4 +1,5 @@
-﻿using SCME.CustomControls;
+﻿using DocumentFormat.OpenXml.Wordprocessing;
+using SCME.CustomControls;
 using SCME.Types;
 using SCME.Types.BaseTestParams;
 using SCME.Types.Profiles;
@@ -2280,6 +2281,11 @@ namespace SCME.dbViewer
                         //читаем значение параметра изделия
                         if (item.GetMember(columnName, out object value))
                         {
+                            if (value == null)
+                            {
+                                value = DBNull.Value;
+                            }
+
                             if (value != DBNull.Value)
                             {
                                 //считываем значение нормы min

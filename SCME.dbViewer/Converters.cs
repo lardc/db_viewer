@@ -91,6 +91,10 @@ namespace SCME.dbViewer
         {
             if (!string.IsNullOrEmpty(columnName) && (item != null))
             {
+                item.GetMember(columnName, out object columnValue);
+                if (columnValue == null)
+                    return Constants.noData;
+
                 columnName = Routines.NameOfHiddenColumn(columnName);
 
                 return item.GetMember(columnName, out object value) ? ((value == DBNull.Value) ? Constants.noData : value) : Constants.noData;

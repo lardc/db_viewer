@@ -3666,7 +3666,7 @@ namespace SCME.dbViewer
         private void StatusContextMenu_Loaded(object sender, RoutedEventArgs e)
         {
             ContextMenu Menu = (ContextMenu)sender;
-            switch (Common.Routines.IsUserAdmin(this.PermissionsLo))
+            switch (Common.Routines.IsUserCanReadReason(this.PermissionsLo))
             {
                 case true:
                     ((MenuItem)Menu.Items[1]).Visibility = Visibility.Visible;
@@ -3698,10 +3698,7 @@ namespace SCME.dbViewer
                         Routines.UpdateManuallySetStatus(devID, Status);
                     }
                 }
-                Obj.SetMember(Common.Constants.Status, Status == "Empty" ? DBNull.Value : (object)Status);
-                DataGridCell OwnerCell = (DataGridCell)((ContextMenu)Item.Parent).PlacementTarget;
-                OwnerCell.Background = Status == "Empty" ? Brushes.White : (SolidColorBrush)new BrushConverter().ConvertFrom(Status == "OK" ? "#8DCD47" : "#FF6565");
-                OwnerCell.ToolTip = Status == "Empty" ? null : (Status == "OK" ? "Manually set: OK" : "Manually set: Fault");
+                RefreshShowingData();
             }
             catch { }
         }
@@ -3709,14 +3706,15 @@ namespace SCME.dbViewer
         private void MnuAboutClick(object sender, RoutedEventArgs e)
         {
             string Name = "Просмотр результатов с КИП СПП";
-            string Version = "1.14.1";
+            string Version = "1.15.0";
             string Descr = "Описание версии:\n" +
                 "- Корректные заголовки столбцов;\n" +
                 "- Добавление к системе управления версиями Git;\n" +
                 "- Установка статуса по определенным измерениям;\n" +
                 "- Ручное редактирование статуса;\n" +
                 "- Уменьшение высоты заголовков таблицы;\n" +
-                "- Работа с тех. запасом Utm (отображение и выбор).";
+                "- Работа с тех. запасом Utm (отображение и выбор);" +
+                "- Создание ручных параметров для RT и Tm";
             MessageBox.Show(Descr, string.Format("{0} (версия {1})", Name, Version));
         }
 

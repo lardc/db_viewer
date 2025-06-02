@@ -54,19 +54,22 @@
             <TextBox x:Name="tbGroupName" IsReadOnly="True" Background="{StaticResource ReadOnly}" Text="{x:Static res:Resources.NotSetted}" DockPanel.Dock="Left" MinWidth="120" HorizontalAlignment="Left" FontWeight="Bold" FontSize="16" MaxLength="32" Foreground="{Binding Path=Text, ElementName=tbGroupName, Converter={StaticResource textToForegroundConverter}}"/>
             <Button x:Name="BtSelectGroupName" Style="{StaticResource CustomButton}" DockPanel.Dock="Left" Margin="8,0,0,0" Click="BtSelectGroupName_Click"/>
 
-            <TextBox DockPanel.Dock="Left" Text="{x:Static res:Resources.Profile}" IsReadOnly="True" HorizontalAlignment="Right" FontSize="16" BorderThickness="0" Margin="30,0,0,0"/>
-            <TextBlock DockPanel.Dock="Left" Text=": " HorizontalAlignment="Right" FontSize="16"/>
-            <ComboBox x:Name="CmbProfileName" ItemsSource="{Binding Source={StaticResource ListOfProfiles}}" DockPanel.Dock="Left" MinWidth="120" HorizontalAlignment="Left" FontWeight="Bold" FontSize="16" Foreground="{Binding Path=Text, ElementName=CmbProfileName, Converter={StaticResource textToForegroundConverter}}" IsEditable="False" MaxDropDownHeight="Auto">
-                <ComboBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Margin="2,0,0,0" Text="{Binding ProfName}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ComboBox.ItemTemplate>
-            </ComboBox>
+            <Grid Visibility="Collapsed">
+                <TextBox DockPanel.Dock="Left" Text="{x:Static res:Resources.Profile}" IsReadOnly="True" HorizontalAlignment="Right" FontSize="16" BorderThickness="0" Margin="30,0,0,0"/>
+                <TextBlock DockPanel.Dock="Left" Text=": " HorizontalAlignment="Right" FontSize="16"/>
+                <ComboBox x:Name="CmbProfileName" ItemsSource="{Binding Source={StaticResource ListOfProfiles}}" DockPanel.Dock="Left" MinWidth="120" HorizontalAlignment="Left" FontWeight="Bold" FontSize="16" Foreground="{Binding Path=Text, ElementName=CmbProfileName, Converter={StaticResource textToForegroundConverter}}" IsEditable="False" MaxDropDownHeight="Auto">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin="2,0,0,0" Text="{Binding ProfName}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
 
-            <Button x:Name="BtSelectProfile" Style="{StaticResource CustomButton}" DockPanel.Dock="Left" Margin="8,0,0,0" Click="BtSelectProfile_Click"/>
+                <Button x:Name="BtSelectProfile" Style="{StaticResource CustomButton}" DockPanel.Dock="Left" Margin="8,0,0,0" Click="BtSelectProfile_Click"/>
+            </Grid>
+
             <Button x:Name="BtLoadData" DockPanel.Dock="Left" Margin="30,0,0,0" MinWidth="85" Content="{x:Static res:Resources.Load}" FontWeight="Bold" FontSize="16" Click="BtLoadData_Click"/>
 
             <DockPanel LastChildFill="False" DockPanel.Dock="Right">

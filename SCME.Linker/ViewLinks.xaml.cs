@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 /*
 using System.Text;
@@ -211,8 +212,21 @@ namespace SCME.Linker
                 //случай сборки
                 btSave.IsEnabled = (this.FGroupName != null);
                 grPackage.RowDefinitions.Clear();
+                
                 reDelimeter.Visibility = Visibility.Visible;
                 grDevice.Visibility = Visibility.Visible;
+                
+                lbOldPackageSerialNum.Visibility = Visibility.Visible;
+                tbOldPackageSerialNum.Visibility = Visibility.Visible;
+
+                lbNewPackageSerialNum.Visibility = Visibility.Hidden;
+                tbNewPackageSerialNum.Visibility = Visibility.Hidden;
+
+                lbOldDevice.Visibility = Visibility.Hidden;
+                tbOldDevice.Visibility = Visibility.Hidden;
+
+                lbNewDevice.Visibility = Visibility.Hidden;
+                tbNewDevice.Visibility = Visibility.Hidden;
 
                 RowDefinition rd = new RowDefinition() { Height = new GridLength(1.1, GridUnitType.Star) };
                 grPackage.RowDefinitions.Add(rd);
@@ -229,9 +243,6 @@ namespace SCME.Linker
                 Grid.SetRow(lbOldPackageSerialNum, 1);
                 Grid.SetRow(tbOldPackageSerialNum, 2);
                 tbOldPackageSerialNum.Background = Brushes.White;
-
-                lbNewPackageSerialNum.Visibility = Visibility.Hidden;
-                tbNewPackageSerialNum.Visibility = Visibility.Hidden;
             }
         }
 
@@ -241,12 +252,22 @@ namespace SCME.Linker
             {
                 //случай перемаркировки
                 btSave.IsEnabled = ((this.FGroupName != null) && (this.FListData != null) && (this.FListData.Count != 0));
-
                 grPackage.RowDefinitions.Clear();
-                lbNewPackageSerialNum.Visibility = Visibility.Visible;
-                tbNewPackageSerialNum.Visibility = Visibility.Visible;
+
                 reDelimeter.Visibility = Visibility.Hidden;
                 grDevice.Visibility = Visibility.Hidden;
+
+                lbOldPackageSerialNum.Visibility = Visibility.Visible;
+                tbOldPackageSerialNum.Visibility = Visibility.Visible;
+
+                lbNewPackageSerialNum.Visibility = Visibility.Visible;
+                tbNewPackageSerialNum.Visibility = Visibility.Visible;
+
+                lbOldDevice.Visibility = Visibility.Hidden;
+                tbOldDevice.Visibility = Visibility.Hidden;
+
+                lbNewDevice.Visibility = Visibility.Hidden;
+                tbNewDevice.Visibility = Visibility.Hidden;
 
                 RowDefinition rd = new RowDefinition() { Height = new GridLength(1.2, GridUnitType.Star) };
                 grPackage.RowDefinitions.Add(rd);
@@ -267,6 +288,51 @@ namespace SCME.Linker
                 Grid.SetRow(lbNewPackageSerialNum, 2);
                 Grid.SetRow(tbNewPackageSerialNum, 3);
                 tbNewPackageSerialNum.Background = Brushes.White;
+            }
+        }
+
+        private void rbReassembly_Click(object sender, RoutedEventArgs e)
+        {
+            if (((RadioButton)sender).IsChecked ?? false)
+            {
+                //случай замены ППЭ
+                btSave.IsEnabled = ((this.FGroupName != null) && (this.FListData != null) && (this.FListData.Count != 0));
+                grPackage.RowDefinitions.Clear();
+
+                reDelimeter.Visibility = Visibility.Hidden;
+                grDevice.Visibility = Visibility.Hidden;
+
+                lbOldPackageSerialNum.Visibility = Visibility.Hidden;
+                tbOldPackageSerialNum.Visibility = Visibility.Hidden;
+
+                lbNewPackageSerialNum.Visibility = Visibility.Hidden;
+                tbNewPackageSerialNum.Visibility = Visibility.Hidden;
+
+                lbOldDevice.Visibility = Visibility.Visible;
+                tbOldDevice.Visibility = Visibility.Visible;
+
+                lbNewDevice.Visibility = Visibility.Visible;
+                tbNewDevice.Visibility = Visibility.Visible;
+
+                RowDefinition rd = new RowDefinition() { Height = new GridLength(1.2, GridUnitType.Star) };
+                grPackage.RowDefinitions.Add(rd);
+
+                rd = new RowDefinition() { Height = new GridLength(1.8, GridUnitType.Star) };
+                grPackage.RowDefinitions.Add(rd);
+
+                rd = new RowDefinition() { Height = new GridLength(1.2, GridUnitType.Star) };
+                grPackage.RowDefinitions.Add(rd);
+
+                rd = new RowDefinition() { Height = new GridLength(1.8, GridUnitType.Star) };
+                grPackage.RowDefinitions.Add(rd);
+
+                Grid.SetRow(lbOldDevice, 0);
+                Grid.SetRow(tbOldDevice, 1);
+                tbOldDevice.Background = Brushes.White;
+
+                Grid.SetRow(lbNewDevice, 2);
+                Grid.SetRow(tbNewDevice, 3);
+                tbNewDevice.Background = Brushes.White;
             }
         }
 
@@ -349,6 +415,21 @@ namespace SCME.Linker
                         {
                             if (packageIsGood && newPackageIsGood)
                                 this.btSave.RaiseEvent(new RoutedEventArgs(System.Windows.Controls.Primitives.ButtonBase.ClickEvent));
+                        }
+                    }
+
+                    if (rbReassembly.IsChecked ?? false)
+                    {
+                        if (tbOldDevice.IsFocused)
+                        {
+                            tbNewDevice.Focus();
+
+                            return;
+                        }
+
+                        if (tbNewDevice.IsFocused)
+                        {
+                            this.btSave.RaiseEvent(new RoutedEventArgs(System.Windows.Controls.Primitives.ButtonBase.ClickEvent));
                         }
                     }
 
@@ -525,6 +606,36 @@ namespace SCME.Linker
                             CreateToolTip(tbOldPackageSerialNum, Properties.Resources.OldSerialNumIsNotFound);
                             break;
                     }
+                }
+            }
+
+            if (rbReassembly.IsChecked ?? false)
+            {
+                switch (this.DbRoutinesReassembly(tbOldDevice.Text, tbNewDevice.Text, ((MainWindow)Application.Current.MainWindow).FTabNum, out int packageID))
+                {
+                    //ошибка в реализации Reassembly
+                    case -1:
+                        System.Windows.Forms.MessageBox.Show(string.Concat(string.Format(Properties.Resources.RealisationError, "DbRoutines.Reassembly"), "."), Properties.Resources.OperationError, System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                        break;
+
+                    //замена старого ППЭ успешно произведена на новый ППЭ
+                    case 0:
+                        tbOldDevice.Background = Brushes.LightGreen;
+                        tbNewDevice.Background = Brushes.LightGreen;
+
+                        //перечитываем данные изменённой записи в this.FListData
+                        RecordOfAssembly recordOfAssembly = this.FListData.Where(x => x.DeviceCode == tbOldDevice.Text || x.DeviceCode2 == tbOldDevice.Text).FirstOrDefault() as RecordOfAssembly;
+
+                        if (recordOfAssembly != null)
+                            DbRoutines.LoadSingleRecordFromAssembly(recordOfAssembly, packageID);
+                        
+                        break;
+
+                    //новый ППЭ @NewDevice уже используется - не корректен
+                    case 1:
+                        tbNewDevice.Background = Brushes.LightPink;
+                        CreateToolTip(tbNewDevice, "Номер ППЭ недействителен. Он уже использован.");
+                        break;
                 }
             }
         }
@@ -783,12 +894,6 @@ namespace SCME.Linker
 
         private void SelectionChanged()
         {
-            if (rbRelabeling.IsChecked ?? false)
-            {
-                if (dgLinks.CurrentItem is RecordOfAssembly recordOfAssembly)
-                    tbOldPackageSerialNum.Text = recordOfAssembly.PackageSerialNum;
-            }
-
             if (rbAssembly.IsChecked ?? false)
             {
                 if (Common.Routines.IsUserCanEditAssembly(((MainWindow)Application.Current.MainWindow).FPermissionsLo))
@@ -799,7 +904,28 @@ namespace SCME.Linker
                         tbOldPackageSerialNum.Text = recordOfAssembly.PackageSerialNum;
                         tbDeviceCode.Text = recordOfAssembly.DeviceCode;
                         tbDeviceCode2.Text = recordOfAssembly.DeviceCode2;
+                        
+                        tbOldDevice.Text = recordOfAssembly.DeviceCode;
                     }
+                }
+            }
+
+            if (rbRelabeling.IsChecked ?? false)
+            {
+                if (dgLinks.CurrentItem is RecordOfAssembly recordOfAssembly)
+                {
+                    tbOldPackageSerialNum.Text = recordOfAssembly.PackageSerialNum;
+                    
+                    tbOldDevice.Text = recordOfAssembly.DeviceCode;
+                }
+
+            }
+
+            if (rbReassembly.IsChecked ?? false)
+            {
+                if (dgLinks.CurrentItem is RecordOfAssembly recordOfAssembly)
+                {
+                    tbOldDevice.Text = recordOfAssembly.DeviceCode;
                 }
             }
         }
@@ -829,7 +955,7 @@ namespace SCME.Linker
             string realizedByJob = lbData1ByGroupName.Content.ToString();
             string linksCount = string.Format(Properties.Resources.ShownLinksCount, listData.Count, this.FListData.Count, Properties.Resources.Pieces);
             string packageInfo = lbData2ByGroupName.Content.ToString().Replace("\r\n", ". ");
-
+            
             string title = string.Concat(
                                           this.Title, ".", "\r\n",
                                           string.Format("{0} {1}, {2}. {3}", Properties.Resources.GroupName, this.FGroupName, description, realizedByJob), "\r\n",
@@ -871,6 +997,55 @@ namespace SCME.Linker
             SetWhiteBackgroundIfTextIsEmpty(sender);
         }
 
+        private void tbOldDevice_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SetWhiteBackgroundIfTextIsEmpty(sender);
+        }
+
+        private void tbNewDevice_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SetWhiteBackgroundIfTextIsEmpty(sender);
+        }
+
+        public int DbRoutinesReassembly(string oldDevice, string newDevice, string usr, out int packageID)
+        {
+            //замена ППЭ - изменение ППЭ на новый. было oldDevice, стало newDevice
+            //Возвращает:
+            //          -1 - ошибка в данной реализации;
+            //           0 - замена старого ППЭ успешно произведена на новый ППЭ;
+            //           1 - новый ППЭ @NewDevice уже используется - не корректен
+            int result = -1;
+            packageID = -1;
+
+            string ConnectionString = "Data Source=192.168.2.170; Initial Catalog=SCME_ResultsDB; User ID=sa; Password=Hpl1520;";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                using (SqlCommand command = new SqlCommand("Reassembly", connection))
+                {
+                    connection.Open();
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@OldDevice", oldDevice);
+                    command.Parameters.AddWithValue("@NewDevice", newDevice);
+                    command.Parameters.AddWithValue("@Usr", usr);
+                    
+                    SqlParameter PackageID = command.Parameters.Add("@PackageID", SqlDbType.Int);
+                    PackageID.Direction = ParameterDirection.Output;
+
+                    SqlParameter returnValue = command.Parameters.Add("@RETURN_VALUE", SqlDbType.Int);
+                    returnValue.Direction = ParameterDirection.ReturnValue;
+
+                    command.ExecuteNonQuery();
+
+                    result = (int)returnValue.Value;
+                    packageID = PackageID.Value == DBNull.Value ? -1 : (int)PackageID.Value;
+                }
+            }
+            catch { }
+            
+            return result;
+        }
     }
 
     public class Printer
@@ -897,14 +1072,21 @@ namespace SCME.Linker
             }
         }
 
-        private void makeRow(TableRow row, string value)
+        private void makeRow(TableRow row, string value, bool isBarcode = false)
         {
             TableCell tableCell = new TableCell(new Paragraph(new Run(value)));
             row.Cells.Add(tableCell);
 
-            tableCell.Padding = new Thickness(4);
+            tableCell.Padding = new Thickness(2);
             tableCell.BorderBrush = Brushes.DarkGray;
             tableCell.BorderThickness = new Thickness(1, 1, 1, 1);
+            
+            if (isBarcode)
+            {
+                tableCell.FontFamily = (FontFamily)App.Current.Resources["BarcodeFont"];
+                tableCell.FontSize = 18;
+                tableCell.Padding = new Thickness(0, 6, 0, 0);
+            }
         }
 
         private double columnWidthByColumnTittle(string columnTittle)
@@ -932,6 +1114,9 @@ namespace SCME.Linker
                 case "Старый серийный номер":
                     return 128;
 
+                case "Штрих-код":
+                    return 100;
+
                 default:
                     return 0;
             }
@@ -945,9 +1130,10 @@ namespace SCME.Linker
             {
                 FlowDocument fd = new FlowDocument();
                 fd.TextAlignment = TextAlignment.Center;
-                fd.PageWidth = printDialog.PrintableAreaWidth;
-                fd.PageHeight = printDialog.PrintableAreaHeight;
-                fd.ColumnWidth = printDialog.PrintableAreaWidth;
+                fd.PageWidth = 1104;
+                fd.PageHeight = 768;
+                fd.PageWidth = 1104;
+                fd.ColumnWidth = 1104;
                 fd.BringIntoView();
 
                 Paragraph p = new Paragraph(new Run(title));
@@ -994,7 +1180,13 @@ namespace SCME.Linker
                     for (int j = 0; j < dataGrid.Columns.Count; j++)
                     {
                         string value = rec.ValueByIndex(j);
-                        this.makeRow(r, value);
+                        
+                        string Header = (string)dataGrid.Columns[j].Header;
+
+                        if (Header == "Штрих-код")
+                            value = rec.ValueByIndex(0);
+
+                        this.makeRow(r, value, Header == "Штрих-код");
                     }
 
                     tableRowGroup.Rows.Add(r);

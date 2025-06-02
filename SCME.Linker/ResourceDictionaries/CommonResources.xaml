@@ -2,6 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:SCME.Linker.ResourceDictionaries">
 
+    <FontFamily x:Key="BarcodeFont">pack://application:,,,/Resources/#Libre Barcode 128 Regular</FontFamily>
+
     <SolidColorBrush x:Key="CustomBlue1" Color="#FFE0EBF5"/>
     <SolidColorBrush x:Key="SelectedRow" Color="#D9E1F2"/>
 
